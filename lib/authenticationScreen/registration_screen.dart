@@ -341,9 +341,9 @@ class _RegistrationScreenState extends State<RegistrationScreen>
               SizedBox(
                 width:MediaQuery.of(context).size.width-20,
                 child: CustomTextFieldWidget(
-                  editingController: bodyTypeTextEditingController,
-                  labelText: "Body Type",
-                  iconData: Icons.boy_outlined,
+                  editingController: smokingTextEditingController,
+                  labelText: "Smoker?",
+                  iconData: Icons.smoke_free_outlined,
                   isObscure: false,
                 ),
               ),
@@ -356,9 +356,9 @@ class _RegistrationScreenState extends State<RegistrationScreen>
               SizedBox(
                 width:MediaQuery.of(context).size.width-20,
                 child: CustomTextFieldWidget(
-                  editingController: bodyTypeTextEditingController,
-                  labelText: "Body Type",
-                  iconData: Icons.boy_outlined,
+                  editingController: maritalStatusTextEditingController,
+                  labelText: "Marital Status",
+                  iconData: Icons.people_alt_rounded,
                   isObscure: false,
                 ),
               ),
@@ -371,9 +371,9 @@ class _RegistrationScreenState extends State<RegistrationScreen>
               SizedBox(
                 width:MediaQuery.of(context).size.width-20,
                 child: CustomTextFieldWidget(
-                  editingController: bodyTypeTextEditingController,
-                  labelText: "Body Type",
-                  iconData: Icons.boy_outlined,
+                  editingController: haveChildrenTextEditingController,
+                  labelText: "Are you a parent?",
+                  iconData: Icons.baby_changing_station,
                   isObscure: false,
                 ),
               ),
@@ -386,9 +386,9 @@ class _RegistrationScreenState extends State<RegistrationScreen>
               SizedBox(
                 width:MediaQuery.of(context).size.width-20,
                 child: CustomTextFieldWidget(
-                  editingController: bodyTypeTextEditingController,
-                  labelText: "Body Type",
-                  iconData: Icons.boy_outlined,
+                  editingController: noOfChildrenTextEditingController,
+                  labelText: "Number of children?-if any",
+                  iconData: Icons.child_friendly,
                   isObscure: false,
                 ),
               ),
@@ -401,9 +401,9 @@ class _RegistrationScreenState extends State<RegistrationScreen>
               SizedBox(
                 width:MediaQuery.of(context).size.width-20,
                 child: CustomTextFieldWidget(
-                  editingController: bodyTypeTextEditingController,
-                  labelText: "Body Type",
-                  iconData: Icons.boy_outlined,
+                  editingController: professionTextEditingController,
+                  labelText: "Profession",
+                  iconData: Icons.computer_outlined,
                   isObscure: false,
                 ),
               ),
@@ -416,9 +416,9 @@ class _RegistrationScreenState extends State<RegistrationScreen>
               SizedBox(
                 width:MediaQuery.of(context).size.width-20,
                 child: CustomTextFieldWidget(
-                  editingController: bodyTypeTextEditingController,
-                  labelText: "Body Type",
-                  iconData: Icons.boy_outlined,
+                  editingController: employmentStatusTextEditingController,
+                  labelText: "Employment Status",
+                  iconData: Icons.work_outlined,
                   isObscure: false,
                 ),
               ),
@@ -432,9 +432,9 @@ class _RegistrationScreenState extends State<RegistrationScreen>
               SizedBox(
                 width:MediaQuery.of(context).size.width-20,
                 child: CustomTextFieldWidget(
-                  editingController: bodyTypeTextEditingController,
-                  labelText: "Body Type",
-                  iconData: Icons.boy_outlined,
+                  editingController: incomeTextEditingController,
+                  labelText: "Yearly Income",
+                  iconData: Icons.monetization_on_rounded,
                   isObscure: false,
                 ),
               ),
@@ -447,9 +447,9 @@ class _RegistrationScreenState extends State<RegistrationScreen>
               SizedBox(
                 width:MediaQuery.of(context).size.width-20,
                 child: CustomTextFieldWidget(
-                  editingController: bodyTypeTextEditingController,
-                  labelText: "Body Type",
-                  iconData: Icons.boy_outlined,
+                  editingController: livingSituationTextEditingController,
+                  labelText: "Living situation",
+                  iconData: Icons.bed_outlined,
                   isObscure: false,
                 ),
               ),
@@ -462,9 +462,9 @@ class _RegistrationScreenState extends State<RegistrationScreen>
               SizedBox(
                 width:MediaQuery.of(context).size.width-20,
                 child: CustomTextFieldWidget(
-                  editingController: bodyTypeTextEditingController,
-                  labelText: "Body Type",
-                  iconData: Icons.boy_outlined,
+                  editingController: willingToRelocateTextEditingController,
+                  labelText: "Willing to relocate for a new found love?",
+                  iconData: Icons.airplanemode_active_rounded,
                   isObscure: false,
                 ),
               ),
@@ -477,9 +477,9 @@ class _RegistrationScreenState extends State<RegistrationScreen>
               SizedBox(
                 width:MediaQuery.of(context).size.width-20,
                 child: CustomTextFieldWidget(
-                  editingController: bodyTypeTextEditingController,
-                  labelText: "Body Type",
-                  iconData: Icons.boy_outlined,
+                  editingController: relationshipYouAreLookingForTextEditingController,
+                  labelText: "Type of relationship you are looking for",
+                  iconData: Icons.people_alt_sharp,
                   isObscure: false,
                 ),
               ),
