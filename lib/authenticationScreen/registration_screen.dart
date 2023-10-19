@@ -560,7 +560,7 @@ class _RegistrationScreenState extends State<RegistrationScreen>
                 height:18,
               ),
 
-              //ethnicity
+              //ethnicity section
               SizedBox(
                 width:MediaQuery.of(context).size.width-20,
                 child: CustomTextFieldWidget(
@@ -581,4 +581,3 @@ class _RegistrationScreenState extends State<RegistrationScreen>
       ),
     );
   }
-}
