@@ -545,7 +545,7 @@ class _RegistrationScreenState extends State<RegistrationScreen>
                 height:18,
               ),
 
-              // religion section
+              // religion sections
               SizedBox(
                 width:MediaQuery.of(context).size.width-20,
                 child: CustomTextFieldWidget(
