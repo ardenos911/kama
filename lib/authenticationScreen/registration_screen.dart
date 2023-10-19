@@ -488,6 +488,18 @@ class _RegistrationScreenState extends State<RegistrationScreen>
                 height:18,
               ),
 
+              // *** Background-Culture values ***
+              const Text("Background/Culture :",
+                style: TextStyle(
+                  fontSize: 20,
+                  color: Colors.lightBlue,
+                ),
+              ),
+
+              const SizedBox(
+                height:8,
+              ),
+
 
             ],
           ),
