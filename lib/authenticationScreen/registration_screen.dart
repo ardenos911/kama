@@ -10,100 +10,97 @@ class RegistrationScreen extends StatefulWidget
   State<RegistrationScreen> createState() => _RegistrationScreenState();
 }
 
-class _RegistrationScreenState extends State<RegistrationScreen>
-{
+class _RegistrationScreenState extends State<RegistrationScreen> {
   //personal info
-  TextEditingController emailTextEditingController= TextEditingController();
-  TextEditingController passwordTextEditingController= TextEditingController();
-  TextEditingController nameTextEditingController= TextEditingController();
-  TextEditingController ageTextEditingController= TextEditingController();
-  TextEditingController phoneNoTextEditingController= TextEditingController();
-  TextEditingController cityTextEditingController= TextEditingController();
-  TextEditingController countryTextEditingController= TextEditingController();
-  TextEditingController profileHeadingTextEditingController= TextEditingController();
-  TextEditingController lookingForInaPartnerTextEditingController= TextEditingController();
+  TextEditingController emailTextEditingController = TextEditingController();
+  TextEditingController passwordTextEditingController = TextEditingController();
+  TextEditingController nameTextEditingController = TextEditingController();
+  TextEditingController ageTextEditingController = TextEditingController();
+  TextEditingController phoneNoTextEditingController = TextEditingController();
+  TextEditingController cityTextEditingController = TextEditingController();
+  TextEditingController countryTextEditingController = TextEditingController();
+  TextEditingController profileHeadingTextEditingController = TextEditingController();
+  TextEditingController lookingForInaPartnerTextEditingController = TextEditingController();
 
   //Appearance
-  TextEditingController heightTextEditingController= TextEditingController();
-  TextEditingController weightTextEditingController= TextEditingController();
-  TextEditingController bodyTypeTextEditingController= TextEditingController();
+  TextEditingController heightTextEditingController = TextEditingController();
+  TextEditingController weightTextEditingController = TextEditingController();
+  TextEditingController bodyTypeTextEditingController = TextEditingController();
 
   //Life Style
-  TextEditingController drinkTextEditingController= TextEditingController();
-  TextEditingController smokingTextEditingController= TextEditingController();
-  TextEditingController maritalStatusTextEditingController= TextEditingController();
-  TextEditingController haveChildrenTextEditingController= TextEditingController();
-  TextEditingController noOfChildrenTextEditingController= TextEditingController();
-  TextEditingController professionTextEditingController= TextEditingController();
-  TextEditingController employmentStatusTextEditingController= TextEditingController();
-  TextEditingController incomeTextEditingController= TextEditingController();
-  TextEditingController livingSituationTextEditingController= TextEditingController();
-  TextEditingController willingToRelocateTextEditingController= TextEditingController();
-  TextEditingController relationshipYouAreLookingForTextEditingController= TextEditingController();
+  TextEditingController drinkTextEditingController = TextEditingController();
+  TextEditingController smokingTextEditingController = TextEditingController();
+  TextEditingController maritalStatusTextEditingController = TextEditingController();
+  TextEditingController haveChildrenTextEditingController = TextEditingController();
+  TextEditingController noOfChildrenTextEditingController = TextEditingController();
+  TextEditingController professionTextEditingController = TextEditingController();
+  TextEditingController employmentStatusTextEditingController = TextEditingController();
+  TextEditingController incomeTextEditingController = TextEditingController();
+  TextEditingController livingSituationTextEditingController = TextEditingController();
+  TextEditingController willingToRelocateTextEditingController = TextEditingController();
+  TextEditingController relationshipYouAreLookingForTextEditingController = TextEditingController();
 
   //Background-cultural values
-  TextEditingController nationalityTextEditingController= TextEditingController();
-  TextEditingController educationTextEditingController= TextEditingController();
-  TextEditingController languageSpokenTextEditingController= TextEditingController();
-  TextEditingController religionTextEditingController= TextEditingController();
-  TextEditingController ethnicityTextEditingController= TextEditingController();
+  TextEditingController nationalityTextEditingController = TextEditingController();
+  TextEditingController educationTextEditingController = TextEditingController();
+  TextEditingController languageSpokenTextEditingController = TextEditingController();
+  TextEditingController religionTextEditingController = TextEditingController();
+  TextEditingController ethnicityTextEditingController = TextEditingController();
 
   @override
-  Widget build(BuildContext context)
-  {
-    return  Scaffold(
+  Widget build(BuildContext context) {
+    return Scaffold(
       body: SingleChildScrollView(
         child: Center(
           child: Column(
             children: [
 
               const SizedBox(
-                height:80,
+                height: 80,
               ),
 
-              const  Text(
+              const Text(
                 "Create Account",
                 style: TextStyle(
                   fontSize: 34,
-                  color:Colors.blue,
+                  color: Colors.blue,
                   fontWeight: FontWeight.bold,
                 ),
               ),
 
               const SizedBox(
-                height:10,
+                height: 10,
               ),
 
-              const  Text(
+              const Text(
                 "and get started now",
                 style: TextStyle(
                   fontSize: 23,
-                  color:Colors.white60,
+                  color: Colors.white60,
                   fontWeight: FontWeight.bold,
                 ),
               ),
 
               const SizedBox(
-                height:14,
+                height: 14,
               ),
 
               //select image circle avatar
               GestureDetector(
-                onTap: ()
-                {
+                onTap: () {
 
                 },
                 child: const CircleAvatar(
-                  radius:80,
+                  radius: 80,
                   backgroundImage: AssetImage(
-                    "images/kama_avatar.png"
+                      "images/kama_avatar.png"
                   ),
                   backgroundColor: Colors.black,
                 ),
               ),
 
               const SizedBox(
-                height:25,
+                height: 25,
               ),
 
               //********** PERSONAL INFO *****************
@@ -115,12 +112,15 @@ class _RegistrationScreenState extends State<RegistrationScreen>
               ),
 
               const SizedBox(
-                height:8,
+                height: 8,
               ),
 
               //name section
               SizedBox(
-                width:MediaQuery.of(context).size.width-20,
+                width: MediaQuery
+                    .of(context)
+                    .size
+                    .width - 20,
                 child: CustomTextFieldWidget(
                   editingController: nameTextEditingController,
                   labelText: "Name",
@@ -130,12 +130,15 @@ class _RegistrationScreenState extends State<RegistrationScreen>
               ),
 
               const SizedBox(
-                height:18,
+                height: 18,
               ),
 
               //email section
               SizedBox(
-                width:MediaQuery.of(context).size.width-20,
+                width: MediaQuery
+                    .of(context)
+                    .size
+                    .width - 20,
                 child: CustomTextFieldWidget(
                   editingController: emailTextEditingController,
                   labelText: "Email",
@@ -145,12 +148,15 @@ class _RegistrationScreenState extends State<RegistrationScreen>
               ),
 
               const SizedBox(
-                height:18,
+                height: 18,
               ),
 
               //password section
               SizedBox(
-                width: MediaQuery.of(context).size.width-20,
+                width: MediaQuery
+                    .of(context)
+                    .size
+                    .width - 20,
                 child: CustomTextFieldWidget(
                   editingController: passwordTextEditingController,
                   labelText: "Password",
@@ -160,12 +166,15 @@ class _RegistrationScreenState extends State<RegistrationScreen>
               ),
 
               const SizedBox(
-                height:18,
+                height: 18,
               ),
 
               //age section
               SizedBox(
-                width: MediaQuery.of(context).size.width-20,
+                width: MediaQuery
+                    .of(context)
+                    .size
+                    .width - 20,
                 child: CustomTextFieldWidget(
                   editingController: ageTextEditingController,
                   labelText: "Age",
@@ -175,12 +184,15 @@ class _RegistrationScreenState extends State<RegistrationScreen>
               ),
 
               const SizedBox(
-                height:18,
+                height: 18,
               ),
 
               //phoneNo section
               SizedBox(
-                width:MediaQuery.of(context).size.width-20,
+                width: MediaQuery
+                    .of(context)
+                    .size
+                    .width - 20,
                 child: CustomTextFieldWidget(
                   editingController: phoneNoTextEditingController,
                   labelText: "Phone Number",
@@ -190,12 +202,15 @@ class _RegistrationScreenState extends State<RegistrationScreen>
               ),
 
               const SizedBox(
-                height:18,
+                height: 18,
               ),
 
               //city section
               SizedBox(
-                width:MediaQuery.of(context).size.width-20,
+                width: MediaQuery
+                    .of(context)
+                    .size
+                    .width - 20,
                 child: CustomTextFieldWidget(
                   editingController: cityTextEditingController,
                   labelText: "City",
@@ -205,12 +220,15 @@ class _RegistrationScreenState extends State<RegistrationScreen>
               ),
 
               const SizedBox(
-                height:18,
+                height: 18,
               ),
 
               //country section
               SizedBox(
-                width:MediaQuery.of(context).size.width-20,
+                width: MediaQuery
+                    .of(context)
+                    .size
+                    .width - 20,
                 child: CustomTextFieldWidget(
                   editingController: countryTextEditingController,
                   labelText: "Country",
@@ -220,12 +238,15 @@ class _RegistrationScreenState extends State<RegistrationScreen>
               ),
 
               const SizedBox(
-                height:18,
+                height: 18,
               ),
 
               //profileHeading section
               SizedBox(
-                width:MediaQuery.of(context).size.width-20,
+                width: MediaQuery
+                    .of(context)
+                    .size
+                    .width - 20,
                 child: CustomTextFieldWidget(
                   editingController: profileHeadingTextEditingController,
                   labelText: "Profile",
@@ -235,12 +256,15 @@ class _RegistrationScreenState extends State<RegistrationScreen>
               ),
 
               const SizedBox(
-                height:18,
+                height: 18,
               ),
 
               //lookingForInaPartner
               SizedBox(
-                width:MediaQuery.of(context).size.width-20,
+                width: MediaQuery
+                    .of(context)
+                    .size
+                    .width - 20,
                 child: CustomTextFieldWidget(
                   editingController: lookingForInaPartnerTextEditingController,
                   labelText: "Describe Your Ideal Mate",
@@ -250,10 +274,10 @@ class _RegistrationScreenState extends State<RegistrationScreen>
               ),
 
               const SizedBox(
-                height:18,
+                height: 18,
               ),
 
-               //********* Appearance *********
+              //********* Appearance *********
               const Text("Physical Stats:",
                 style: TextStyle(
                   fontSize: 20,
@@ -262,12 +286,15 @@ class _RegistrationScreenState extends State<RegistrationScreen>
               ),
 
               const SizedBox(
-                height:8,
+                height: 8,
               ),
 
               //height section
               SizedBox(
-                width:MediaQuery.of(context).size.width-20,
+                width: MediaQuery
+                    .of(context)
+                    .size
+                    .width - 20,
                 child: CustomTextFieldWidget(
                   editingController: heightTextEditingController,
                   labelText: "Height",
@@ -277,12 +304,15 @@ class _RegistrationScreenState extends State<RegistrationScreen>
               ),
 
               const SizedBox(
-                height:18,
+                height: 18,
               ),
 
               //weight section
               SizedBox(
-                width:MediaQuery.of(context).size.width-20,
+                width: MediaQuery
+                    .of(context)
+                    .size
+                    .width - 20,
                 child: CustomTextFieldWidget(
                   editingController: weightTextEditingController,
                   labelText: "Weight",
@@ -292,12 +322,15 @@ class _RegistrationScreenState extends State<RegistrationScreen>
               ),
 
               const SizedBox(
-                height:18,
+                height: 18,
               ),
 
               //body type section
               SizedBox(
-                width:MediaQuery.of(context).size.width-20,
+                width: MediaQuery
+                    .of(context)
+                    .size
+                    .width - 20,
                 child: CustomTextFieldWidget(
                   editingController: bodyTypeTextEditingController,
                   labelText: "Body Type",
@@ -307,7 +340,7 @@ class _RegistrationScreenState extends State<RegistrationScreen>
               ),
 
               const SizedBox(
-                height:18,
+                height: 18,
               ),
 
               //********* Lifestyle *********
@@ -319,12 +352,15 @@ class _RegistrationScreenState extends State<RegistrationScreen>
               ),
 
               const SizedBox(
-                height:8,
+                height: 8,
               ),
 
               //drink section
               SizedBox(
-                width:MediaQuery.of(context).size.width-20,
+                width: MediaQuery
+                    .of(context)
+                    .size
+                    .width - 20,
                 child: CustomTextFieldWidget(
                   editingController: drinkTextEditingController,
                   labelText: "Alcohol Consumption",
@@ -334,12 +370,15 @@ class _RegistrationScreenState extends State<RegistrationScreen>
               ),
 
               const SizedBox(
-                height:18,
+                height: 18,
               ),
 
               //smoking section
               SizedBox(
-                width:MediaQuery.of(context).size.width-20,
+                width: MediaQuery
+                    .of(context)
+                    .size
+                    .width - 20,
                 child: CustomTextFieldWidget(
                   editingController: smokingTextEditingController,
                   labelText: "Smoker?",
@@ -349,12 +388,15 @@ class _RegistrationScreenState extends State<RegistrationScreen>
               ),
 
               const SizedBox(
-                height:18,
+                height: 18,
               ),
 
               //marital status section
               SizedBox(
-                width:MediaQuery.of(context).size.width-20,
+                width: MediaQuery
+                    .of(context)
+                    .size
+                    .width - 20,
                 child: CustomTextFieldWidget(
                   editingController: maritalStatusTextEditingController,
                   labelText: "Marital Status",
@@ -364,12 +406,15 @@ class _RegistrationScreenState extends State<RegistrationScreen>
               ),
 
               const SizedBox(
-                height:18,
+                height: 18,
               ),
 
               //have children section
               SizedBox(
-                width:MediaQuery.of(context).size.width-20,
+                width: MediaQuery
+                    .of(context)
+                    .size
+                    .width - 20,
                 child: CustomTextFieldWidget(
                   editingController: haveChildrenTextEditingController,
                   labelText: "Are you a parent?",
@@ -379,12 +424,15 @@ class _RegistrationScreenState extends State<RegistrationScreen>
               ),
 
               const SizedBox(
-                height:18,
+                height: 18,
               ),
 
               //number of children section
               SizedBox(
-                width:MediaQuery.of(context).size.width-20,
+                width: MediaQuery
+                    .of(context)
+                    .size
+                    .width - 20,
                 child: CustomTextFieldWidget(
                   editingController: noOfChildrenTextEditingController,
                   labelText: "Number of children?-if any",
@@ -394,12 +442,15 @@ class _RegistrationScreenState extends State<RegistrationScreen>
               ),
 
               const SizedBox(
-                height:18,
+                height: 18,
               ),
 
               //profession section
               SizedBox(
-                width:MediaQuery.of(context).size.width-20,
+                width: MediaQuery
+                    .of(context)
+                    .size
+                    .width - 20,
                 child: CustomTextFieldWidget(
                   editingController: professionTextEditingController,
                   labelText: "Profession",
@@ -409,12 +460,15 @@ class _RegistrationScreenState extends State<RegistrationScreen>
               ),
 
               const SizedBox(
-                height:18,
+                height: 18,
               ),
 
               //employment section
               SizedBox(
-                width:MediaQuery.of(context).size.width-20,
+                width: MediaQuery
+                    .of(context)
+                    .size
+                    .width - 20,
                 child: CustomTextFieldWidget(
                   editingController: employmentStatusTextEditingController,
                   labelText: "Employment Status",
@@ -424,13 +478,16 @@ class _RegistrationScreenState extends State<RegistrationScreen>
               ),
 
               const SizedBox(
-                height:18,
+                height: 18,
               ),
 
 
               //income section
               SizedBox(
-                width:MediaQuery.of(context).size.width-20,
+                width: MediaQuery
+                    .of(context)
+                    .size
+                    .width - 20,
                 child: CustomTextFieldWidget(
                   editingController: incomeTextEditingController,
                   labelText: "Yearly Income",
@@ -440,12 +497,15 @@ class _RegistrationScreenState extends State<RegistrationScreen>
               ),
 
               const SizedBox(
-                height:18,
+                height: 18,
               ),
 
-             //living situation section
+              //living situation section
               SizedBox(
-                width:MediaQuery.of(context).size.width-20,
+                width: MediaQuery
+                    .of(context)
+                    .size
+                    .width - 20,
                 child: CustomTextFieldWidget(
                   editingController: livingSituationTextEditingController,
                   labelText: "Living situation",
@@ -455,12 +515,15 @@ class _RegistrationScreenState extends State<RegistrationScreen>
               ),
 
               const SizedBox(
-                height:18,
+                height: 18,
               ),
 
               //willing to relocate section
               SizedBox(
-                width:MediaQuery.of(context).size.width-20,
+                width: MediaQuery
+                    .of(context)
+                    .size
+                    .width - 20,
                 child: CustomTextFieldWidget(
                   editingController: willingToRelocateTextEditingController,
                   labelText: "Willing to relocate for a new found love?",
@@ -470,12 +533,15 @@ class _RegistrationScreenState extends State<RegistrationScreen>
               ),
 
               const SizedBox(
-                height:18,
+                height: 18,
               ),
 
               //relationship you are looking for
               SizedBox(
-                width:MediaQuery.of(context).size.width-20,
+                width: MediaQuery
+                    .of(context)
+                    .size
+                    .width - 20,
                 child: CustomTextFieldWidget(
                   editingController: relationshipYouAreLookingForTextEditingController,
                   labelText: "Type of relationship you are looking for",
@@ -485,7 +551,7 @@ class _RegistrationScreenState extends State<RegistrationScreen>
               ),
 
               const SizedBox(
-                height:18,
+                height: 18,
               ),
 
               // ********* Background-Culture values *********
@@ -497,12 +563,15 @@ class _RegistrationScreenState extends State<RegistrationScreen>
               ),
 
               const SizedBox(
-                height:8,
+                height: 8,
               ),
 
               // nationality section
               SizedBox(
-                width:MediaQuery.of(context).size.width-20,
+                width: MediaQuery
+                    .of(context)
+                    .size
+                    .width - 20,
                 child: CustomTextFieldWidget(
                   editingController: nationalityTextEditingController,
                   labelText: "Nationality",
@@ -512,12 +581,15 @@ class _RegistrationScreenState extends State<RegistrationScreen>
               ),
 
               const SizedBox(
-                height:18,
+                height: 18,
               ),
 
               //education section
               SizedBox(
-                width:MediaQuery.of(context).size.width-20,
+                width: MediaQuery
+                    .of(context)
+                    .size
+                    .width - 20,
                 child: CustomTextFieldWidget(
                   editingController: educationTextEditingController,
                   labelText: "Level of education",
@@ -527,12 +599,15 @@ class _RegistrationScreenState extends State<RegistrationScreen>
               ),
 
               const SizedBox(
-                height:18,
+                height: 18,
               ),
 
               //language section
               SizedBox(
-                width:MediaQuery.of(context).size.width-20,
+                width: MediaQuery
+                    .of(context)
+                    .size
+                    .width - 20,
                 child: CustomTextFieldWidget(
                   editingController: languageSpokenTextEditingController,
                   labelText: "Number of Languages spoken",
@@ -542,12 +617,15 @@ class _RegistrationScreenState extends State<RegistrationScreen>
               ),
 
               const SizedBox(
-                height:18,
+                height: 18,
               ),
 
               // religion sections
               SizedBox(
-                width:MediaQuery.of(context).size.width-20,
+                width: MediaQuery
+                    .of(context)
+                    .size
+                    .width - 20,
                 child: CustomTextFieldWidget(
                   editingController: religionTextEditingController,
                   labelText: "Religion",
@@ -557,12 +635,15 @@ class _RegistrationScreenState extends State<RegistrationScreen>
               ),
 
               const SizedBox(
-                height:18,
+                height: 18,
               ),
 
               //ethnicity section
               SizedBox(
-                width:MediaQuery.of(context).size.width-20,
+                width: MediaQuery
+                    .of(context)
+                    .size
+                    .width - 20,
                 child: CustomTextFieldWidget(
                   editingController: ethnicityTextEditingController,
                   labelText: "Ethnicity",
@@ -572,7 +653,7 @@ class _RegistrationScreenState extends State<RegistrationScreen>
               ),
 
               const SizedBox(
-                height:18,
+                height: 18,
               ),
 
             ],
@@ -581,3 +662,4 @@ class _RegistrationScreenState extends State<RegistrationScreen>
       ),
     );
   }
+}
