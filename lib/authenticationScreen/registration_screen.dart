@@ -403,7 +403,7 @@ class _RegistrationScreenState extends State<RegistrationScreen>
                 child: CustomTextFieldWidget(
                   editingController: professionTextEditingController,
                   labelText: "Profession",
-                  iconData: Icons.computer_outlined,
+                  iconData: Icons.business,
                   isObscure: false,
                 ),
               ),
