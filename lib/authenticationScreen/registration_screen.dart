@@ -106,7 +106,7 @@ class _RegistrationScreenState extends State<RegistrationScreen>
                 height:25,
               ),
 
-              //**********PERSONAL INFO *****************
+              //********** PERSONAL INFO *****************
               const Text("Enter Personal Info :",
                 style: TextStyle(
                   fontSize: 20,
@@ -253,7 +253,7 @@ class _RegistrationScreenState extends State<RegistrationScreen>
                 height:18,
               ),
 
-               //*** Appearance ***
+               //********* Appearance *********
               const Text("Physical Stats:",
                 style: TextStyle(
                   fontSize: 20,
@@ -310,7 +310,7 @@ class _RegistrationScreenState extends State<RegistrationScreen>
                 height:18,
               ),
 
-              //*** Lifestyle ***
+              //********* Lifestyle *********
               const Text("Lifestyle:",
                 style: TextStyle(
                   fontSize: 20,
@@ -488,7 +488,7 @@ class _RegistrationScreenState extends State<RegistrationScreen>
                 height:18,
               ),
 
-              // *** Background-Culture values ***
+              // ********* Background-Culture values *********
               const Text("Background/Culture :",
                 style: TextStyle(
                   fontSize: 20,
@@ -500,6 +500,35 @@ class _RegistrationScreenState extends State<RegistrationScreen>
                 height:8,
               ),
 
+              // nationality section
+              SizedBox(
+                width:MediaQuery.of(context).size.width-20,
+                child: CustomTextFieldWidget(
+                  editingController: nationalityTextEditingController,
+                  labelText: "Nationality",
+                  iconData: Icons.recent_actors_outlined,
+                  isObscure: false,
+                ),
+              ),
+
+              const SizedBox(
+                height:18,
+              ),
+
+              //education section
+              SizedBox(
+                width:MediaQuery.of(context).size.width-20,
+                child: CustomTextFieldWidget(
+                  editingController: educationTextEditingController,
+                  labelText: "Level of education",
+                  iconData: Icons.school_rounded,
+                  isObscure: false,
+                ),
+              ),
+
+              const SizedBox(
+                height:18,
+              ),
 
             ],
           ),
