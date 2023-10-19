@@ -367,6 +367,128 @@ class _RegistrationScreenState extends State<RegistrationScreen>
                 height:18,
               ),
 
+              //have children section
+              SizedBox(
+                width:MediaQuery.of(context).size.width-20,
+                child: CustomTextFieldWidget(
+                  editingController: bodyTypeTextEditingController,
+                  labelText: "Body Type",
+                  iconData: Icons.boy_outlined,
+                  isObscure: false,
+                ),
+              ),
+
+              const SizedBox(
+                height:18,
+              ),
+
+              //number of children section
+              SizedBox(
+                width:MediaQuery.of(context).size.width-20,
+                child: CustomTextFieldWidget(
+                  editingController: bodyTypeTextEditingController,
+                  labelText: "Body Type",
+                  iconData: Icons.boy_outlined,
+                  isObscure: false,
+                ),
+              ),
+
+              const SizedBox(
+                height:18,
+              ),
+
+              //profession section
+              SizedBox(
+                width:MediaQuery.of(context).size.width-20,
+                child: CustomTextFieldWidget(
+                  editingController: bodyTypeTextEditingController,
+                  labelText: "Body Type",
+                  iconData: Icons.boy_outlined,
+                  isObscure: false,
+                ),
+              ),
+
+              const SizedBox(
+                height:18,
+              ),
+
+              //employment section
+              SizedBox(
+                width:MediaQuery.of(context).size.width-20,
+                child: CustomTextFieldWidget(
+                  editingController: bodyTypeTextEditingController,
+                  labelText: "Body Type",
+                  iconData: Icons.boy_outlined,
+                  isObscure: false,
+                ),
+              ),
+
+              const SizedBox(
+                height:18,
+              ),
+
+
+              //income section
+              SizedBox(
+                width:MediaQuery.of(context).size.width-20,
+                child: CustomTextFieldWidget(
+                  editingController: bodyTypeTextEditingController,
+                  labelText: "Body Type",
+                  iconData: Icons.boy_outlined,
+                  isObscure: false,
+                ),
+              ),
+
+              const SizedBox(
+                height:18,
+              ),
+
+             //living situation section
+              SizedBox(
+                width:MediaQuery.of(context).size.width-20,
+                child: CustomTextFieldWidget(
+                  editingController: bodyTypeTextEditingController,
+                  labelText: "Body Type",
+                  iconData: Icons.boy_outlined,
+                  isObscure: false,
+                ),
+              ),
+
+              const SizedBox(
+                height:18,
+              ),
+
+              //willing to relocate section
+              SizedBox(
+                width:MediaQuery.of(context).size.width-20,
+                child: CustomTextFieldWidget(
+                  editingController: bodyTypeTextEditingController,
+                  labelText: "Body Type",
+                  iconData: Icons.boy_outlined,
+                  isObscure: false,
+                ),
+              ),
+
+              const SizedBox(
+                height:18,
+              ),
+
+              //relationship you are looking for
+              SizedBox(
+                width:MediaQuery.of(context).size.width-20,
+                child: CustomTextFieldWidget(
+                  editingController: bodyTypeTextEditingController,
+                  labelText: "Body Type",
+                  iconData: Icons.boy_outlined,
+                  isObscure: false,
+                ),
+              ),
+
+              const SizedBox(
+                height:18,
+              ),
+
+
             ],
           ),
         ),
