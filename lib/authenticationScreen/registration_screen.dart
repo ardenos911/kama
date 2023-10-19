@@ -530,6 +530,51 @@ class _RegistrationScreenState extends State<RegistrationScreen>
                 height:18,
               ),
 
+              //language section
+              SizedBox(
+                width:MediaQuery.of(context).size.width-20,
+                child: CustomTextFieldWidget(
+                  editingController: languageSpokenTextEditingController,
+                  labelText: "Number of Languages spoken",
+                  iconData: Icons.language_outlined,
+                  isObscure: false,
+                ),
+              ),
+
+              const SizedBox(
+                height:18,
+              ),
+
+              // religion section
+              SizedBox(
+                width:MediaQuery.of(context).size.width-20,
+                child: CustomTextFieldWidget(
+                  editingController: religionTextEditingController,
+                  labelText: "Religion",
+                  iconData: Icons.church,
+                  isObscure: false,
+                ),
+              ),
+
+              const SizedBox(
+                height:18,
+              ),
+
+              //ethnicity
+              SizedBox(
+                width:MediaQuery.of(context).size.width-20,
+                child: CustomTextFieldWidget(
+                  editingController: ethnicityTextEditingController,
+                  labelText: "Ethnicity",
+                  iconData: Icons.landscape_rounded,
+                  isObscure: false,
+                ),
+              ),
+
+              const SizedBox(
+                height:18,
+              ),
+
             ],
           ),
         ),
