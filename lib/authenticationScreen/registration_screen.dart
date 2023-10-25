@@ -102,6 +102,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               ),
 
               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
 
                   IconButton(
@@ -125,7 +126,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
 
                     },
                     icon: const Icon(
-                      Icons.camera_alt_outlined,
+                      Icons.camera_alt_rounded,
                       color: Colors.grey,
                     ),
                   ),
