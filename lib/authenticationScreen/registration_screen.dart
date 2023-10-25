@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
+import '../controllers/authentication_controller.dart';
 import '../widgets/custom_text_field_widget.dart';
 
 class RegistrationScreen extends StatefulWidget
@@ -51,6 +52,8 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
   //Progress Bar
   bool showProgressBar = false;
 
+  var authenticationController = AuthenticationController.authController;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -90,17 +93,44 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               ),
 
               //select image circle avatar
-              GestureDetector(
-                onTap: () {
-
-                },
-                child: const CircleAvatar(
-                  radius: 80,
-                  backgroundImage: AssetImage(
-                      "images/kama_avatar.png"
-                  ),
-                  backgroundColor: Colors.black,
+              const CircleAvatar(
+                radius: 80,
+                backgroundImage: AssetImage(
+                    "images/kama_avatar.png"
                 ),
+                backgroundColor: Colors.black,
+              ),
+
+              Row(
+                children: [
+
+                  IconButton(
+                    onPressed: ()
+                    {
+
+                    },
+                    icon: const Icon(
+                      Icons.image_outlined,
+                      color: Colors.grey,
+                    ),
+                  ),
+
+                  const SizedBox(
+                    height: 12,
+                  ),
+
+                  IconButton(
+                    onPressed: ()
+                    {
+
+                    },
+                    icon: const Icon(
+                      Icons.camera_alt_outlined,
+                      color: Colors.grey,
+                    ),
+                  ),
+
+                ],
               ),
 
               const SizedBox(
