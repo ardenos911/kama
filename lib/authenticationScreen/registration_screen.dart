@@ -69,7 +69,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               const Text(
                 "Create Account",
                 style: TextStyle(
-                  fontSize: 34,
+                  fontSize: 30,
                   color: Colors.blue,
                   fontWeight: FontWeight.bold,
                 ),
@@ -82,8 +82,8 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               const Text(
                 "and get started now",
                 style: TextStyle(
-                  fontSize: 23,
-                  color: Colors.white60,
+                  fontSize: 18,
+                  color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -157,7 +157,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 width: MediaQuery
                     .of(context)
                     .size
-                    .width - 20,
+                    .width - 40,
                 child: CustomTextFieldWidget(
                   editingController: nameTextEditingController,
                   labelText: "Name",
@@ -175,7 +175,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 width: MediaQuery
                     .of(context)
                     .size
-                    .width - 20,
+                    .width - 40,
                 child: CustomTextFieldWidget(
                   editingController: emailTextEditingController,
                   labelText: "Email",
@@ -193,7 +193,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 width: MediaQuery
                     .of(context)
                     .size
-                    .width - 20,
+                    .width - 40,
                 child: CustomTextFieldWidget(
                   editingController: passwordTextEditingController,
                   labelText: "Password",
@@ -211,7 +211,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 width: MediaQuery
                     .of(context)
                     .size
-                    .width - 20,
+                    .width - 40,
                 child: CustomTextFieldWidget(
                   editingController: ageTextEditingController,
                   labelText: "Age",
@@ -229,7 +229,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 width: MediaQuery
                     .of(context)
                     .size
-                    .width - 20,
+                    .width - 40,
                 child: CustomTextFieldWidget(
                   editingController: phoneNoTextEditingController,
                   labelText: "Phone Number",
@@ -247,7 +247,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 width: MediaQuery
                     .of(context)
                     .size
-                    .width - 20,
+                    .width - 40,
                 child: CustomTextFieldWidget(
                   editingController: cityTextEditingController,
                   labelText: "City",
@@ -265,7 +265,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 width: MediaQuery
                     .of(context)
                     .size
-                    .width - 20,
+                    .width - 40,
                 child: CustomTextFieldWidget(
                   editingController: countryTextEditingController,
                   labelText: "Country",
@@ -283,7 +283,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 width: MediaQuery
                     .of(context)
                     .size
-                    .width - 20,
+                    .width - 40,
                 child: CustomTextFieldWidget(
                   editingController: profileHeadingTextEditingController,
                   labelText: "Profile",
@@ -301,7 +301,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 width: MediaQuery
                     .of(context)
                     .size
-                    .width - 20,
+                    .width - 40,
                 child: CustomTextFieldWidget(
                   editingController: lookingForInaPartnerTextEditingController,
                   labelText: "Describe Your Ideal Mate",
@@ -331,7 +331,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 width: MediaQuery
                     .of(context)
                     .size
-                    .width - 20,
+                    .width - 40,
                 child: CustomTextFieldWidget(
                   editingController: heightTextEditingController,
                   labelText: "Height",
@@ -349,7 +349,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 width: MediaQuery
                     .of(context)
                     .size
-                    .width - 20,
+                    .width - 40,
                 child: CustomTextFieldWidget(
                   editingController: weightTextEditingController,
                   labelText: "Weight",
@@ -367,7 +367,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 width: MediaQuery
                     .of(context)
                     .size
-                    .width - 20,
+                    .width - 40,
                 child: CustomTextFieldWidget(
                   editingController: bodyTypeTextEditingController,
                   labelText: "Body Type",
@@ -397,7 +397,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 width: MediaQuery
                     .of(context)
                     .size
-                    .width - 20,
+                    .width - 40,
                 child: CustomTextFieldWidget(
                   editingController: drinkTextEditingController,
                   labelText: "Alcohol Consumption",
@@ -415,7 +415,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 width: MediaQuery
                     .of(context)
                     .size
-                    .width - 20,
+                    .width - 40,
                 child: CustomTextFieldWidget(
                   editingController: smokingTextEditingController,
                   labelText: "Smoker?",
@@ -433,7 +433,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 width: MediaQuery
                     .of(context)
                     .size
-                    .width - 20,
+                    .width - 40,
                 child: CustomTextFieldWidget(
                   editingController: maritalStatusTextEditingController,
                   labelText: "Marital Status",
@@ -451,7 +451,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 width: MediaQuery
                     .of(context)
                     .size
-                    .width - 20,
+                    .width - 40,
                 child: CustomTextFieldWidget(
                   editingController: haveChildrenTextEditingController,
                   labelText: "Are you a parent?",
@@ -469,10 +469,10 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 width: MediaQuery
                     .of(context)
                     .size
-                    .width - 20,
+                    .width - 40,
                 child: CustomTextFieldWidget(
                   editingController: noOfChildrenTextEditingController,
-                  labelText: "Number of children?-if any",
+                  labelText: "Number of children?",
                   iconData: Icons.child_friendly,
                   isObscure: false,
                 ),
@@ -487,7 +487,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 width: MediaQuery
                     .of(context)
                     .size
-                    .width - 20,
+                    .width - 40,
                 child: CustomTextFieldWidget(
                   editingController: professionTextEditingController,
                   labelText: "Profession",
@@ -505,7 +505,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 width: MediaQuery
                     .of(context)
                     .size
-                    .width - 20,
+                    .width - 40,
                 child: CustomTextFieldWidget(
                   editingController: employmentStatusTextEditingController,
                   labelText: "Employment Status",
@@ -524,7 +524,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 width: MediaQuery
                     .of(context)
                     .size
-                    .width - 20,
+                    .width - 40,
                 child: CustomTextFieldWidget(
                   editingController: incomeTextEditingController,
                   labelText: "Yearly Income",
@@ -542,7 +542,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 width: MediaQuery
                     .of(context)
                     .size
-                    .width - 20,
+                    .width - 40,
                 child: CustomTextFieldWidget(
                   editingController: livingSituationTextEditingController,
                   labelText: "Living situation",
@@ -560,10 +560,10 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 width: MediaQuery
                     .of(context)
                     .size
-                    .width - 20,
+                    .width - 40,
                 child: CustomTextFieldWidget(
                   editingController: willingToRelocateTextEditingController,
-                  labelText: "Willing to relocate for a new found love?",
+                  labelText: "Willing to relocate for love?",
                   iconData: Icons.airplanemode_active_rounded,
                   isObscure: false,
                 ),
@@ -578,10 +578,10 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 width: MediaQuery
                     .of(context)
                     .size
-                    .width - 20,
+                    .width - 40,
                 child: CustomTextFieldWidget(
                   editingController: relationshipYouAreLookingForTextEditingController,
-                  labelText: "Type of relationship you are looking for",
+                  labelText: "Type of relationship desired",
                   iconData: Icons.people_alt_sharp,
                   isObscure: false,
                 ),
@@ -608,7 +608,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 width: MediaQuery
                     .of(context)
                     .size
-                    .width - 20,
+                    .width - 40,
                 child: CustomTextFieldWidget(
                   editingController: nationalityTextEditingController,
                   labelText: "Nationality",
@@ -626,7 +626,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 width: MediaQuery
                     .of(context)
                     .size
-                    .width - 20,
+                    .width - 40,
                 child: CustomTextFieldWidget(
                   editingController: educationTextEditingController,
                   labelText: "Level of education",
@@ -644,7 +644,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 width: MediaQuery
                     .of(context)
                     .size
-                    .width - 20,
+                    .width - 40,
                 child: CustomTextFieldWidget(
                   editingController: languageSpokenTextEditingController,
                   labelText: "Number of Languages spoken",
@@ -662,7 +662,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 width: MediaQuery
                     .of(context)
                     .size
-                    .width - 20,
+                    .width - 40,
                 child: CustomTextFieldWidget(
                   editingController: religionTextEditingController,
                   labelText: "Religion",
@@ -680,7 +680,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 width: MediaQuery
                     .of(context)
                     .size
-                    .width - 20,
+                    .width - 40,
                 child: CustomTextFieldWidget(
                   editingController: ethnicityTextEditingController,
                   labelText: "Ethnicity",
@@ -695,8 +695,8 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
 
               //create account button
               Container(
-                width: MediaQuery.of(context).size.width-20,
-                height:55,
+                width: MediaQuery.of(context).size.width-40,
+                height:50,
                 decoration: const BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.all(
@@ -712,7 +712,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     child: Text(
                       "Create Account",
                       style: TextStyle(
-                        fontSize: 22,
+                        fontSize: 18,
                         color: Colors.black,
                         fontWeight: FontWeight.bold,
                       ),
@@ -731,7 +731,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 children:[
                   const Text("   Already have an account?  ",
                     style: TextStyle(
-                      fontSize: 15,
+                      fontSize: 11,
                       color: Colors.lightBlue,
                     ),
                   ),
@@ -743,7 +743,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     child: const Text(
                       "Login Here",
                       style: TextStyle(
-                        fontSize: 17,
+                        fontSize: 13,
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
                       ),

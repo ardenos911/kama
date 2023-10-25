@@ -29,12 +29,12 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
              Image.asset(
                  "images/kama_logo.png",
-                  width:300,
+                  width:200,
              ),
             const Text(
               "Welcome to Kama Dating",
               style:TextStyle(
-                fontSize: 22,
+                fontSize: 19,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -44,17 +44,19 @@ class _LoginScreenState extends State<LoginScreen> {
             const Text(
               "Please login to start your journey",
               style:TextStyle(
-                fontSize: 16,
+                fontSize: 12,
                 fontWeight: FontWeight.bold,
+                color:Colors.lightBlue,
               ),
             ),
             const SizedBox(
-              height:29,
+              height:20,
             ),
 
             //email section
             SizedBox(
-              width:MediaQuery.of(context).size.width-20,
+              height:50,
+              width:MediaQuery.of(context).size.width-40,
               child: CustomTextFieldWidget(
                 editingController: emailTextEditingController,
                 labelText: "Email",
@@ -64,12 +66,13 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
 
             const SizedBox(
-              height:15,
+              height:19,
             ),
 
             //password section
             SizedBox(
-              width: MediaQuery.of(context).size.width-20,
+              height:50,
+              width: MediaQuery.of(context).size.width-40,
               child: CustomTextFieldWidget(
                 editingController: passwordTextEditingController,
                 labelText: "Password",
@@ -79,17 +82,17 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
 
             const SizedBox(
-              height:15,
+              height:20,
             ),
 
             //Login Button
             Container(
-              width: MediaQuery.of(context).size.width-20,
+              width: MediaQuery.of(context).size.width-60,
               height:55,
               decoration: const BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.all(
-                  Radius.circular(25),
+                  Radius.circular(30),
                 ),
               ),
               child: InkWell(
@@ -101,7 +104,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   child: Text(
                     "Login",
                     style: TextStyle(
-                      fontSize: 22,
+                      fontSize: 18,
                       color: Colors.black,
                       fontWeight: FontWeight.bold,
                     ),
@@ -111,7 +114,7 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
 
             const SizedBox(
-              height:15,
+              height:30,
             ),
 
             //dont have an account -create here string
@@ -120,7 +123,7 @@ class _LoginScreenState extends State<LoginScreen> {
               children:[
                const Text("   Don't have an account?  ",
                 style: TextStyle(
-                  fontSize: 15,
+                  fontSize: 11,
                   color: Colors.lightBlue,
                 ),
                 ),
@@ -130,9 +133,9 @@ class _LoginScreenState extends State<LoginScreen> {
                     Get.to(RegistrationScreen());
                   },
                   child: const Text(
-                    "Register an Account Here",
+                    "Register Here",
                       style: TextStyle(
-                      fontSize: 17,
+                      fontSize: 12,
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
                     ),
