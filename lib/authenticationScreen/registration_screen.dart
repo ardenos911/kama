@@ -108,26 +108,28 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   IconButton(
                     onPressed: ()
                     {
-
+                        authenticationController.pickImageFileFromGallery();
                     },
                     icon: const Icon(
                       Icons.image_outlined,
                       color: Colors.grey,
+                      size:35,
                     ),
                   ),
 
                   const SizedBox(
-                    height: 12,
+                    height: 20,
                   ),
 
                   IconButton(
                     onPressed: ()
                     {
-
+                      authenticationController.captureImageFromPhoneCamera();
                     },
                     icon: const Icon(
                       Icons.camera_alt_rounded,
                       color: Colors.grey,
+                      size:35,
                     ),
                   ),
 
