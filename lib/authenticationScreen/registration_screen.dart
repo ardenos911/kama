@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 import '../widgets/custom_text_field_widget.dart';
 
@@ -46,6 +48,8 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
   TextEditingController languageSpokenTextEditingController = TextEditingController();
   TextEditingController religionTextEditingController = TextEditingController();
   TextEditingController ethnicityTextEditingController = TextEditingController();
+  //Progress Bar
+  bool showProgressBar = false;
 
   @override
   Widget build(BuildContext context) {
@@ -653,7 +657,78 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               ),
 
               const SizedBox(
-                height: 18,
+                height: 30,
+              ),
+
+              //create account button
+              Container(
+                width: MediaQuery.of(context).size.width-20,
+                height:55,
+                decoration: const BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(25),
+                  ),
+                ),
+                child: InkWell(
+                  onTap: ()
+                  {
+
+                  },
+                  child: const Center(
+                    child: Text(
+                      "Create Account",
+                      style: TextStyle(
+                        fontSize: 22,
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+
+              const SizedBox(
+                height:15,
+              ),
+
+              //already have an account -login here string
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children:[
+                  const Text("   Already have an account?  ",
+                    style: TextStyle(
+                      fontSize: 15,
+                      color: Colors.lightBlue,
+                    ),
+                  ),
+                  InkWell(
+                    onTap: ()
+                    {
+                      Get.back();
+                    },
+                    child: const Text(
+                      "Login Here",
+                      style: TextStyle(
+                        fontSize: 17,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+
+              const SizedBox(
+                height:15,
+              ),
+
+              showProgressBar == true ? const CircularProgressIndicator(
+                valueColor: AlwaysStoppedAnimation<Color>(Colors.redAccent),
+              ) : Container(),
+
+              const SizedBox(
+                height:26,
               ),
 
             ],
