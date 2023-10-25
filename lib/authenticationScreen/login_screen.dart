@@ -144,9 +144,14 @@ class _LoginScreenState extends State<LoginScreen> {
             const SizedBox(
               height:15,
             ),
+
             showProgressBar == true ? const CircularProgressIndicator(
               valueColor: AlwaysStoppedAnimation<Color>(Colors.redAccent),
             ) : Container(),
+
+            const SizedBox(
+              height:26,
+            ),
           ],
         ),
        ),
