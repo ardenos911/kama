@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "910409894361",
+    "project_id": "kama-9ee34",
+    "storage_bucket": "kama-9ee34.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:910409894361:android:3ced3e1285bce457d271c8",
+        "android_client_info": {
+          "package_name": "com.peachtree.kama_love"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgPqMHpnHIeI75_Rk0xeZNhQ_QyT1tZjw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
