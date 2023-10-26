@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
@@ -95,13 +96,30 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               ),
 
               //select image circle avatar
+              authenticationController.imageFile == null ?
               const CircleAvatar(
                 radius: 80,
                 backgroundImage: AssetImage(
                     "images/kama_avatar.png"
                 ),
                 backgroundColor: Colors.black,
-              ),
+              ) :
+          Container(
+          width: 180,
+          height: 180,
+          decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          color: Colors.grey,
+          image: DecorationImage(
+          fit: BoxFit.fitHeight,
+          image: FileImage(
+          File(
+          authenticationController.imageFile!.path,
+          ),
+        ),
+       )
+     ),
+          ),
 
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
