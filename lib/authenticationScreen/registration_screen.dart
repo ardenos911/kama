@@ -85,6 +85,8 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   fontSize: 18,
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
+                  fontStyle: FontStyle.italic,
+
                 ),
               ),
 
@@ -112,8 +114,8 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     },
                     icon: const Icon(
                       Icons.image_outlined,
-                      color: Colors.grey,
-                      size:35,
+                      color: Colors.deepPurpleAccent,
+                      size:40,
                     ),
                   ),
 
@@ -128,8 +130,8 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     },
                     icon: const Icon(
                       Icons.camera_alt_rounded,
-                      color: Colors.grey,
-                      size:35,
+                      color: Colors.deepPurpleAccent,
+                      size:40,
                     ),
                   ),
 
