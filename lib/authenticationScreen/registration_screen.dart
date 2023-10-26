@@ -106,9 +106,9 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 children: [
 
                   IconButton(
-                    onPressed: ()
+                    onPressed: () async
                     {
-                        authenticationController.pickImageFileFromGallery();
+                       await authenticationController.pickImageFileFromGallery();
                     },
                     icon: const Icon(
                       Icons.image_outlined,
