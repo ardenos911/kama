@@ -117,7 +117,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
           authenticationController.imageFile!.path,
           ),
         ),
-       )
+       ),
      ),
           ),
 
@@ -129,6 +129,9 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     onPressed: () async
                     {
                        await authenticationController.pickImageFileFromGallery();
+                       setState(() {
+                         authenticationController.imageFile;
+                       });
                     },
                     icon: const Icon(
                       Icons.image_outlined,
@@ -145,6 +148,9 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     onPressed: () async
                     {
                       await authenticationController.captureImageFromPhoneCamera();
+                      setState(() {
+                        authenticationController.imageFile;
+                      });
                     },
                     icon: const Icon(
                       Icons.camera_alt_rounded,
