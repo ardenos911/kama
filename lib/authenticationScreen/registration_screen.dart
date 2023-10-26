@@ -120,13 +120,13 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   ),
 
                   const SizedBox(
-                    height: 20,
+                    height: 30,
                   ),
 
                   IconButton(
-                    onPressed: ()
+                    onPressed: () async
                     {
-                      authenticationController.captureImageFromPhoneCamera();
+                      await authenticationController.captureImageFromPhoneCamera();
                     },
                     icon: const Icon(
                       Icons.camera_alt_rounded,
