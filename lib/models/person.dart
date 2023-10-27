@@ -1,8 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-class Person
-{
-   //personal info
+class Person {
+   //personal info-correspond to labelText: field of every customTextWidget() in registration_screen
   String? uid;
   String? imageProfile;
   String? email;
