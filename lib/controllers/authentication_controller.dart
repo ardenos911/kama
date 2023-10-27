@@ -26,10 +26,6 @@ class AuthenticationController extends GetxController
 
     pickedFile = Rx<File?>(File(imageFile!.path));
 
-    if(imageFile != null)
-    {
-      Get.snackbar("Profile Image", "you have successfully picked your profile image from the phone galley.");
-    }
 
   }
 
@@ -43,13 +39,8 @@ class AuthenticationController extends GetxController
       Get.snackbar("Profile Image", "you have successfully captured your profile image using camera.");
     }
 
-    pickedFile = Rx<File?>(File(imageFile!.path));
+     pickedFile = Rx<File?>(File(imageFile!.path));
 
-
-    if(imageFile != null)
-    {
-      Get.snackbar("Profile Image", "you have successfully captured your profile image using phone camera.");
-    }
 
   }
 
