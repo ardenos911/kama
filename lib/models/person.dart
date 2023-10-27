@@ -41,8 +41,8 @@ class Person {
   String? religion;
   String? ethnicity;
 
-    //constructor-named parameters with no default value set-
-  // they are NULL value-but that's ok since we said they can be null above ( i.e. String? uid,)
+    //constructor has named parameters with no default value set-
+  // so they are NULL value-but that's ok since we said they can be null above ( i.e. String? uid,)
   Person({
     //personal info
     this.uid,
@@ -85,6 +85,9 @@ class Person {
     this.ethnicity,
   });
 
+  //this static method returns an object of type Person-call it (after importing the class)
+  // by using this syntax below
+  // Person.fromDataSnapshot();-constructor is then auto populated from Firestore DB
   static Person fromDataSnapshot(DocumentSnapshot snapshot)
   {
     var dataSnapshot = snapshot.data() as Map<String, dynamic>;
