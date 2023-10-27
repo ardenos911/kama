@@ -134,7 +134,9 @@ class Person {
       ethnicity: dataSnapshot["ethnicity"],
     );
   }
-
+  //in Json format everything is a String-create an object of the Person class
+  //to access this function since it's not Static- i.e. Person myPersonObj = Person()
+  // myPersonObj.toJson(); --wil return ALL Json below...
   Map<String, dynamic> toJson()=>
       {
         //personal info
