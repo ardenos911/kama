@@ -41,7 +41,8 @@ class Person {
   String? religion;
   String? ethnicity;
 
-    //constructor
+    //constructor-named parameters with no default value set-
+  // they are NULL value-but that's ok we said they can be null above ( i.e. String? uid,)
   Person({
     //personal info
     this.uid,
