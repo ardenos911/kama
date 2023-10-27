@@ -42,7 +42,7 @@ class Person {
   String? ethnicity;
 
     //constructor-named parameters with no default value set-
-  // they are NULL value-but that's ok we said they can be null above ( i.e. String? uid,)
+  // they are NULL value-but that's ok since we said they can be null above ( i.e. String? uid,)
   Person({
     //personal info
     this.uid,
@@ -131,6 +131,49 @@ class Person {
       ethnicity: dataSnapshot["ethnicity"],
     );
   }
+
+  Map<String, dynamic> toJson()=>
+      {
+        //personal info
+        "uid": uid,
+        "imageProfile": imageProfile,
+        "email": email,
+        "password": password,
+        "name": name,
+        "age": age,
+        "gender": gender,
+        "phoneNo": phoneNo,
+        "city": city,
+        "country": country,
+        "profileHeading": profileHeading,
+        "lookingForInaPartner": lookingForInaPartner,
+        "publishedDateTime": publishedDateTime,
+
+        //Appearance
+        "height": height,
+        "weight": weight,
+        "bodyType": bodyType,
+
+        //Life style
+        "drink": drink,
+        "smoke": smoke,
+        "martialStatus": martialStatus,
+        "haveChildren": haveChildren,
+        "noOfChildren": noOfChildren,
+        "profession": profession,
+        "employmentStatus": employmentStatus,
+        "income": income,
+        "livingSituation": livingSituation,
+        "willingToRelocate": willingToRelocate,
+        "relationshipYouAreLookingFor": relationshipYouAreLookingFor,
+
+        //Background - Cultural Values
+        "nationality": nationality,
+        "education": education,
+        "languageSpoken": languageSpoken,
+        "religion": religion,
+        "ethnicity": ethnicity,
+      };
 
 
 
