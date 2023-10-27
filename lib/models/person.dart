@@ -85,8 +85,53 @@ class Person
     this.ethnicity,
   });
 
+  static Person fromDataSnapshot(DocumentSnapshot snapshot)
+  {
+    var dataSnapshot = snapshot.data() as Map<String, dynamic>;
+
+    return Person(
+      //personal info
+      uid: dataSnapshot["uid"],
+      name: dataSnapshot["name"],
+      imageProfile: dataSnapshot["imageProfile"],
+      email: dataSnapshot["email"],
+      password: dataSnapshot["password"],
+      age: dataSnapshot["age"],
+      gender: dataSnapshot["gender"],
+      phoneNo: dataSnapshot["phoneNo"],
+      city: dataSnapshot["city"],
+      country: dataSnapshot["country"],
+      profileHeading: dataSnapshot["profileHeading"],
+      lookingForInaPartner: dataSnapshot["lookingForInaPartner"],
+      publishedDateTime: dataSnapshot["publishedDateTime"],
+
+      //Appearance
+      height: dataSnapshot["height"],
+      weight: dataSnapshot["weight"],
+      bodyType: dataSnapshot["bodyType"],
+
+      //Life style
+      drink: dataSnapshot["drink"],
+      smoke: dataSnapshot["smoke"],
+      martialStatus: dataSnapshot["martialStatus"],
+      haveChildren: dataSnapshot["haveChildren"],
+      noOfChildren: dataSnapshot["noOfChildren"],
+      profession: dataSnapshot["profession"],
+      employmentStatus: dataSnapshot["employmentStatus"],
+      income: dataSnapshot["income"],
+      livingSituation: dataSnapshot["livingSituation"],
+      willingToRelocate: dataSnapshot["willingToRelocate"],
+      relationshipYouAreLookingFor: dataSnapshot["relationshipYouAreLookingFor"],
+
+      //Background - Cultural Values
+      nationality: dataSnapshot["nationality"],
+      education: dataSnapshot["education"],
+      languageSpoken: dataSnapshot["languageSpoken"],
+      religion: dataSnapshot["religion"],
+      ethnicity: dataSnapshot["ethnicity"],
+    );
+  }
 
 
 
-
-}
+}// end of Person class
