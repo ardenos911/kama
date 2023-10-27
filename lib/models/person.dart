@@ -42,6 +42,49 @@ class Person
   String? religion;
   String? ethnicity;
 
+    //constructor
+  Person({
+    //personal info
+    this.uid,
+    this.imageProfile,
+    this.email,
+    this.password,
+    this.name,
+    this.age,
+    this.gender,
+    this.phoneNo,
+    this.city,
+    this.country,
+    this.profileHeading,
+    this.lookingForInaPartner,
+    this.publishedDateTime,
+
+    //Appearance
+    this.height,
+    this.weight,
+    this.bodyType,
+
+    //Life style
+    this.drink,
+    this.smoke,
+    this.martialStatus,
+    this.haveChildren,
+    this.noOfChildren,
+    this.profession,
+    this.employmentStatus,
+    this.income,
+    this.livingSituation,
+    this.willingToRelocate,
+    this.relationshipYouAreLookingFor,
+
+    //Background - Cultural Values
+    this.nationality,
+    this.education,
+    this.languageSpoken,
+    this.religion,
+    this.ethnicity,
+  });
+
 
 
 
