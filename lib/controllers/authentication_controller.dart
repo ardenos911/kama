@@ -7,6 +7,8 @@ import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:kama_love/models/person.dart' as personModel;
 
+import '../homeScreen/home_screen.dart';
+
 
 
 class AuthenticationController extends GetxController
@@ -146,7 +148,7 @@ class AuthenticationController extends GetxController
            .set(personInstance.toJson());
 
        Get.snackbar("Account Created", "Congratulations, your account has been created.");
-       //Get.to(HomeScreen());
+       Get.to(HomeScreen());
      }
      catch(errorMsg)
      {
