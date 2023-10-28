@@ -20,6 +20,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
   TextEditingController passwordTextEditingController = TextEditingController();
   TextEditingController nameTextEditingController = TextEditingController();
   TextEditingController ageTextEditingController = TextEditingController();
+  TextEditingController genderTextEditingController = TextEditingController();
   TextEditingController phoneNoTextEditingController = TextEditingController();
   TextEditingController cityTextEditingController = TextEditingController();
   TextEditingController countryTextEditingController = TextEditingController();
@@ -245,6 +246,25 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   isObscure: false,
                 ),
               ),
+
+              const SizedBox(
+                height: 18,
+              ),
+
+              //gender section
+              SizedBox(
+                width: MediaQuery
+                    .of(context)
+                    .size
+                    .width - 40,
+                child: CustomTextFieldWidget(
+                  editingController: genderTextEditingController,
+                  labelText: "Gender",
+                  iconData: Icons.boy_outlined,
+                  isObscure: false,
+                ),
+              ),
+
 
               const SizedBox(
                 height: 18,
@@ -730,9 +750,107 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   ),
                 ),
                 child: InkWell(
-                  onTap: ()
+                  onTap: () async
                   {
+                      //input validation---
+                    if(authenticationController.imageFile != null)
+                    {
+                      if(
+                      //personal info
+                      nameTextEditingController.text.trim().isNotEmpty
+                          && emailTextEditingController.text.trim().isNotEmpty
+                          && passwordTextEditingController.text.trim().isNotEmpty
+                          && ageTextEditingController.text.trim().isNotEmpty
+                          && genderTextEditingController.text.trim().isNotEmpty
+                          && phoneNoTextEditingController.text.trim().isNotEmpty
+                          && cityTextEditingController.text.trim().isNotEmpty
+                          && countryTextEditingController.text.trim().isNotEmpty
+                          && profileHeadingTextEditingController.text.trim().isNotEmpty
+                          && lookingForInaPartnerTextEditingController.text.trim().isNotEmpty &&
 
+                          //Appearance
+                          heightTextEditingController.text.trim().isNotEmpty
+                          && weightTextEditingController.text.trim().isNotEmpty
+                          && bodyTypeTextEditingController.text.trim().isNotEmpty &&
+
+                          //Life style
+                          drinkTextEditingController.text.trim().isNotEmpty
+                          && smokingTextEditingController.text.trim().isNotEmpty
+                          && maritalStatusTextEditingController.text.trim().isNotEmpty
+                          && haveChildrenTextEditingController.text.trim().isNotEmpty
+                          && noOfChildrenTextEditingController.text.trim().isNotEmpty
+                          && professionTextEditingController.text.trim().isNotEmpty
+                          && employmentStatusTextEditingController.text.trim().isNotEmpty
+                          && incomeTextEditingController.text.trim().isNotEmpty
+                          && livingSituationTextEditingController.text.trim().isNotEmpty
+                          && willingToRelocateTextEditingController.text.trim().isNotEmpty
+                          && relationshipYouAreLookingForTextEditingController.text.trim().isNotEmpty &&
+
+                          //Background - Cultural Values
+                          nationalityTextEditingController.text.trim().isNotEmpty
+                          && educationTextEditingController.text.trim().isNotEmpty
+                          && languageSpokenTextEditingController.text.trim().isNotEmpty
+                          && religionTextEditingController.text.trim().isNotEmpty
+                          && ethnicityTextEditingController.text.trim().isNotEmpty)
+                      {
+                        setState(() {
+                          showProgressBar = true;
+                        });
+
+                        await authenticationController.createNewUserAccount(
+                          //personal info
+                          authenticationController.profileImage!,
+                          emailTextEditingController.text.trim(),
+                          passwordTextEditingController.text.trim(),
+                          nameTextEditingController.text.trim(),
+                          ageTextEditingController.text.trim(),
+                          genderTextEditingController.text.trim(),
+                          phoneNoTextEditingController.text.trim(),
+                          cityTextEditingController.text.trim(),
+                          countryTextEditingController.text.trim(),
+                          profileHeadingTextEditingController.text.trim(),
+                          lookingForInaPartnerTextEditingController.text.trim(),
+
+                          //Appearance
+                          heightTextEditingController.text.trim(),
+                          weightTextEditingController.text.trim(),
+                          bodyTypeTextEditingController.text.trim(),
+
+                          //Life style
+                          drinkTextEditingController.text.trim(),
+                          smokingTextEditingController.text.trim(),
+                          maritalStatusTextEditingController.text.trim(),
+                          haveChildrenTextEditingController.text.trim(),
+                          noOfChildrenTextEditingController.text.trim(),
+                          professionTextEditingController.text.trim(),
+                          employmentStatusTextEditingController.text.trim(),
+                          incomeTextEditingController.text.trim(),
+                          livingSituationTextEditingController.text.trim(),
+                          willingToRelocateTextEditingController.text.trim(),
+                          relationshipYouAreLookingForTextEditingController.text.trim(),
+
+                          //Background - Cultural Values
+                          nationalityTextEditingController.text.trim(),
+                          educationTextEditingController.text.trim(),
+                          languageSpokenTextEditingController.text.trim(),
+                          religionTextEditingController.text.trim(),
+                          ethnicityTextEditingController.text.trim(),
+                        );
+
+                        setState(() {
+                          showProgressBar = false;
+                          authenticationController.imageFile = null;
+                        });
+                      }
+                      else
+                      {
+                        Get.snackbar("A Field is Empty", "Please fill out all field in text fields.");
+                      }
+                    }
+                    else
+                    {
+                      Get.snackbar("Image File Missing", "Please pick image from Gallery or capture with Camera");
+                    }
                   },
                   child: const Center(
                     child: Text(
