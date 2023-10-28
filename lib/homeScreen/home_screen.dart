@@ -19,7 +19,7 @@ class _HomeScreenState extends State<HomeScreen> {
            "Welcome to Your Home Page",
            style: TextStyle(
              color: Colors.lightBlue,
-             fontSize: 20,
+             fontSize: 17,
            ),
          )
        )

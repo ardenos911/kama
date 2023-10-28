@@ -7,6 +7,7 @@ import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:kama_love/models/person.dart' as personModel;
 
+import '../authenticationScreen/login_screen.dart';
 import '../homeScreen/home_screen.dart';
 
 
@@ -157,6 +158,39 @@ class AuthenticationController extends GetxController
 
 
    }// end of createNewUserAccount()
+
+  loginUser(String emailUser, String passwordUser) async
+  {
+    try
+    {
+      await FirebaseAuth.instance.signInWithEmailAndPassword(
+        email: emailUser,
+        password: passwordUser,
+      );
+
+      Get.snackbar("Logged-in Successful", "you're logged-in successfully.");
+
+      Get.to(HomeScreen());
+    }
+    catch(errorMsg)
+    {
+      Get.snackbar("Login Unsuccessful", "Error occurred: $errorMsg");
+    }
+  }
+
+
+  checkIfUserIsLoggedIn(User? currentUser)
+  {
+    if(currentUser == null)
+    {
+      Get.to(LoginScreen());
+    }
+    else
+    {
+      Get.to(HomeScreen());
+    }
+  }
+
 
 
 }// end of AuthenticationController{} class

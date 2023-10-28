@@ -4,6 +4,8 @@ import 'package:get/get_navigation/get_navigation.dart';
 import 'package:kama_love/authenticationScreen/registration_screen.dart';
 import 'package:kama_love/widgets/custom_text_field_widget.dart';
 
+import '../controllers/authentication_controller.dart';
+
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -17,6 +19,8 @@ class _LoginScreenState extends State<LoginScreen> {
   TextEditingController emailTextEditingController= TextEditingController();
   TextEditingController passwordTextEditingController= TextEditingController();
   bool showProgressBar = false;
+
+  var controllerAuth = AuthenticationController.authController;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -96,9 +100,29 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
               child: InkWell(
-                onTap: ()
+                // Login with email & password functionality button click---
+                onTap: () async
                     {
+                      if(emailTextEditingController.text.trim().isNotEmpty
+                          && passwordTextEditingController.text.trim().isNotEmpty)
+                      {
+                        setState(() {
+                          showProgressBar = true;
+                        });
 
+                        await controllerAuth.loginUser(
+                            emailTextEditingController.text.trim(),
+                            passwordTextEditingController.text.trim()
+                        );
+
+                        setState(() {
+                          showProgressBar = false;
+                        });
+                      }
+                      else
+                      {
+                        Get.snackbar("Email/Password is Missing", "Please fill all fields.");
+                      }
                     },
                 child: const Center(
                   child: Text(
