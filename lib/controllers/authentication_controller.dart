@@ -74,7 +74,7 @@ class AuthenticationController extends GetxController
        String height, String weight, String bodyType,
 
        //Life style
-       String drink, String smoke, String martialStatus,
+       String drink, String smoking, String martialStatus,
        String haveChildren, String noOfChildren, String profession,
        String employmentStatus, String income, String livingSituation,
        String willingToRelocate, String relationshipYouAreLookingFor,
@@ -120,7 +120,7 @@ class AuthenticationController extends GetxController
 
          //Life style
          drink: drink,
-         smoke: smoke,
+         smoke: smoking,
          martialStatus: martialStatus,
          haveChildren: haveChildren,
          noOfChildren: noOfChildren,
