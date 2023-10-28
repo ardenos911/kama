@@ -844,12 +844,12 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                       }
                       else
                       {
-                        Get.snackbar("A Field is Empty", "Please fill out all field in text fields.");
+                        Get.snackbar("A Box is Empty", "Please fill out all entries in the text fields.");
                       }
                     }
                     else
                     {
-                      Get.snackbar("Image File Missing", "Please pick image from Gallery or capture with Camera");
+                      Get.snackbar("Image File Missing", "Please pick a profile image from Gallery or capture with phone Camera");
                     }
                   },
                   child: const Center(
