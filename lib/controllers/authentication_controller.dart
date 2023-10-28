@@ -140,7 +140,7 @@ class AuthenticationController extends GetxController
 
        );
 
-       //send the data to Firestore via the personInstance we just created
+       //send the data to Firestore via the personInstance object we just created
        await FirebaseFirestore.instance.collection("users")
            .doc(FirebaseAuth.instance.currentUser!.uid)
            .set(personInstance.toJson());
