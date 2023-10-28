@@ -158,7 +158,7 @@ class AuthenticationController extends GetxController
 
 
    }// end of createNewUserAccount()
-
+    //Login user button functionality for login_screen.dart
   loginUser(String emailUser, String passwordUser) async
   {
     try
@@ -178,7 +178,7 @@ class AuthenticationController extends GetxController
     }
   }
 
-
+    //validate if user is already logged in
   checkIfUserIsLoggedIn(User? currentUser)
   {
     if(currentUser == null)
