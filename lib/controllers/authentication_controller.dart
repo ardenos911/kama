@@ -158,6 +158,7 @@ class AuthenticationController extends GetxController
 
 
    }// end of createNewUserAccount()
+
     //Login user button functionality for login_screen.dart
   loginUser(String emailUser, String passwordUser) async
   {
@@ -172,9 +173,9 @@ class AuthenticationController extends GetxController
 
       Get.to(HomeScreen());
     }
-    catch(errorMsg)
+    catch(err)
     {
-      Get.snackbar("Login Unsuccessful", "Error occurred: $errorMsg");
+      Get.snackbar("Login Unsuccessful", "Error occurred: $err");
     }
   }
 
