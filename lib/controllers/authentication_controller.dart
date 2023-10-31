@@ -15,6 +15,7 @@ import '../homeScreen/home_screen.dart';
 class AuthenticationController extends GetxController
 {
   static AuthenticationController authController = Get.find();
+  late Rx<User?> firebaseCurrentUser;
 
   late Rx<File?> pickedFile;
   File? get profileImage => pickedFile.value;
@@ -169,7 +170,7 @@ class AuthenticationController extends GetxController
         password: passwordUser,
       );
 
-      Get.snackbar("Logged-in Successful", "you're logged-in successfully.");
+      Get.snackbar("Log-in Successful", "you're logged-in successfully.");
 
       Get.to(HomeScreen());
     }
@@ -192,6 +193,15 @@ class AuthenticationController extends GetxController
     }
   }
 
+  @override
+  void onReady() {
+    // TODO: implement onReady
+    super.onReady();
 
+    firebaseCurrentUser = Rx<User?>(FirebaseAuth.instance.currentUser);
+    firebaseCurrentUser.bindStream(FirebaseAuth.instance.authStateChanges());
+
+    ever(firebaseCurrentUser, checkIfUserIsLoggedIn);
+  }
 
 }// end of AuthenticationController{} class
