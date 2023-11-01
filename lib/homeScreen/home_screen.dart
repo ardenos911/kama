@@ -44,16 +44,56 @@ class _HomeScreenState extends State<HomeScreen> {
          selectedItemColor: Colors.white,
          unselectedItemColor: Colors.lightBlue,
          currentIndex: screenIndex,
-       ),
-       body: Center(
-         child:Text(
-           "Welcome to Your Home Page",
-           style: TextStyle(
-             color: Colors.lightBlue,
-             fontSize: 17,
+         items: const [
+
+           //SwippingScreen
+           BottomNavigationBarItem(
+               icon: Icon(
+                 Icons.home,
+                 size: 30,
+               ),
+               label: ""
            ),
-         )
-       )
+
+           //viewSentViewReceived icon button
+           BottomNavigationBarItem(
+               icon: Icon(
+                 Icons.remove_red_eye,
+                 size: 30,
+               ),
+               label: ""
+           ),
+
+           //favoriteSentFavoriteReceived icon button
+           BottomNavigationBarItem(
+               icon: Icon(
+                 Icons.star,
+                 size: 30,
+               ),
+               label: ""
+           ),
+
+           //likeSentLikeReceived icon button
+           BottomNavigationBarItem(
+               icon: Icon(
+                 Icons.favorite,
+                 size: 30,
+               ),
+               label: ""
+           ),
+
+           //userDetailsScreen icon button
+           BottomNavigationBarItem(
+               icon: Icon(
+                 Icons.person,
+                 size: 30,
+               ),
+               label: ""
+           ),
+
+         ],
+       ),
+       body: tabScreensList[screenIndex],
     );
   }
 
