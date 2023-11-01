@@ -44,7 +44,7 @@ class _HomeScreenState extends State<HomeScreen> {
          selectedItemColor: Colors.white,
          unselectedItemColor: Colors.lightBlue,
          currentIndex: screenIndex,
-         items: const [
+         items: const <BottomNavigationBarItem>[
 
            //SwippingScreen
            BottomNavigationBarItem(
