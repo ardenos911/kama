@@ -1,24 +1,21 @@
-import 'dart:io';
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
-class SwippingScreen extends StatefulWidget {
-  const SwippingScreen({super.key});
+class ViewSentViewReceivedScreen extends StatefulWidget {
+  const ViewSentViewReceivedScreen({super.key});
 
   @override
-  State<SwippingScreen> createState() => _SwippingScreenState();
+  State<ViewSentViewReceivedScreen> createState() => _ViewSentViewReceivedScreenState();
 }
 
-class _SwippingScreenState extends State<SwippingScreen> {
+class _ViewSentViewReceivedScreenState extends State<ViewSentViewReceivedScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.black45,
         body: Center(
             child:Text(
-              "Welcome to Your Swipping Screen",
+              "Welcome to Your View Received Screen",
               style: TextStyle(
                 color: Colors.redAccent,
                 fontSize: 17,
