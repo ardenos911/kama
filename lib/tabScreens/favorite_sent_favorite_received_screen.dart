@@ -15,10 +15,10 @@ class _FavoriteSentFavoriteReceivedScreenState extends State<FavoriteSentFavorit
         backgroundColor: Colors.black45,
         body: Center(
             child:Text(
-              "Welcome to Favorite sent Favorite Received Screen",
+              "Welcome Fav sent & received Screen",
               style: TextStyle(
                 color: Colors.redAccent,
-                fontSize: 17,
+                fontSize: 14,
               ),
             )
         )

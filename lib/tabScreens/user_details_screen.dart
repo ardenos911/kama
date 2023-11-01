@@ -50,7 +50,7 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
               "Welcome to User Details Screen",
               style: TextStyle(
                 color: Colors.redAccent,
-                fontSize: 17,
+                fontSize: 14,
               ),
             )
         )

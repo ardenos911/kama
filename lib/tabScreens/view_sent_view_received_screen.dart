@@ -18,7 +18,7 @@ class _ViewSentViewReceivedScreenState extends State<ViewSentViewReceivedScreen>
               "Welcome to Your View Received Screen",
               style: TextStyle(
                 color: Colors.redAccent,
-                fontSize: 17,
+                fontSize: 14,
               ),
             )
         )

@@ -15,10 +15,10 @@ class _LikeSentLikeReceivedScreenState extends State<LikeSentLikeReceivedScreen>
         backgroundColor: Colors.black45,
         body: Center(
             child:Text(
-              "Welcome to Like Sent Like Received Screen",
+              "Welcome to Like Sent Received Screen",
               style: TextStyle(
                 color: Colors.redAccent,
-                fontSize: 17,
+                fontSize: 14,
               ),
             )
         )
