@@ -21,7 +21,7 @@ class _SwippingScreenState extends State<SwippingScreen> {
               "Welcome to Your Swipping Screen",
               style: TextStyle(
                 color: Colors.redAccent,
-                fontSize: 17,
+                fontSize: 14,
               ),
             )
         )
