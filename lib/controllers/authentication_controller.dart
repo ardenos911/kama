@@ -197,10 +197,11 @@ class AuthenticationController extends GetxController
   void onReady() {
     // TODO: implement onReady
     super.onReady();
-
+    //used Rx and Darts Generics, Rx<Type> to make firebaseCurrentUser- observable
     firebaseCurrentUser = Rx<User?>(FirebaseAuth.instance.currentUser);
     firebaseCurrentUser.bindStream(FirebaseAuth.instance.authStateChanges());
 
+    /// future navigation based on auth state changes for firebaseCurrentUser
     ever(firebaseCurrentUser, checkIfUserIsLoggedIn);
   }
 
