@@ -4,7 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class UserDetailsScreen extends StatefulWidget {
-  const UserDetailsScreen({super.key});
+
+  String? userID;
+  UserDetailsScreen({super.key, this.userID,});
 
   @override
   State<UserDetailsScreen> createState() => _UserDetailsScreenState();

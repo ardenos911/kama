@@ -26,12 +26,25 @@ class _HomeScreenState extends State<HomeScreen> {
     ViewSentViewReceivedScreen(),
     FavoriteSentFavoriteReceivedScreen(),
     LikeSentLikeReceivedScreen(),
-    UserDetailsScreen(),
+    UserDetailsScreen(userID: FirebaseAuth.instance.currentUser!.uid,),
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black45,
+       bottomNavigationBar: BottomNavigationBar(
+         onTap: (indexNumber)
+         {
+           setState(() {
+             screenIndex = indexNumber;
+           });
+         },
+         type:BottomNavigationBarType.fixed,
+         backgroundColor: Colors.black45,
+         selectedItemColor: Colors.white,
+         unselectedItemColor: Colors.lightBlue,
+         currentIndex: screenIndex,
+       ),
        body: Center(
          child:Text(
            "Welcome to Your Home Page",
