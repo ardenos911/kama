@@ -40,7 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
            });
          },
          type:BottomNavigationBarType.fixed,
-         backgroundColor: Colors.black45,
+         backgroundColor: Colors.black,
          selectedItemColor: Colors.white,
          unselectedItemColor: Colors.lightBlue,
          currentIndex: screenIndex,
