@@ -3,10 +3,13 @@ import 'dart:io';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:kama_love/tabScreens/user_details_screen.dart';
 
 import '../controllers/profile-controller.dart';
+import '../global.dart';
 
-class SwippingScreen extends StatefulWidget {
+class SwippingScreen extends StatefulWidget
+{
   const SwippingScreen({super.key});
 
   @override
@@ -15,15 +18,217 @@ class SwippingScreen extends StatefulWidget {
 
 class _SwippingScreenState extends State<SwippingScreen>
 {
-
   ProfileController profileController = Get.put(ProfileController());
   String senderName = "";
+
+
+  startChattingInWhatsApp(String receiverPhoneNumber) async
+  {
+    var androidUrl = "whatsapp://send?phone=$receiverPhoneNumber&text=Hi, I found your profile on kama app.";
+    var iosUrl = "https://wa.me/$receiverPhoneNumber?text=${Uri.parse('Hi, I found your profile on kama app.')}";
+
+    try
+    {
+      if(Platform.isIOS)
+      {
+        await launchUrl((Uri.parse(iosUrl)));
+      }
+      else
+      {
+        await launchUrl((Uri.parse(androidUrl)));
+      }
+    }
+    on Exception
+    {
+      showDialog(
+          context: context,
+          builder: (BuildContext context)
+          {
+            return AlertDialog(
+              title: const Text("Whatsapp Not Found"),
+              content: const Text("WhatsApp is not installed."),
+              actions: [
+                TextButton(
+                  onPressed: ()
+                  {
+                    Get.back();
+                  },
+                  child: const Text("Ok"),
+                ),
+              ],
+            );
+          }
+      );
+    }
+  }
+
+  applyFilter()
+  {
+    showDialog(
+        context: context,
+        builder: (BuildContext context)
+        {
+          return StatefulBuilder(
+            builder: (BuildContext context, StateSetter setState)
+            {
+              return AlertDialog(
+                title: const Text(
+                  "Matching Filter",
+                ),
+                content: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+
+                    const Text("I am looking for a:"),
+                    SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: DropdownButton<String>(
+                        hint: const Text('Select gender'),
+                        value: chosenGender,
+                        underline: Container(),
+                        items: [
+                          'Male',
+                          'Female',
+                          'Others'
+                        ].map((value)
+                        {
+                          return DropdownMenuItem<String>(
+                            value: value,
+                            child: Text(
+                              value,
+                              style: const TextStyle(fontWeight: FontWeight.w500),
+                            ),
+                          );
+                        }).toList(),
+                        onChanged: (String? value)
+                        {
+                          setState(() {
+                            chosenGender = value;
+                          });
+                        },
+                      ),
+                    ),
+                    const SizedBox(height: 20,),
+
+                    const Text("who lives in:"),
+                    SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: DropdownButton<String>(
+                        hint: const Text('Select country'),
+                        value: chosenCountry,
+                        underline: Container(),
+                        items: [
+                          'Spain',
+                          'France',
+                          'Germany',
+                          'United Kingdom',
+                          'Canada',
+                          'USA',
+                        ].map((value)
+                        {
+                          return DropdownMenuItem<String>(
+                            value: value,
+                            child: Text(
+                              value,
+                              style: const TextStyle(fontWeight: FontWeight.w500),
+                            ),
+                          );
+                        }).toList(),
+                        onChanged: (String? value)
+                        {
+                          setState(() {
+                            chosenCountry = value;
+                          });
+                        },
+                      ),
+                    ),
+                    const SizedBox(height: 20,),
+
+                    const Text("who's age is equal to or above:"),
+                    SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: DropdownButton<String>(
+                        hint: const Text('Select age'),
+                        value: chosenAge,
+                        underline: Container(),
+                        items: [
+                          '18',
+                          '20',
+                          '25',
+                          '30',
+                          '35',
+                          '40',
+                          '45',
+                          '50',
+                          '55',
+                        ].map((value)
+                        {
+                          return DropdownMenuItem<String>(
+                            value: value,
+                            child: Text(
+                              value,
+                              style: const TextStyle(fontWeight: FontWeight.w500),
+                            ),
+                          );
+                        }).toList(),
+                        onChanged: (String? value)
+                        {
+                          setState(() {
+                            chosenAge = value;
+                          });
+                        },
+                      ),
+                    ),
+                    const SizedBox(height: 20,),
+
+                  ],
+                ),
+                actions: [
+                  ElevatedButton(
+                    onPressed: ()
+                    {
+                      Get.back();
+
+                      profileController.getResults();
+                    },
+                    child: const Text("Done"),
+                  ),
+                ],
+              );
+            },
+          );
+        }
+    );
+  }
+
+  readCurrentUserData() async
+  {
+    await FirebaseFirestore.instance
+        .collection("users")
+        .doc(currentUserID)
+        .get()
+        .then((dataSnapshot)
+    {
+      setState(() {
+        senderName = dataSnapshot.data()!["name"].toString();
+      });
+    });
+  }
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+
+    readCurrentUserData();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.black45,
-        body: PageView.builder(
+      body: Obx(()
+      {
+        return PageView.builder(
           itemCount: profileController.allUsersProfileList.length,
           controller: PageController(initialPage: 0, viewportFraction: 1),
           scrollDirection: Axis.horizontal,
@@ -262,7 +467,8 @@ class _SwippingScreenState extends State<SwippingScreen>
               ),
             );
           },
-        ),
+        );
+      }),
     );
   }
 }
