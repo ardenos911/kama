@@ -292,7 +292,7 @@ class _SwippingScreenState extends State<SwippingScreen>
                             eachProfileInfo.name.toString(),
                             style: const TextStyle(
                               color: Colors.white,
-                              fontSize: 28,
+                              fontSize: 32,
                               letterSpacing: 4,
                               fontWeight: FontWeight.bold,
                             ),
@@ -302,7 +302,7 @@ class _SwippingScreenState extends State<SwippingScreen>
                           Text(
                             eachProfileInfo.age.toString() + " ◉ " + eachProfileInfo.city.toString(),
                             style: const TextStyle(
-                              color: Colors.black,
+                              color: Colors.white,
                               fontSize: 19,
                               letterSpacing: 4,
                               fontWeight: FontWeight.bold,
