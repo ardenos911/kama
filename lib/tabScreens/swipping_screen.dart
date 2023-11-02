@@ -31,11 +31,11 @@ class _SwippingScreenState extends State<SwippingScreen>
     {
       if(Platform.isIOS)
       {
-        await launchUrl((Uri.parse(iosUrl)));
+       // await launchUrl((Uri.parse(iosUrl)));
       }
       else
       {
-        await launchUrl((Uri.parse(androidUrl)));
+       // await launchUrl((Uri.parse(androidUrl)));
       }
     }
     on Exception
@@ -292,7 +292,7 @@ class _SwippingScreenState extends State<SwippingScreen>
                             eachProfileInfo.name.toString(),
                             style: const TextStyle(
                               color: Colors.white,
-                              fontSize: 24,
+                              fontSize: 28,
                               letterSpacing: 4,
                               fontWeight: FontWeight.bold,
                             ),
@@ -302,9 +302,10 @@ class _SwippingScreenState extends State<SwippingScreen>
                           Text(
                             eachProfileInfo.age.toString() + " ◉ " + eachProfileInfo.city.toString(),
                             style: const TextStyle(
-                              color: Colors.white,
-                              fontSize: 14,
+                              color: Colors.black,
+                              fontSize: 19,
                               letterSpacing: 4,
+                              fontWeight: FontWeight.bold,
                             ),
                           ),
 
@@ -320,7 +321,7 @@ class _SwippingScreenState extends State<SwippingScreen>
                               ElevatedButton(
                                 onPressed: (){},
                                 style: ElevatedButton.styleFrom(
-                                  backgroundColor: Colors.white30,
+                                  backgroundColor: Colors.redAccent,
                                   shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(16)
                                   ),
@@ -341,7 +342,7 @@ class _SwippingScreenState extends State<SwippingScreen>
                               ElevatedButton(
                                 onPressed: (){},
                                 style: ElevatedButton.styleFrom(
-                                  backgroundColor: Colors.white30,
+                                  backgroundColor: Colors.redAccent,
                                   shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(16)
                                   ),
@@ -366,7 +367,7 @@ class _SwippingScreenState extends State<SwippingScreen>
                               ElevatedButton(
                                 onPressed: (){},
                                 style: ElevatedButton.styleFrom(
-                                  backgroundColor: Colors.white30,
+                                  backgroundColor: Colors.redAccent,
                                   shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(16)
                                   ),
@@ -387,7 +388,7 @@ class _SwippingScreenState extends State<SwippingScreen>
                               ElevatedButton(
                                 onPressed: (){},
                                 style: ElevatedButton.styleFrom(
-                                  backgroundColor: Colors.white30,
+                                  backgroundColor: Colors.redAccent,
                                   shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(16)
                                   ),
@@ -440,7 +441,7 @@ class _SwippingScreenState extends State<SwippingScreen>
                           },
                           child: Image.asset(
                             "images/chat.png",
-                            width: 90,
+                            width: 60,
                           ),
                         ),
 
