@@ -47,8 +47,8 @@ class ProfileController extends GetxController
           FirebaseFirestore.instance
               .collection("users")
               .where("gender", isEqualTo: chosenGender.toString().toLowerCase())
-              .where("country", isEqualTo: chosenCountry.toString())
-              .where("city", isEqualTo: chosenCity.toString())
+              .where("country", isEqualTo: chosenCountry.toString().toLowerCase())
+              .where("city", isEqualTo: chosenCity.toString().toLowerCase())
               .where("age", isGreaterThanOrEqualTo: int.parse(chosenAge.toString()))
               .snapshots()
               .map((QuerySnapshot queryDataSnapshot)
