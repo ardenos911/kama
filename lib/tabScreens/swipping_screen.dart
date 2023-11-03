@@ -382,7 +382,7 @@ class _SwippingScreenState extends State<SwippingScreen>
                     ),
                     const SizedBox(height: 20,),
 
-                    const Text("who lives in:"),
+                    const Text("who lives near the city:"),
                     SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
                       child: DropdownButton<String>(
