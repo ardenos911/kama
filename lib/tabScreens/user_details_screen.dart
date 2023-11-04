@@ -51,11 +51,11 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
   String ethnicity = '';
 
   //slider images
-  String urlImage1 = "https://firebasestorage.googleapis.com/v0/b/kama-9ee34.appspot.com/o/Profile%20Images%2F4iIbD3ly0lfp1xg8HqUOavwIa7S2?alt=media&token=6e61a081-149a-441f-9599-18b101277c0d";
-  String urlImage2 = "https://firebasestorage.googleapis.com/v0/b/dating-app-88e50.appspot.com/o/Place%20Holder%2Fprofile_avatar.jpg?alt=media&token=c8524daf-6c56-4f02-99dc-00c971c2f07c";
-  String urlImage3 = "https://firebasestorage.googleapis.com/v0/b/dating-app-88e50.appspot.com/o/Place%20Holder%2Fprofile_avatar.jpg?alt=media&token=c8524daf-6c56-4f02-99dc-00c971c2f07c";
-  String urlImage4 = "https://firebasestorage.googleapis.com/v0/b/dating-app-88e50.appspot.com/o/Place%20Holder%2Fprofile_avatar.jpg?alt=media&token=c8524daf-6c56-4f02-99dc-00c971c2f07c";
-  String urlImage5 = "https://firebasestorage.googleapis.com/v0/b/dating-app-88e50.appspot.com/o/Place%20Holder%2Fprofile_avatar.jpg?alt=media&token=c8524daf-6c56-4f02-99dc-00c971c2f07c";
+  String urlImage1 = "https://firebasestorage.googleapis.com/v0/b/kama-9ee34.appspot.com/o/Place%20Holder%2Fkama_avatar.png?alt=media&token=f78117e1-084d-4253-b2a0-8f9d4873c5a3";
+  String urlImage2 = "https://firebasestorage.googleapis.com/v0/b/kama-9ee34.appspot.com/o/Place%20Holder%2Fkama_avatar.png?alt=media&token=f78117e1-084d-4253-b2a0-8f9d4873c5a3";
+  String urlImage3 = "https://firebasestorage.googleapis.com/v0/b/kama-9ee34.appspot.com/o/Place%20Holder%2Fkama_avatar.png?alt=media&token=f78117e1-084d-4253-b2a0-8f9d4873c5a3";
+  String urlImage4 = "https://firebasestorage.googleapis.com/v0/b/kama-9ee34.appspot.com/o/Place%20Holder%2Fkama_avatar.png?alt=media&token=f78117e1-084d-4253-b2a0-8f9d4873c5a3";
+  String urlImage5 = "https://firebasestorage.googleapis.com/v0/b/kama-9ee34.appspot.com/o/Place%20Holder%2Fkama_avatar.png?alt=media&token=f78117e1-084d-4253-b2a0-8f9d4873c5a3";
 
 
   retrieveUserInfo() async
