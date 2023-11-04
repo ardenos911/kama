@@ -522,7 +522,8 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                   children: [
 
                     //Drink
-                    TableRow(children :[
+                    TableRow(
+                        children :[
                       const Text(
                         "Drink: ",
                         style: TextStyle(
@@ -540,13 +541,15 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                     ]),
 
                     //extra row
-                    const TableRow(children :[
+                    const TableRow(
+                        children :[
                       Text(''),
                       Text(""),
                     ]),
 
                     //Smoke
-                    TableRow(children :[
+                    TableRow(
+                        children :[
                       const Text(
                         "Smoke: ",
                         style: TextStyle(
@@ -564,13 +567,15 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                     ]),
 
                     //extra row
-                    const TableRow(children :[
+                    const TableRow(
+                        children :[
                       Text(''),
                       Text(""),
                     ]),
 
                     //Martial Status
-                    TableRow(children :[
+                    TableRow(
+                        children :[
                       const Text(
                         "Martial Status: ",
                         style: TextStyle(
@@ -588,13 +593,15 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                     ]),
 
                     //extra row
-                    const TableRow(children :[
+                    const TableRow(
+                        children :[
                       Text(''),
                       Text(""),
                     ]),
 
                     //Have Children
-                    TableRow(children :[
+                    TableRow(
+                        children :[
                       const Text(
                         "Have Children: ",
                         style: TextStyle(
@@ -612,13 +619,15 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                     ]),
 
                     //extra row
-                    const TableRow(children :[
+                    const TableRow(
+                        children :[
                       Text(''),
                       Text(""),
                     ]),
 
                     //Number of Children
-                    TableRow(children :[
+                    TableRow(
+                        children :[
                       const Text(
                         "Number of Children: ",
                         style: TextStyle(
@@ -636,13 +645,15 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                     ]),
 
                     //extra row
-                    const TableRow(children :[
+                    const TableRow(
+                        children :[
                       Text(''),
                       Text(""),
                     ]),
 
                     //Profession
-                    TableRow(children :[
+                    TableRow(
+                        children :[
                       const Text(
                         "Profession: ",
                         style: TextStyle(
@@ -660,13 +671,15 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                     ]),
 
                     //extra row
-                    const TableRow(children :[
+                    const TableRow(
+                        children :[
                       Text(''),
                       Text(""),
                     ]),
 
                     //Employment Status
-                    TableRow(children :[
+                    TableRow(
+                        children :[
                       const Text(
                         "Employment Status: ",
                         style: TextStyle(
@@ -684,13 +697,15 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                     ]),
 
                     //extra row
-                    const TableRow(children :[
+                    const TableRow(
+                        children :[
                       Text(''),
                       Text(""),
                     ]),
 
                     //Income
-                    TableRow(children :[
+                    TableRow(
+                        children :[
                       const Text(
                         "Income: ",
                         style: TextStyle(
@@ -708,13 +723,15 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                     ]),
 
                     //extra row
-                    const TableRow(children :[
+                    const TableRow(
+                        children :[
                       Text(''),
                       Text(""),
                     ]),
 
                     //Living Situation
-                    TableRow(children :[
+                    TableRow(
+                        children :[
                       const Text(
                         "Living Situation: ",
                         style: TextStyle(
@@ -732,13 +749,15 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                     ]),
 
                     //extra row
-                    const TableRow(children :[
+                    const TableRow(
+                        children :[
                       Text(''),
                       Text(""),
                     ]),
 
                     //Willing to Relocate
-                    TableRow(children :[
+                    TableRow(
+                        children :[
                       const Text(
                         "Willing to Relocate: ",
                         style: TextStyle(
@@ -756,13 +775,15 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                     ]),
 
                     //extra row
-                    const TableRow(children :[
+                    const TableRow(
+                        children :[
                       Text(''),
                       Text(""),
                     ]),
 
                     //Looking for
-                    TableRow(children :[
+                    TableRow(
+                        children :[
                       const Text(
                         "Looking for: ",
                         style: TextStyle(
@@ -807,7 +828,8 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                   children: [
 
                     //Nationality
-                    TableRow(children :[
+                    TableRow(
+                        children :[
                       const Text(
                         "Nationality: ",
                         style: TextStyle(
@@ -825,13 +847,15 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                     ]),
 
                     //extra row
-                    const TableRow(children :[
+                    const TableRow(
+                        children :[
                       Text(''),
                       Text(""),
                     ]),
 
                     //Education
-                    TableRow(children :[
+                    TableRow(
+                        children :[
                       const Text(
                         "Education: ",
                         style: TextStyle(
@@ -849,13 +873,15 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                     ]),
 
                     //extra row
-                    const TableRow(children :[
+                    const TableRow(
+                        children :[
                       Text(''),
                       Text(""),
                     ]),
 
                     //Language Spoken
-                    TableRow(children :[
+                    TableRow(
+                        children :[
                       const Text(
                         "Language Spoken: ",
                         style: TextStyle(
@@ -873,13 +899,15 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                     ]),
 
                     //extra row
-                    const TableRow(children :[
+                    const TableRow(
+                        children :[
                       Text(''),
                       Text(""),
                     ]),
 
                     //Religion
-                    TableRow(children :[
+                    TableRow(
+                        children :[
                       const Text(
                         "Religion: ",
                         style: TextStyle(
@@ -897,13 +925,15 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                     ]),
 
                     //extra row
-                    const TableRow(children :[
+                    const TableRow(
+                        children :[
                       Text(''),
                       Text(""),
                     ]),
 
                     //Ethnicity
-                    TableRow(children :[
+                    TableRow(
+                        children :[
                       const Text(
                         "Ethnicity: ",
                         style: TextStyle(
