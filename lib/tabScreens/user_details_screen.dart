@@ -319,13 +319,15 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                     ),
 
                     //extra row
-                    const TableRow(children :[
+                    const TableRow(
+                        children :[
                       Text(''),
                       Text(""),
                     ]),
 
                     //city
-                    TableRow(children :[
+                    TableRow(
+                        children :[
                       const Text(
                         "City: ",
                         style: TextStyle(
@@ -343,13 +345,15 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                     ]),
 
                     //extra row
-                    const TableRow(children :[
+                    const TableRow(
+                        children :[
                       Text(''),
                       Text(""),
                     ]),
 
                     //country
-                    TableRow(children :[
+                    TableRow(
+                        children :[
                       const Text(
                         "Country: ",
                         style: TextStyle(
@@ -367,13 +371,15 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                     ]),
 
                     //extra row
-                    const TableRow(children :[
+                    const TableRow(
+                        children :[
                       Text(''),
                       Text(""),
                     ]),
 
                     //seeking
-                    TableRow(children :[
+                    TableRow(
+                        children :[
                       const Text(
                         "Seeking: ",
                         style: TextStyle(
@@ -418,7 +424,8 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                   children: [
 
                     //height
-                    TableRow(children :[
+                    TableRow(
+                        children :[
                       const Text(
                         "Height: ",
                         style: TextStyle(
@@ -436,13 +443,15 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                     ]),
 
                     //extra row
-                    const TableRow(children :[
+                    const TableRow(
+                        children :[
                       Text(''),
                       Text(""),
                     ]),
 
                     //Weight
-                    TableRow(children :[
+                    TableRow(
+                        children :[
                       const Text(
                         "Weight: ",
                         style: TextStyle(
@@ -460,13 +469,15 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                     ]),
 
                     //extra row
-                    const TableRow(children :[
+                    const TableRow(
+                        children :[
                       Text(''),
                       Text(""),
                     ]),
 
                     //Body Type
-                    TableRow(children :[
+                    TableRow(
+                        children :[
                       const Text(
                         "Body Type: ",
                         style: TextStyle(
