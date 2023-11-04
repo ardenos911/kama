@@ -219,7 +219,7 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                   "Personal Info:",
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 22,
+                    fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -230,7 +230,7 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
               ),
               //personal info table data
               Container(
-                padding: const EdgeInsets.all(20.0),
+                padding: const EdgeInsets.all(1.0),
                 child: Table(
                   children: [
 
@@ -242,7 +242,7 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                           "Name: ",
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 18,
+                            fontSize: 13,
                           ),
                         ),
 
@@ -250,7 +250,7 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                           name,
                           style: const TextStyle(
                             color: Colors.grey,
-                            fontSize: 18,
+                            fontSize: 13,
                           ),
                         ),
                       ],
@@ -273,7 +273,7 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                           "Age: ",
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 18,
+                            fontSize: 13,
                           ),
                         ),
 
@@ -281,7 +281,7 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                           age,
                           style: const TextStyle(
                             color: Colors.grey,
-                            fontSize: 18,
+                            fontSize: 13,
                           ),
                         ),
                       ],
@@ -304,7 +304,7 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                           "Phone Number: ",
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 18,
+                            fontSize: 13,
                           ),
                         ),
 
@@ -312,7 +312,7 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                           phoneNo,
                           style: const TextStyle(
                             color: Colors.grey,
-                            fontSize: 18,
+                            fontSize: 13,
                           ),
                         ),
                       ],
@@ -332,14 +332,14 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                         "City: ",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 18,
+                          fontSize: 13,
                         ),
                       ),
                       Text(
                         city,
                         style: const TextStyle(
                           color: Colors.grey,
-                          fontSize: 18,
+                          fontSize: 13,
                         ),
                       ),
                     ]),
@@ -358,14 +358,14 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                         "Country: ",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 18,
+                          fontSize: 13,
                         ),
                       ),
                       Text(
                         country,
                         style: const TextStyle(
                           color: Colors.grey,
-                          fontSize: 18,
+                          fontSize: 13,
                         ),
                       ),
                     ]),
@@ -384,14 +384,14 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                         "Seeking: ",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 18,
+                          fontSize: 13,
                         ),
                       ),
                       Text(
                         lookingForInaPartner,
                         style: const TextStyle(
                           color: Colors.grey,
-                          fontSize: 18,
+                          fontSize: 13,
                         ),
                       ),
                     ]),
@@ -408,7 +408,7 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                   "Appearance:",
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 22,
+                    fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -419,7 +419,7 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
               ),
               //appearance table data
               Container(
-                padding: const EdgeInsets.all(20.0),
+                padding: const EdgeInsets.all(1.0),
                 child: Table(
                   children: [
 
@@ -430,14 +430,14 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                         "Height: ",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 18,
+                          fontSize: 13,
                         ),
                       ),
                       Text(
                         height,
                         style: const TextStyle(
                           color: Colors.grey,
-                          fontSize: 18,
+                          fontSize: 13,
                         ),
                       ),
                     ]),
@@ -456,14 +456,14 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                         "Weight: ",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 18,
+                          fontSize: 13,
                         ),
                       ),
                       Text(
                         weight,
                         style: const TextStyle(
                           color: Colors.grey,
-                          fontSize: 18,
+                          fontSize: 13,
                         ),
                       ),
                     ]),
@@ -482,14 +482,14 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                         "Body Type: ",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 18,
+                          fontSize: 13,
                         ),
                       ),
                       Text(
                         bodyType,
                         style: const TextStyle(
                           color: Colors.grey,
-                          fontSize: 18,
+                          fontSize: 13,
                         ),
                       ),
                     ]),
@@ -506,7 +506,7 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                   "Life style:",
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 22,
+                    fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -517,7 +517,7 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
               ),
               //Life style table data
               Container(
-                padding: const EdgeInsets.all(20.0),
+                padding: const EdgeInsets.all(1.0),
                 child: Table(
                   children: [
 
@@ -528,14 +528,14 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                         "Drink: ",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 18,
+                          fontSize: 13,
                         ),
                       ),
                       Text(
                         drink,
                         style: const TextStyle(
                           color: Colors.grey,
-                          fontSize: 18,
+                          fontSize: 13,
                         ),
                       ),
                     ]),
@@ -554,14 +554,14 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                         "Smoke: ",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 18,
+                          fontSize: 13,
                         ),
                       ),
                       Text(
                         smoke,
                         style: const TextStyle(
                           color: Colors.grey,
-                          fontSize: 18,
+                          fontSize: 13,
                         ),
                       ),
                     ]),
@@ -580,14 +580,14 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                         "Martial Status: ",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 18,
+                          fontSize: 13,
                         ),
                       ),
                       Text(
                         martialStatus,
                         style: const TextStyle(
                           color: Colors.grey,
-                          fontSize: 18,
+                          fontSize: 13,
                         ),
                       ),
                     ]),
@@ -606,14 +606,14 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                         "Have Children: ",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 18,
+                          fontSize: 13,
                         ),
                       ),
                       Text(
                         haveChildren,
                         style: const TextStyle(
                           color: Colors.grey,
-                          fontSize: 18,
+                          fontSize: 13,
                         ),
                       ),
                     ]),
@@ -632,14 +632,14 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                         "Number of Children: ",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 18,
+                          fontSize: 13,
                         ),
                       ),
                       Text(
                         noOfChildren,
                         style: const TextStyle(
                           color: Colors.grey,
-                          fontSize: 18,
+                          fontSize: 13,
                         ),
                       ),
                     ]),
@@ -658,14 +658,14 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                         "Profession: ",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 18,
+                          fontSize: 13,
                         ),
                       ),
                       Text(
                         profession,
                         style: const TextStyle(
                           color: Colors.grey,
-                          fontSize: 18,
+                          fontSize: 13,
                         ),
                       ),
                     ]),
@@ -684,14 +684,14 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                         "Employment Status: ",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 18,
+                          fontSize: 13,
                         ),
                       ),
                       Text(
                         employmentStatus,
                         style: const TextStyle(
                           color: Colors.grey,
-                          fontSize: 18,
+                          fontSize: 13,
                         ),
                       ),
                     ]),
@@ -710,14 +710,14 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                         "Income: ",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 18,
+                          fontSize: 13,
                         ),
                       ),
                       Text(
                         income,
                         style: const TextStyle(
                           color: Colors.grey,
-                          fontSize: 18,
+                          fontSize: 13,
                         ),
                       ),
                     ]),
@@ -736,14 +736,14 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                         "Living Situation: ",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 18,
+                          fontSize: 13,
                         ),
                       ),
                       Text(
                         livingSituation,
                         style: const TextStyle(
                           color: Colors.grey,
-                          fontSize: 18,
+                          fontSize: 13,
                         ),
                       ),
                     ]),
@@ -762,14 +762,14 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                         "Willing to Relocate: ",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 18,
+                          fontSize: 13,
                         ),
                       ),
                       Text(
                         willingToRelocate,
                         style: const TextStyle(
                           color: Colors.grey,
-                          fontSize: 18,
+                          fontSize: 13,
                         ),
                       ),
                     ]),
@@ -788,14 +788,14 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                         "Looking for: ",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 18,
+                          fontSize: 13,
                         ),
                       ),
                       Text(
                         relationshipYouAreLookingFor,
                         style: const TextStyle(
                           color: Colors.grey,
-                          fontSize: 18,
+                          fontSize: 13,
                         ),
                       ),
                     ]),
@@ -812,7 +812,7 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                   "Background - Cultural Values:",
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 22,
+                    fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -823,7 +823,7 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
               ),
               //Background - Cultural Values tables data
               Container(
-                padding: const EdgeInsets.all(20.0),
+                padding: const EdgeInsets.all(1.0),
                 child: Table(
                   children: [
 
@@ -834,14 +834,14 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                         "Nationality: ",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 18,
+                          fontSize: 13,
                         ),
                       ),
                       Text(
                         nationality,
                         style: const TextStyle(
                           color: Colors.grey,
-                          fontSize: 18,
+                          fontSize: 13,
                         ),
                       ),
                     ]),
@@ -860,14 +860,14 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                         "Education: ",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 18,
+                          fontSize: 13,
                         ),
                       ),
                       Text(
                         education,
                         style: const TextStyle(
                           color: Colors.grey,
-                          fontSize: 18,
+                          fontSize: 13,
                         ),
                       ),
                     ]),
@@ -886,14 +886,14 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                         "Language Spoken: ",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 18,
+                          fontSize: 13,
                         ),
                       ),
                       Text(
                         languageSpoken,
                         style: const TextStyle(
                           color: Colors.grey,
-                          fontSize: 18,
+                          fontSize: 13,
                         ),
                       ),
                     ]),
@@ -912,14 +912,14 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                         "Religion: ",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 18,
+                          fontSize: 13,
                         ),
                       ),
                       Text(
                         religion,
                         style: const TextStyle(
                           color: Colors.grey,
-                          fontSize: 18,
+                          fontSize: 13,
                         ),
                       ),
                     ]),
@@ -938,14 +938,14 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                         "Ethnicity: ",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 18,
+                          fontSize: 13,
                         ),
                       ),
                       Text(
                         ethnicity,
                         style: const TextStyle(
                           color: Colors.grey,
-                          fontSize: 18,
+                          fontSize: 13,
                         ),
                       ),
                     ]),
