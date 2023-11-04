@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:flutter_image_slider/carousel.dart';
-
+import 'package:kama_love/accountSettingScreen/account_settings_screen.dart';
 import '../global.dart';
 
 class UserDetailsScreen extends StatefulWidget {
