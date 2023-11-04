@@ -1026,7 +1026,7 @@ class _SwippingScreenState extends State<SwippingScreen>
                           },
                           child: Image.asset(
                             "images/chat.png",
-                            width: 60,
+                            width: 70,
                           ),
                         ),
 
