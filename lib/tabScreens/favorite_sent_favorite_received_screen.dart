@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/services.dart';
 import 'package:kama_love/global.dart';
 import 'package:flutter/material.dart';
 
@@ -88,7 +89,13 @@ class _FavoriteSentFavoriteReceivedScreenState extends State<FavoriteSentFavorit
   {
     return Scaffold(
       appBar: AppBar(
+        systemOverlayStyle: SystemUiOverlayStyle(
+          statusBarColor: Colors.red[900], // <-- SEE HERE
+          statusBarIconBrightness: Brightness.dark, //<-- For Android SEE HERE (dark icons)
+          statusBarBrightness: Brightness.light, //<-- For iOS SEE HERE (dark icons)
+        ),
         automaticallyImplyLeading: false,
+
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -114,7 +121,7 @@ class _FavoriteSentFavoriteReceivedScreenState extends State<FavoriteSentFavorit
                 style: TextStyle(
                   color: isFavoriteSentClicked ? Colors.white : Colors.grey,
                   fontWeight: isFavoriteSentClicked ? FontWeight.bold : FontWeight.normal,
-                  fontSize: 14,
+                  fontSize: 11,
                 ),
               ),
             ),
@@ -147,7 +154,7 @@ class _FavoriteSentFavoriteReceivedScreenState extends State<FavoriteSentFavorit
                 style: TextStyle(
                   color: isFavoriteSentClicked ? Colors.grey : Colors.white,
                   fontWeight: isFavoriteSentClicked ? FontWeight.normal : FontWeight.bold,
-                  fontSize: 14,
+                  fontSize: 11,
                 ),
               ),
             ),
@@ -163,7 +170,7 @@ class _FavoriteSentFavoriteReceivedScreenState extends State<FavoriteSentFavorit
       )
           : GridView.count(
         crossAxisCount: 2,
-        padding: const EdgeInsets.all(8),
+        padding: const EdgeInsets.all(12),
         children: List.generate(favoritesList.length, (index)
         {
           return GridTile(
@@ -198,8 +205,8 @@ class _FavoriteSentFavoriteReceivedScreenState extends State<FavoriteSentFavorit
                               maxLines: 2,
                               style: const TextStyle(
                                 overflow: TextOverflow.ellipsis,
-                                color: Colors.black,
-                                fontSize: 15,
+                                color: Colors.red,
+                                fontSize: 11,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
@@ -214,8 +221,8 @@ class _FavoriteSentFavoriteReceivedScreenState extends State<FavoriteSentFavorit
 
                                 const Icon(
                                   Icons.location_on_outlined,
-                                  color: Colors.black,
-                                  size: 15,
+                                  color: Colors.red,
+                                  size: 13,
                                 ),
 
                                 Expanded(
@@ -224,8 +231,8 @@ class _FavoriteSentFavoriteReceivedScreenState extends State<FavoriteSentFavorit
                                     maxLines: 2,
                                     style: const TextStyle(
                                       overflow: TextOverflow.ellipsis,
-                                      color: Colors.black,
-                                      fontSize: 14,
+                                      color: Colors.red,
+                                      fontSize: 11,
                                       fontWeight:FontWeight.bold,
                                     ),
                                   ),
