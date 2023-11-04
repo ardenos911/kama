@@ -8,7 +8,7 @@ import 'package:flutter_image_slider/carousel.dart';
 import '../global.dart';
 
 class UserDetailsScreen extends StatefulWidget {
-
+   //we need this state variable to scroll through each profile
   String? userID;
   UserDetailsScreen({super.key, this.userID,});
 
