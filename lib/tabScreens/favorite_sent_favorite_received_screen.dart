@@ -55,7 +55,8 @@ class _FavoriteSentFavoriteReceivedScreenState extends State<FavoriteSentFavorit
   }
 
   getKeysDataFromUsersCollection(List<String> keysList) async
-  {
+  {      //all uid's or docs-which are a list of uid's anyway-will be retrieved
+       //because a specific one was not specified with the .doc(uid) syntax notation
     var allUsersDocument = await FirebaseFirestore.instance.collection("users").get();
 
     for(int i=0; i<allUsersDocument.docs.length; i++)
