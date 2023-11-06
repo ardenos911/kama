@@ -1011,6 +1011,7 @@ class _SwippingScreenState extends State<SwippingScreen>
                               eachProfileInfo.uid.toString(),
                               senderName,
                             );
+
                           },
                           child: Image.asset(
                             "images/favorite.png",
