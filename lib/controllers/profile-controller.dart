@@ -95,7 +95,8 @@ class ProfileController extends GetxController
           .doc(toUserID).collection("favoriteReceived").doc(currentUserID)
           .set({});
 
-      //add profile person [toUserID] to the favoriteSent list of the currentUser
+      //add profile person [toUserID] to the favorites list of the currentUser
+      // favoriteSent collection is auto created if not already exists
       await FirebaseFirestore.instance
           .collection("users")
           .doc(currentUserID).collection("favoriteSent").doc(toUserID)
