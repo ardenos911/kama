@@ -123,9 +123,10 @@ class _FavoriteSentFavoriteReceivedScreenState extends State<FavoriteSentFavorit
             ),
 
             const Text(
-              "   |   ",
+              "   ✪   ",
               style: TextStyle(
                 color: Colors.black,
+                fontSize: 15,
               ),
             ),
 
