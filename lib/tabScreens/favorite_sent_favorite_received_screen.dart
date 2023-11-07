@@ -90,11 +90,6 @@ class _FavoriteSentFavoriteReceivedScreenState extends State<FavoriteSentFavorit
   {
     return Scaffold(
       appBar: AppBar(
-        systemOverlayStyle: SystemUiOverlayStyle(
-          statusBarColor: Colors.red[900], // <-- SEE HERE
-          statusBarIconBrightness: Brightness.dark, //<-- For Android SEE HERE (dark icons)
-          statusBarBrightness: Brightness.light, //<-- For iOS SEE HERE (dark icons)
-        ),
         automaticallyImplyLeading: false,
 
         title: Row(
