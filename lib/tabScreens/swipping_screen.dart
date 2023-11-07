@@ -526,6 +526,7 @@ class _SwippingScreenState extends State<SwippingScreen>
                           'Houston',
                           'Hyderabad',
                           'Ibadan',
+                          'Ilocos'
                           'Incheon',
                           'Indianapolis',
                           'Indore',
