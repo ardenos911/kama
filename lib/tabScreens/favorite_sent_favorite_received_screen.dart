@@ -200,7 +200,7 @@ class _FavoriteSentFavoriteReceivedScreenState extends State<FavoriteSentFavorit
 
                             const Spacer(),
 
-                            //name - age
+                            //name - age integer
                             Text(
                               favoritesList[index]["name"].toString() + " ◉ " + favoritesList[index]["age"].toString(),
                               maxLines: 2,
