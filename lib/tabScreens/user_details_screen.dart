@@ -139,7 +139,7 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
             statusBarIconBrightness: Brightness.dark, //<-- For Android SEE HERE (dark icons)
             statusBarBrightness: Brightness.light, //<-- For iOS SEE HERE (dark icons)
           ),
-          automaticallyImplyLeading: false,
+          automaticallyImplyLeading: widget.userID == currentUserID ? false : true,
           backgroundColor: Colors.red[900],
           title: const Text(
             "User Profile",
