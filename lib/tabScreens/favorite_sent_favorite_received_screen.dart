@@ -126,7 +126,7 @@ class _FavoriteSentFavoriteReceivedScreenState extends State<FavoriteSentFavorit
               "   ✪   ",
               style: TextStyle(
                 color: Colors.black,
-                fontSize: 15,
+                fontSize: 17,
               ),
             ),
 

@@ -114,7 +114,7 @@ class _LikeSentLikeReceivedScreenState extends State<LikeSentLikeReceivedScreen>
                 style: TextStyle(
                   color: isLikeSentClicked ? Colors.white : Colors.grey,
                   fontWeight: isLikeSentClicked ? FontWeight.bold : FontWeight.normal,
-                  fontSize: 14,
+                  fontSize: 12,
                 ),
               ),
             ),
@@ -147,11 +147,10 @@ class _LikeSentLikeReceivedScreenState extends State<LikeSentLikeReceivedScreen>
                 style: TextStyle(
                   color: isLikeSentClicked ? Colors.grey : Colors.white,
                   fontWeight: isLikeSentClicked ? FontWeight.normal : FontWeight.bold,
-                  fontSize: 14,
+                  fontSize: 12,
                 ),
               ),
             ),
-
 
           ],
         ),
