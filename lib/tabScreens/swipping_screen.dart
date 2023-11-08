@@ -918,7 +918,11 @@ class _SwippingScreenState extends State<SwippingScreen>
                             children: [
 
                               ElevatedButton(
-                                onPressed: (){},
+                                onPressed: (){
+                                  Get.to(UserDetailsScreen(
+                                  userID: eachProfileInfo.uid.toString(),
+                                ));
+                                  },
                                 style: ElevatedButton.styleFrom(
                                   backgroundColor: Colors.redAccent,
                                   shape: RoundedRectangleBorder(
@@ -939,7 +943,11 @@ class _SwippingScreenState extends State<SwippingScreen>
                               ),
 
                               ElevatedButton(
-                                onPressed: (){},
+                                onPressed: (){
+                                  Get.to(UserDetailsScreen(
+                                  userID: eachProfileInfo.uid.toString(),
+                                ));
+                                  },
                                 style: ElevatedButton.styleFrom(
                                   backgroundColor: Colors.redAccent,
                                   shape: RoundedRectangleBorder(
@@ -964,7 +972,11 @@ class _SwippingScreenState extends State<SwippingScreen>
                             children: [
 
                               ElevatedButton(
-                                onPressed: (){},
+                                onPressed: (){
+                                  Get.to(UserDetailsScreen(
+                                  userID: eachProfileInfo.uid.toString(),
+                                ));
+                                  },
                                 style: ElevatedButton.styleFrom(
                                   backgroundColor: Colors.redAccent,
                                   shape: RoundedRectangleBorder(
@@ -985,7 +997,11 @@ class _SwippingScreenState extends State<SwippingScreen>
                               ),
 
                               ElevatedButton(
-                                onPressed: (){},
+                                onPressed: (){
+                                  Get.to(UserDetailsScreen(
+                                  userID: eachProfileInfo.uid.toString(),
+                                ));
+                                  },
                                 style: ElevatedButton.styleFrom(
                                   backgroundColor: Colors.redAccent,
                                   shape: RoundedRectangleBorder(
