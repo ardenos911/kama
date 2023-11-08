@@ -169,6 +169,16 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                 size:27,
               ),
             ),
+          IconButton(
+            onPressed: ()
+            {
+              Get.to(AccountSettingsScreen());
+            },
+            icon: const Icon(
+              Icons.settings,
+              size: 30,
+            ),
+          ),
           ],
         ) : Container(),
           ],
