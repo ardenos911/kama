@@ -139,7 +139,6 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
             statusBarIconBrightness: Brightness.dark, //<-- For Android SEE HERE (dark icons)
             statusBarBrightness: Brightness.light, //<-- For iOS SEE HERE (dark icons)
           ),
-          automaticallyImplyLeading: widget.userID == currentUserID ? false : true,
           backgroundColor: Colors.red[900],
           title: const Text(
             "User Profile",
@@ -149,13 +148,12 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
             ),
           ),
           centerTitle: true,
-          //automaticallyImplyLeading: false,
             leading: widget.userID != currentUserID ? IconButton(
               onPressed: ()
               {
                 Get.back();
               },
-              icon: const Icon(Icons.arrow_back_outlined, size: 30,),
+              icon: const Icon(Icons.arrow_back, size: 30,),
             ) : Container(),
           actions: [
             widget.userID == currentUserID ?
