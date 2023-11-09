@@ -146,7 +146,7 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen>
         .then((snapshot)
     {
       if(snapshot.exists)
-      {
+      {//here you are setting the state variables with stored Firebase data
         setState(() {
 
           //personal info
