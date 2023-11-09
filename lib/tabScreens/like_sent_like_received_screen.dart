@@ -122,7 +122,7 @@ class _LikeSentLikeReceivedScreenState extends State<LikeSentLikeReceivedScreen>
             const Text(
               "   💕   ",
               style: TextStyle(
-                color: Colors.grey,
+                color: Colors.red,
               ),
             ),
 
@@ -197,7 +197,7 @@ class _LikeSentLikeReceivedScreenState extends State<LikeSentLikeReceivedScreen>
                               maxLines: 2,
                               style: const TextStyle(
                                 overflow: TextOverflow.ellipsis,
-                                color: Colors.grey,
+                                color: Colors.red,
                                 fontSize: 16,
                                 fontWeight: FontWeight.bold,
                               ),
@@ -213,7 +213,7 @@ class _LikeSentLikeReceivedScreenState extends State<LikeSentLikeReceivedScreen>
 
                                 const Icon(
                                   Icons.location_on_outlined,
-                                  color: Colors.grey,
+                                  color: Colors.red,
                                   size: 16,
                                 ),
 
@@ -223,7 +223,7 @@ class _LikeSentLikeReceivedScreenState extends State<LikeSentLikeReceivedScreen>
                                     maxLines: 2,
                                     style: const TextStyle(
                                       overflow: TextOverflow.ellipsis,
-                                      color: Colors.grey,
+                                      color: Colors.red,
                                       fontSize: 14,
                                     ),
                                   ),

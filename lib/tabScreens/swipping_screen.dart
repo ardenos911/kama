@@ -919,6 +919,11 @@ class _SwippingScreenState extends State<SwippingScreen>
 
                               ElevatedButton(
                                 onPressed: (){
+                                  profileController.viewSentAndViewReceived(
+                                    eachProfileInfo.uid.toString(),
+                                    senderName,
+                                  );
+
                                   Get.to(UserDetailsScreen(
                                   userID: eachProfileInfo.uid.toString(),
                                 ));
@@ -944,6 +949,11 @@ class _SwippingScreenState extends State<SwippingScreen>
 
                               ElevatedButton(
                                 onPressed: (){
+                                  profileController.viewSentAndViewReceived(
+                                    eachProfileInfo.uid.toString(),
+                                    senderName,
+                                  );
+
                                   Get.to(UserDetailsScreen(
                                   userID: eachProfileInfo.uid.toString(),
                                 ));
@@ -973,6 +983,11 @@ class _SwippingScreenState extends State<SwippingScreen>
 
                               ElevatedButton(
                                 onPressed: (){
+                                  profileController.viewSentAndViewReceived(
+                                    eachProfileInfo.uid.toString(),
+                                    senderName,
+                                  );
+
                                   Get.to(UserDetailsScreen(
                                   userID: eachProfileInfo.uid.toString(),
                                 ));
@@ -998,6 +1013,11 @@ class _SwippingScreenState extends State<SwippingScreen>
 
                               ElevatedButton(
                                 onPressed: (){
+                                  profileController.viewSentAndViewReceived(
+                                    eachProfileInfo.uid.toString(),
+                                    senderName,
+                                  );
+
                                   Get.to(UserDetailsScreen(
                                   userID: eachProfileInfo.uid.toString(),
                                 ));
