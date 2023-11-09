@@ -493,7 +493,7 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen>
                 height: 55,
                 child: CustomTextFieldWidget(
                   editingController: profileHeadingTextEditingController,
-                  labelText: "Profile Heading",
+                  labelText: "Profile Heading 👑",
                   iconData: Icons.text_fields,
                   isObscure: false,
                 ),
@@ -539,7 +539,7 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen>
                 height: 55,
                 child: CustomTextFieldWidget(
                   editingController: heightTextEditingController,
-                  labelText: "Height",
+                  labelText: "Height ⛹️",
                   iconData: Icons.insert_chart,
                   isObscure: false,
                 ),
@@ -601,7 +601,7 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen>
                 height: 55,
                 child: CustomTextFieldWidget(
                   editingController: drinkTextEditingController,
-                  labelText: "Drink 🍸",
+                  labelText: "Drink? 🍸",
                   iconData: Icons.no_drinks_outlined,
                   isObscure: false,
                 ),

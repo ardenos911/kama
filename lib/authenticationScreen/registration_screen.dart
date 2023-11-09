@@ -168,7 +168,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               ),
 
               //********** PERSONAL INFO *****************
-              const Text("Enter Personal Info :",
+              const Text("Enter Personal Info : 🎭",
                 style: TextStyle(
                   fontSize: 20,
                   color: Colors.lightBlue,
@@ -205,7 +205,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     .width - 40,
                 child: CustomTextFieldWidget(
                   editingController: emailTextEditingController,
-                  labelText: "Email",
+                  labelText: "Email ＠",
                   iconData: Icons.email_outlined,
                   isObscure: false,
                 ),
@@ -223,7 +223,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     .width - 40,
                 child: CustomTextFieldWidget(
                   editingController: passwordTextEditingController,
-                  labelText: "Password",
+                  labelText: "Password 🔐",
                   iconData: Icons.lock_outline,
                   isObscure: true,
                 ),
@@ -241,7 +241,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     .width - 40,
                 child: CustomTextFieldWidget(
                   editingController: ageTextEditingController,
-                  labelText: "Age",
+                  labelText: "Age 👴",
                   iconData: Icons.numbers,
                   isObscure: false,
                 ),
@@ -259,7 +259,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     .width - 40,
                 child: CustomTextFieldWidget(
                   editingController: genderTextEditingController,
-                  labelText: "Gender",
+                  labelText: "Gender  ♀️ ♂️",
                   iconData: Icons.boy_outlined,
                   isObscure: false,
                 ),
@@ -278,7 +278,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     .width - 40,
                 child: CustomTextFieldWidget(
                   editingController: phoneNoTextEditingController,
-                  labelText: "Phone Number",
+                  labelText: "Phone Number 📱",
                   iconData: Icons.phone_android_outlined,
                   isObscure: false,
                 ),
@@ -296,7 +296,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     .width - 40,
                 child: CustomTextFieldWidget(
                   editingController: cityTextEditingController,
-                  labelText: "City",
+                  labelText: "City 🌇",
                   iconData: Icons.location_city,
                   isObscure: false,
                 ),
@@ -314,7 +314,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     .width - 40,
                 child: CustomTextFieldWidget(
                   editingController: countryTextEditingController,
-                  labelText: "Country",
+                  labelText: "Country 🌄",
                   iconData: Icons.emoji_flags_sharp,
                   isObscure: false,
                 ),
@@ -332,7 +332,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     .width - 40,
                 child: CustomTextFieldWidget(
                   editingController: profileHeadingTextEditingController,
-                  labelText: "Profile",
+                  labelText: "Profile 👑",
                   iconData: Icons.face,
                   isObscure: false,
                 ),
@@ -361,7 +361,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               ),
 
               //********* Appearance *********
-              const Text("Physical Stats:",
+              const Text("Physical Stats: 🏄",
                 style: TextStyle(
                   fontSize: 20,
                   color: Colors.lightBlue,
@@ -380,7 +380,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     .width - 40,
                 child: CustomTextFieldWidget(
                   editingController: heightTextEditingController,
-                  labelText: "Height",
+                  labelText: "Height ⛹️",
                   iconData: Icons.insert_chart,
                   isObscure: false,
                 ),
@@ -398,7 +398,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     .width - 40,
                 child: CustomTextFieldWidget(
                   editingController: weightTextEditingController,
-                  labelText: "Weight",
+                  labelText: "Weight 🍕",
                   iconData: Icons.fastfood_sharp,
                   isObscure: false,
                 ),
@@ -416,7 +416,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     .width - 40,
                 child: CustomTextFieldWidget(
                   editingController: bodyTypeTextEditingController,
-                  labelText: "Body Type",
+                  labelText: "Body Type 🏋️",
                   iconData: Icons.boy_outlined,
                   isObscure: false,
                 ),
@@ -427,7 +427,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               ),
 
               //********* Lifestyle *********
-              const Text("Lifestyle:",
+              const Text("Lifestyle: 🏌️‍♀️",
                 style: TextStyle(
                   fontSize: 20,
                   color: Colors.lightBlue,
@@ -446,7 +446,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     .width - 40,
                 child: CustomTextFieldWidget(
                   editingController: drinkTextEditingController,
-                  labelText: "Alcohol Consumption",
+                  labelText: "Alcohol ? 🍸",
                   iconData: Icons.no_drinks_sharp,
                   isObscure: false,
                 ),
@@ -464,7 +464,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     .width - 40,
                 child: CustomTextFieldWidget(
                   editingController: smokingTextEditingController,
-                  labelText: "Smoker?",
+                  labelText: "Smoker? 🚭",
                   iconData: Icons.smoke_free_outlined,
                   isObscure: false,
                 ),
@@ -482,7 +482,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     .width - 40,
                 child: CustomTextFieldWidget(
                   editingController: maritalStatusTextEditingController,
-                  labelText: "Marital Status",
+                  labelText: "Marital Status 💍",
                   iconData: Icons.people_alt_rounded,
                   isObscure: false,
                 ),
@@ -500,7 +500,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     .width - 40,
                 child: CustomTextFieldWidget(
                   editingController: haveChildrenTextEditingController,
-                  labelText: "Are you a parent?",
+                  labelText: "Are you a parent? 👨‍👧‍👧",
                   iconData: Icons.baby_changing_station,
                   isObscure: false,
                 ),
@@ -518,7 +518,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     .width - 40,
                 child: CustomTextFieldWidget(
                   editingController: noOfChildrenTextEditingController,
-                  labelText: "Number of children?",
+                  labelText: "Number of children? 🚼",
                   iconData: Icons.child_friendly,
                   isObscure: false,
                 ),
@@ -536,7 +536,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     .width - 40,
                 child: CustomTextFieldWidget(
                   editingController: professionTextEditingController,
-                  labelText: "Profession",
+                  labelText: "Profession 👨‍💼",
                   iconData: Icons.business,
                   isObscure: false,
                 ),
@@ -554,7 +554,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     .width - 40,
                 child: CustomTextFieldWidget(
                   editingController: employmentStatusTextEditingController,
-                  labelText: "Employment Status",
+                  labelText: "Employment Status ‍💻",
                   iconData: Icons.work_outlined,
                   isObscure: false,
                 ),
@@ -573,7 +573,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     .width - 40,
                 child: CustomTextFieldWidget(
                   editingController: incomeTextEditingController,
-                  labelText: "Yearly Income",
+                  labelText: "Yearly Income 💰",
                   iconData: Icons.monetization_on_rounded,
                   isObscure: false,
                 ),
@@ -591,7 +591,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     .width - 40,
                 child: CustomTextFieldWidget(
                   editingController: livingSituationTextEditingController,
-                  labelText: "Living situation",
+                  labelText: "Living situation 🛌",
                   iconData: Icons.bed_outlined,
                   isObscure: false,
                 ),
@@ -638,7 +638,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               ),
 
               // ********* Background-Culture values *********
-              const Text("Background/Culture :",
+              const Text("Background/Culture: 👳",
                 style: TextStyle(
                   fontSize: 20,
                   color: Colors.lightBlue,
@@ -657,7 +657,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     .width - 40,
                 child: CustomTextFieldWidget(
                   editingController: nationalityTextEditingController,
-                  labelText: "Nationality",
+                  labelText: "Nationality 🌎",
                   iconData: Icons.recent_actors_outlined,
                   isObscure: false,
                 ),
@@ -675,7 +675,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     .width - 40,
                 child: CustomTextFieldWidget(
                   editingController: educationTextEditingController,
-                  labelText: "Level of education",
+                  labelText: "Level of education 👨‍🎓",
                   iconData: Icons.school_rounded,
                   isObscure: false,
                 ),
@@ -693,7 +693,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     .width - 40,
                 child: CustomTextFieldWidget(
                   editingController: languageSpokenTextEditingController,
-                  labelText: "Number of Languages spoken",
+                  labelText: "Number of Languages spoken 🌐",
                   iconData: Icons.language_outlined,
                   isObscure: false,
                 ),
@@ -711,7 +711,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     .width - 40,
                 child: CustomTextFieldWidget(
                   editingController: religionTextEditingController,
-                  labelText: "Religion",
+                  labelText: "Religion 🧞‍♀️",
                   iconData: Icons.church,
                   isObscure: false,
                 ),
@@ -729,7 +729,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     .width - 40,
                 child: CustomTextFieldWidget(
                   editingController: ethnicityTextEditingController,
-                  labelText: "Ethnicity",
+                  labelText: "Ethnicity 🧕",
                   iconData: Icons.landscape_rounded,
                   isObscure: false,
                 ),
