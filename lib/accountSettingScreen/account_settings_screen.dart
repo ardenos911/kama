@@ -310,7 +310,7 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen>
           'urlImage5': urlsList[4].toString(),
         });
 
-    Get.snackbar("Updated", "your account has been updated successfully.");
+    Get.snackbar("Updated", "your account has been updated successfully. ✔️");
 
     Get.to(HomeScreen());
 
@@ -866,7 +866,7 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen>
                 height: 30,
               ),
 
-              //create account button
+              //update account button
               Container(
                 width: MediaQuery.of(context).size.width - 36,
                 height: 45,
