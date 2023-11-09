@@ -1008,7 +1008,7 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen>
                             uploading == true;
                           });
 
-                          Get.snackbar("5 Images Chosen", "5 Images Already Selected 👍");
+                          Get.snackbar("5 Images Chosen 🎈", "5 Images Already Selected 👍");
                         }
                       },
                       icon: const Icon(Icons.add),
