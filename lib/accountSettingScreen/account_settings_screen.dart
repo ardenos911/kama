@@ -378,7 +378,7 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen>
 
               //personal info
               const Text(
-                "Personal Info:",
+                "Personal Info: 🎭",
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 16,
@@ -413,7 +413,7 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen>
                 height: 55,
                 child: CustomTextFieldWidget(
                   editingController: ageTextEditingController,
-                  labelText: "Age",
+                  labelText: "Age 👴",
                   iconData: Icons.numbers,
                   isObscure: false,
                 ),
@@ -429,7 +429,7 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen>
                 height: 55,
                 child: CustomTextFieldWidget(
                   editingController: genderTextEditingController,
-                  labelText: "Gender",
+                  labelText: "Gender ♀️ ♂️",
                   iconData: Icons.person_outline_sharp,
                   isObscure: false,
                 ),
@@ -445,7 +445,7 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen>
                 height: 55,
                 child: CustomTextFieldWidget(
                   editingController: phoneNoTextEditingController,
-                  labelText: "Phone",
+                  labelText: "Phone 📱",
                   iconData: Icons.phone_android,
                   isObscure: false,
                 ),
@@ -461,7 +461,7 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen>
                 height: 55,
                 child: CustomTextFieldWidget(
                   editingController: cityTextEditingController,
-                  labelText: "City",
+                  labelText: "City 🌇",
                   iconData: Icons.location_city,
                   isObscure: false,
                 ),
@@ -477,7 +477,7 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen>
                 height: 55,
                 child: CustomTextFieldWidget(
                   editingController: countryTextEditingController,
-                  labelText: "Country",
+                  labelText: "Country 🌄",
                   iconData: Icons.flag,
                   isObscure: false,
                 ),
@@ -509,7 +509,7 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen>
                 height: 55,
                 child: CustomTextFieldWidget(
                   editingController: lookingForInaPartnerTextEditingController,
-                  labelText: "Type of partner desired",
+                  labelText: "Type of partner desired 👬",
                   iconData: Icons.face,
                   isObscure: false,
                 ),
@@ -521,7 +521,7 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen>
 
               //Appearance
               const Text(
-                "Appearance:",
+                "Appearance: 🕴️",
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 16,
@@ -555,7 +555,7 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen>
                 height: 55,
                 child: CustomTextFieldWidget(
                   editingController: weightTextEditingController,
-                  labelText: "Weight",
+                  labelText: "Weight 🍕",
                   iconData: Icons.fastfood_sharp,
                   isObscure: false,
                 ),
@@ -571,7 +571,7 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen>
                 height: 55,
                 child: CustomTextFieldWidget(
                   editingController: bodyTypeTextEditingController,
-                  labelText: "Body Type",
+                  labelText: "Body Type 🏋️",
                   iconData: Icons.girl,
                   isObscure: false,
                 ),
@@ -583,7 +583,7 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen>
 
               //Life style
               const Text(
-                "Life style:",
+                "Life style: 🏌️‍♀️",
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 16,
@@ -601,7 +601,7 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen>
                 height: 55,
                 child: CustomTextFieldWidget(
                   editingController: drinkTextEditingController,
-                  labelText: "Drink",
+                  labelText: "Drink 🍸",
                   iconData: Icons.no_drinks_outlined,
                   isObscure: false,
                 ),
@@ -617,7 +617,7 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen>
                 height: 55,
                 child: CustomTextFieldWidget(
                   editingController: smokeTextEditingController,
-                  labelText: "Smoke",
+                  labelText: "Smoke 🚭",
                   iconData: Icons.smoking_rooms,
                   isObscure: false,
                 ),
@@ -633,7 +633,7 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen>
                 height: 55,
                 child: CustomTextFieldWidget(
                   editingController: martialStatusTextEditingController,
-                  labelText: "Martial Status",
+                  labelText: "Martial Status 💍",
                   iconData: CupertinoIcons.person_2,
                   isObscure: false,
                 ),
@@ -649,7 +649,7 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen>
                 height: 55,
                 child: CustomTextFieldWidget(
                   editingController: haveChildrenTextEditingController,
-                  labelText: "Do you have Children?",
+                  labelText: "Do you have Children? 👨‍👧‍👧",
                   iconData: CupertinoIcons.person_3_fill,
                   isObscure: false,
                 ),
@@ -665,7 +665,7 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen>
                 height: 55,
                 child: CustomTextFieldWidget(
                   editingController: noOfChildrenTextEditingController,
-                  labelText: "Number of Children",
+                  labelText: "Number of Children 🚼",
                   iconData: CupertinoIcons.cart_fill,
                   isObscure: false,
                 ),
@@ -682,7 +682,7 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen>
                 height: 55,
                 child: CustomTextFieldWidget(
                   editingController: professionTextEditingController,
-                  labelText: "Profession",
+                  labelText: "Profession 👨‍💼",
                   iconData: Icons.business,
                   isObscure: false,
                 ),
@@ -698,7 +698,7 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen>
                 height: 55,
                 child: CustomTextFieldWidget(
                   editingController: employmentStatusTextEditingController,
-                  labelText: "Employment Status",
+                  labelText: "Employment Status 👨‍💻",
                   iconData: CupertinoIcons.rectangle_stack_person_crop_fill,
                   isObscure: false,
                 ),
@@ -714,7 +714,7 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen>
                 height: 55,
                 child: CustomTextFieldWidget(
                   editingController: incomeTextEditingController,
-                  labelText: "Income",
+                  labelText: "Income 💰",
                   iconData: CupertinoIcons.money_dollar_circle,
                   isObscure: false,
                 ),
@@ -730,7 +730,7 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen>
                 height: 55,
                 child: CustomTextFieldWidget(
                   editingController: livingSituationTextEditingController,
-                  labelText: "Living Situation",
+                  labelText: "Living Situation 🏚️",
                   iconData: CupertinoIcons.person_2_square_stack,
                   isObscure: false,
                 ),
@@ -746,7 +746,7 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen>
                 height: 55,
                 child: CustomTextFieldWidget(
                   editingController: willingToRelocateTextEditingController,
-                  labelText: "Willing to Relocate for Love?",
+                  labelText: "Willing to Relocate? 🗽️",
                   iconData: CupertinoIcons.airplane,
                   isObscure: false,
                 ),
@@ -762,7 +762,7 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen>
                 height: 55,
                 child: CustomTextFieldWidget(
                   editingController: relationshipYouAreLookingForTextEditingController,
-                  labelText: "Type of relationship desired?",
+                  labelText: "Type of relationship desired? 👩‍❤️‍👨",
                   iconData: CupertinoIcons.person_alt_circle,
                   isObscure: false,
                 ),
@@ -774,7 +774,7 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen>
 
               //Background - Cultural Values
               const Text(
-                "Background - Cultural Values:",
+                "Background - Cultural Values: 👳",
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 16,
@@ -792,7 +792,7 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen>
                 height: 55,
                 child: CustomTextFieldWidget(
                   editingController: nationalityTextEditingController,
-                  labelText: "Nationality",
+                  labelText: "Nationality 🌎",
                   iconData: Icons.flag_circle_outlined,
                   isObscure: false,
                 ),
@@ -808,7 +808,7 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen>
                 height: 55,
                 child: CustomTextFieldWidget(
                   editingController: educationTextEditingController,
-                  labelText: "Education",
+                  labelText: "Education 👨‍🎓",
                   iconData: Icons.history_edu,
                   isObscure: false,
                 ),
@@ -824,7 +824,7 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen>
                 height: 55,
                 child: CustomTextFieldWidget(
                   editingController: languageSpokenTextEditingController,
-                  labelText: "Language Spoken",
+                  labelText: "Language Spoken 🌐",
                   iconData: CupertinoIcons.chat_bubble_text,
                   isObscure: false,
                 ),
@@ -840,7 +840,7 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen>
                 height: 55,
                 child: CustomTextFieldWidget(
                   editingController: religionTextEditingController,
-                  labelText: "Religion",
+                  labelText: "Religion 🧞‍♀️",
                   iconData: CupertinoIcons.plus,
                   isObscure: false,
                 ),
@@ -856,7 +856,7 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen>
                 height: 55,
                 child: CustomTextFieldWidget(
                   editingController: ethnicityTextEditingController,
-                  labelText: "Ethnicity",
+                  labelText: "Ethnicity 🧕",
                   iconData: CupertinoIcons.globe,
                   isObscure: false,
                 ),
@@ -955,7 +955,7 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen>
                     }
                     else
                     {
-                      Get.snackbar("A Field is Empty!", "Please fill out all text fields.");
+                      Get.snackbar("A Field is Empty! ⛔", "Please fill out all text fields.");
                     }
                   },
                   child: const Center(
@@ -963,7 +963,7 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen>
                       "Update",
                       style: TextStyle(
                         fontSize: 18,
-                        color: Colors.black,
+                        color: Colors.white,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
