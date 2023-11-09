@@ -251,7 +251,7 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen>
                       SizedBox(
                         height: 10,
                       ),
-                      Text("uploading images..."),
+                      Text("⏳ uploading images..."),
                     ],
                   )
               ),
