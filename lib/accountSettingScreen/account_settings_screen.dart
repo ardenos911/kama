@@ -999,7 +999,7 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen>
                       onPressed: ()
                       {
                         if(_image.length < 5)
-                        {
+                        {  // if uploading is NOT true then chooseImage()
                           !uploading ? chooseImage() : null;
                         }
                         else
