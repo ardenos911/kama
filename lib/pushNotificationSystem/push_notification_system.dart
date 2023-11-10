@@ -15,7 +15,7 @@ class PushNotificationSystem
   {
     //1. Terminated
     //When the app is completely closed and opened directly from the push notification
-    FirebaseMessaging.instance.getInitialMessage().then((RemoteMessage? remoteMessage)
+     FirebaseMessaging.instance.getInitialMessage().then((RemoteMessage? remoteMessage)
     {
       if(remoteMessage != null)
       {
@@ -66,7 +66,7 @@ class PushNotificationSystem
         .doc(senderID)
         .get()
         .then((snapshot)
-    {// square brackets because thats how you referance jason data
+    { // square brackets because that's how you reference jason data
       String profileImage = snapshot.data()!["imageProfile"].toString();
       String name = snapshot.data()!["name"].toString();
       String age = snapshot.data()!["age"].toString();
@@ -122,7 +122,7 @@ class PushNotificationSystem
                           name + " ● " + age.toString(),
                           style: const TextStyle(
                             color: Colors.white,
-                            fontSize: 16,
+                            fontSize: 13,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -138,7 +138,7 @@ class PushNotificationSystem
                             const Icon(
                               Icons.location_on_outlined,
                               color: Colors.white,
-                              size: 16,
+                              size: 13,
                             ),
 
                             const SizedBox(
