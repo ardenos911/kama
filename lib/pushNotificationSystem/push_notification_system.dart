@@ -66,7 +66,7 @@ class PushNotificationSystem
         .doc(senderID)
         .get()
         .then((snapshot)
-    {
+    {// square brackets because thats how you referance jason data
       String profileImage = snapshot.data()!["imageProfile"].toString();
       String name = snapshot.data()!["name"].toString();
       String age = snapshot.data()!["age"].toString();
