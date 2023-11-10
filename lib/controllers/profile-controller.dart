@@ -103,7 +103,7 @@ class ProfileController extends GetxController
           .set({});
 
       //send notification
-      //sendNotificationToUser(toUserID, "Favorite", senderName);
+      sendNotificationToUser(toUserID, "Favorite", senderName);
     }
 
     update();
@@ -146,7 +146,7 @@ class ProfileController extends GetxController
           .set({});
 
       //send notification
-      //sendNotificationToUser(toUserID, "Like", senderName);
+      sendNotificationToUser(toUserID, "Like", senderName);
     }
 
     update();
@@ -178,7 +178,7 @@ class ProfileController extends GetxController
           .set({});
 
       //send notification
-      //sendNotificationToUser(toUserID, "View", senderName);
+      sendNotificationToUser(toUserID, "View", senderName);
     }
 
     update();
