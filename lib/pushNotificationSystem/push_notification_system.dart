@@ -121,8 +121,8 @@ class PushNotificationSystem
                         Text(
                           name + " ● " + age.toString(),
                           style: const TextStyle(
-                            color: Colors.white,
-                            fontSize: 13,
+                            color: Colors.redAccent,
+                            fontSize: 14,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -137,7 +137,7 @@ class PushNotificationSystem
 
                             const Icon(
                               Icons.location_on_outlined,
-                              color: Colors.white,
+                              color: Colors.red,
                               size: 13,
                             ),
 
@@ -150,7 +150,7 @@ class PushNotificationSystem
                                 city + ", " + country.toString(),
                                 maxLines: 4,
                                 style: const TextStyle(
-                                  color: Colors.white,
+                                  color: Colors.red,
                                   fontSize: 14,
                                 ),
                               ),

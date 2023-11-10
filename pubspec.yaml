@@ -45,6 +45,7 @@ dependencies:
   firebase_messaging:
   flutter_image_slider:
   url_launcher:
+  http:
 
 dev_dependencies:
   flutter_test:
