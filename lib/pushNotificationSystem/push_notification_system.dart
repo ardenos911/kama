@@ -15,7 +15,7 @@ class PushNotificationSystem
   {
     //1. Terminated
     //When the app is completely closed and opened directly from the push notification
-     FirebaseMessaging.instance.getInitialMessage().then((RemoteMessage? remoteMessage)
+     await FirebaseMessaging.instance.getInitialMessage().then((RemoteMessage? remoteMessage)
     {
       if(remoteMessage != null)
       {
