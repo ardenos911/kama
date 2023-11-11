@@ -55,11 +55,12 @@ class ProfileController extends GetxController
           {
             List<Person> profilesList = [];
 
-            for(var eachProfile in queryDataSnapshot.docs)
-            {
+            for (var eachProfile in queryDataSnapshot.docs) {
               profilesList.add(Person.fromDataSnapshot(eachProfile));
             }
-            return profilesList;
+            if(profilesList.isEmpty) {
+            return allUsersProfileList;
+            } else {return profilesList;}
           })
       );
     }
