@@ -793,7 +793,26 @@ class _SwippingScreenState extends State<SwippingScreen>
 
                       profileController.getResults();
                     },
-                    child: const Text("Done"),
+                    child: const Text("Start Filters"),
+                  ),
+                  ElevatedButton(
+                    onPressed: ()
+                    {
+                      Get.back();
+
+                      setState(() {
+                        chosenCity = null;
+                        chosenAge = null;
+                        chosenCountry = null;
+                        chosenGender = null;
+                      });
+
+                      profileController.getFilterReset();
+                    },
+                    style: ElevatedButton.styleFrom(
+                      primary: Colors.red,
+                    ),
+                    child: const Text("Clear Filters"),
                   ),
                 ],
               );

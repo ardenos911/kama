@@ -13,6 +13,12 @@ class ProfileController extends GetxController
   List<Person> get allUsersProfileList => usersProfileList.value;
 
 
+
+  getFilterReset(){
+
+    onInit();
+  }
+
   getResults()
   {
     usersProfileList.bindStream(
@@ -31,8 +37,12 @@ class ProfileController extends GetxController
             profilesList.add(Person.fromDataSnapshot(eachProfile));
           }
           if(profilesList.isEmpty) {
+            Get.snackbar("No Filter Match 😒", "Sorry but your filter parameters have no matches-Try Again!");
             return allUsersProfileList;
-          } else {return profilesList;}
+          } else {
+            Get.snackbar("Found Some Matches 🥰", "Here are your results!");
+            return profilesList;
+          }
         })
     );
   }
