@@ -319,6 +319,7 @@ class _SwippingScreenState extends State<SwippingScreen>
                           'Ukraine',
                           'United Arab Emirates',
                           'United States',
+                          'USA',
                           'Uruguay',
                           'Uzbekistan',
                           'Vanuatu',
