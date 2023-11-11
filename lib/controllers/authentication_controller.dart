@@ -154,7 +154,7 @@ class AuthenticationController extends GetxController
      }
      catch(errorMsg)
      {
-       Get.snackbar("Account Creation Unsuccessful", "Error occurred: $errorMsg");
+       Get.snackbar("Account Creation Unsuccessful", "Please try again-Fill in ALL fields");
      }
 
 
@@ -176,7 +176,7 @@ class AuthenticationController extends GetxController
     }
     catch(err)
     {
-      Get.snackbar("Login Unsuccessful", "Error occurred: $err");
+      Get.snackbar("Login Unsuccessful", "Please check your Email & Password");
     }
   }
 
