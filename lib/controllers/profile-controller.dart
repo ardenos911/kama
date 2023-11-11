@@ -12,9 +12,29 @@ class ProfileController extends GetxController
   final Rx<List<Person>> usersProfileList = Rx<List<Person>>([]);
   List<Person> get allUsersProfileList => usersProfileList.value;
 
+
   getResults()
   {
-    onInit();
+    usersProfileList.bindStream(
+        FirebaseFirestore.instance
+            .collection("users")
+            .where("gender", isEqualTo: chosenGender.toString().toLowerCase())
+            .where("country", isEqualTo: chosenCountry.toString().toLowerCase())
+            .where("city", isEqualTo: chosenCity.toString().toLowerCase())
+            .where("age", isGreaterThanOrEqualTo: int.parse(chosenAge.toString()))
+            .snapshots()
+            .map((QuerySnapshot queryDataSnapshot)
+        {
+          List<Person> profilesList = [];
+
+          for (var eachProfile in queryDataSnapshot.docs) {
+            profilesList.add(Person.fromDataSnapshot(eachProfile));
+          }
+          if(profilesList.isEmpty) {
+            return allUsersProfileList;
+          } else {return profilesList;}
+        })
+    );
   }
 
   @override
@@ -41,29 +61,8 @@ class ProfileController extends GetxController
           })
       );
     }
-    else
-    {
-      usersProfileList.bindStream(
-          FirebaseFirestore.instance
-              .collection("users")
-              .where("gender", isEqualTo: chosenGender.toString().toLowerCase())
-              .where("country", isEqualTo: chosenCountry.toString().toLowerCase())
-              .where("city", isEqualTo: chosenCity.toString().toLowerCase())
-              .where("age", isGreaterThanOrEqualTo: int.parse(chosenAge.toString()))
-              .snapshots()
-              .map((QuerySnapshot queryDataSnapshot)
-          {
-            List<Person> profilesList = [];
 
-            for (var eachProfile in queryDataSnapshot.docs) {
-              profilesList.add(Person.fromDataSnapshot(eachProfile));
-            }
-            if(profilesList.isEmpty) {
-            return allUsersProfileList;
-            } else {return profilesList;}
-          })
-      );
-    }
+
   }// end of onInit()
 
   favoriteSentAndFavoriteReceived(String toUserID, String senderName) async
