@@ -599,6 +599,7 @@ class _SwippingScreenState extends State<SwippingScreen>
                           'MAPUTO',
                           'Maracaibo',
                           'Mashhad',
+                          'Mattoon',
                           'Mecca',
                           'Medan',
                           'Medellin',
@@ -789,7 +790,7 @@ class _SwippingScreenState extends State<SwippingScreen>
                   ElevatedButton(
                     onPressed: ()
                     {
-                      Get.back();
+                      //Get.back();
 
                       profileController.getResults();
                     },
@@ -798,7 +799,7 @@ class _SwippingScreenState extends State<SwippingScreen>
                   ElevatedButton(
                     onPressed: ()
                     {
-                      Get.back();
+                      //Get.back();
 
                       setState(() {
                         chosenCity = null;
