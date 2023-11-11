@@ -93,6 +93,9 @@ class _SwippingScreenState extends State<SwippingScreen>
                           'non-binary',
                           'lady-boy',
                           'Transgender',
+                          'Gay',
+                          'Lesbian',
+                          'Bi-Sexual',
                         ].map((value)
                         {
                           return DropdownMenuItem<String>(
