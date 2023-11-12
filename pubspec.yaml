@@ -47,6 +47,7 @@ dependencies:
   url_launcher:
   http:
   permission_handler:
+  geolocator:
 
 dev_dependencies:
   flutter_test:

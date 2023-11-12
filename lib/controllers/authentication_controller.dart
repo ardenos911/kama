@@ -9,6 +9,7 @@ import 'package:kama_love/models/person.dart' as personModel;
 
 import '../authenticationScreen/login_screen.dart';
 import '../homeScreen/home_screen.dart';
+import 'package:geolocator/geolocator.dart';
 
 
 
@@ -90,16 +91,29 @@ class AuthenticationController extends GetxController
    {
      try
      {
-       //1. authenticate user and create User With Email and Password
+
+       //1.function that will set the current user's Lat & long coordinates and send to Firestore
+       void storeUserLocation(String uid) async {
+         Position position = await Geolocator.getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
+         FirebaseFirestore.instance.collection('users').doc(uid).set({
+           'lat': position.latitude,
+           'long': position.longitude,
+         });
+       }
+
+       //2. call the function which sets the Lat and Long in Firestore DB
+        storeUserLocation(FirebaseAuth.instance.currentUser!.uid);
+
+       //3. authenticate user and create User With Email and Password
        UserCredential credential = await FirebaseAuth.instance.createUserWithEmailAndPassword(
            email: email,
            password: password
        );
 
-       //2. upload image to storage
+       //4. upload image to storage
        String urlOfDownloadedImage = await uploadImageToStorage(imageProfile);
 
-       //3. save user info to firestore database
+       //5. save user info to firestore database
        personModel.Person personInstance = personModel.Person(
 
          //personal info
