@@ -272,8 +272,8 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen>
           'age': int.parse(age),
           "gender": gender.toLowerCase(),
           'phoneNo': phoneNo,
-          'city': city,
-          'country': country,
+          'city': city.toLowerCase(),
+          'country': country.toLowerCase(),
           'profileHeading': profileHeading,
           'lookingForInaPartner': lookingForInaPartner,
 
