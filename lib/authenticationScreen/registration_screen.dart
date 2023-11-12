@@ -804,10 +804,10 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                           passwordTextEditingController.text.trim(),
                           nameTextEditingController.text.trim(),
                           ageTextEditingController.text.trim(),
-                          genderTextEditingController.text.trim(),
+                          genderTextEditingController.text.toLowerCase().trim(),
                           phoneNoTextEditingController.text.trim(),
-                          cityTextEditingController.text.trim(),
-                          countryTextEditingController.text.trim(),
+                          cityTextEditingController.text.toLowerCase().trim(),
+                          countryTextEditingController.text.toLowerCase().trim(),
                           profileHeadingTextEditingController.text.trim(),
                           lookingForInaPartnerTextEditingController.text.trim(),
 
