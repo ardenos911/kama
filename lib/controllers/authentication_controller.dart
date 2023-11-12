@@ -92,17 +92,8 @@ class AuthenticationController extends GetxController
      try
      {
 
-       //1.function that will set the current user's Lat & long coordinates and send to Firestore
-       void storeUserLocation(String uid) async {
-         Position position = await Geolocator.getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
-         FirebaseFirestore.instance.collection('users').doc(uid).set({
-           'lat': position.latitude,
-           'long': position.longitude,
-         });
-       }
-
-       //2. call the function which sets the Lat and Long in Firestore DB
-        storeUserLocation(FirebaseAuth.instance.currentUser!.uid);
+       //code that will set the current user's Lat & long coordinates and send to Firestore
+       Position position = await Geolocator.getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
 
        //3. authenticate user and create User With Email and Password
        UserCredential credential = await FirebaseAuth.instance.createUserWithEmailAndPassword(
@@ -130,6 +121,8 @@ class AuthenticationController extends GetxController
          profileHeading: profileHeading,
          lookingForInaPartner: lookingForInaPartner,
          publishedDateTime: DateTime.now().millisecondsSinceEpoch,
+         lat: position.latitude,
+         long: position.longitude,
 
          //Appearance
          height: height,

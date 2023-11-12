@@ -15,6 +15,8 @@ class Person {
   String? profileHeading;
   String? lookingForInaPartner;
   int? publishedDateTime;
+  double? lat;
+  double? long;
 
   //Appearance
   String? height;
@@ -58,6 +60,8 @@ class Person {
     this.profileHeading,
     this.lookingForInaPartner,
     this.publishedDateTime,
+    this.lat,
+    this.long,
 
     //Appearance
     this.height,
@@ -107,6 +111,8 @@ class Person {
       profileHeading: dataSnapshot["profileHeading"],
       lookingForInaPartner: dataSnapshot["lookingForInaPartner"],
       publishedDateTime: dataSnapshot["publishedDateTime"],
+      lat: dataSnapshot["lat"],
+      long: dataSnapshot["long"],
 
       //Appearance
       height: dataSnapshot["height"],
@@ -153,6 +159,9 @@ class Person {
         "profileHeading": profileHeading,
         "lookingForInaPartner": lookingForInaPartner,
         "publishedDateTime": publishedDateTime,
+        "lat": lat,
+        "long": long,
+
 
         //Appearance
         "height": height,
