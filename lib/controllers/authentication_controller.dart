@@ -170,13 +170,13 @@ class AuthenticationController extends GetxController
         password: passwordUser,
       );
 
-      Get.snackbar("Log-in Successful", "you have logged-in successfully.");
+      Get.snackbar("Log-in Successful ✔️", "you have logged-in successfully.");
 
       Get.to(HomeScreen());
     }
     catch(err)
     {
-      Get.snackbar("Login Unsuccessful", "Please check your Email & Password");
+      Get.snackbar("Login Unsuccessful ⛔", "Please check your Email & Password");
     }
   }
 
