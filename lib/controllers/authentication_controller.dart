@@ -149,7 +149,7 @@ class AuthenticationController extends GetxController
            .doc(FirebaseAuth.instance.currentUser!.uid)
            .set(personInstance.toJson());
 
-       Get.snackbar("Account Created", "Congratulations, your account has been created.");
+       Get.snackbar("Account Created 🎁", "Congratulations ✨ 🎈, your account has been created.");
        Get.to(const HomeScreen());
      }
      catch(errorMsg)
