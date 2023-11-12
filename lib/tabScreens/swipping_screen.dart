@@ -508,6 +508,7 @@ class _SwippingScreenState extends State<SwippingScreen>
                           'Fukuoka',
                           'Fuzhou',
                           'General santos',
+                          'Georgetown',
                           'Giza',
                           'Goiania',
                           'Guadalajara',
