@@ -90,12 +90,12 @@ class _SwippingScreenState extends State<SwippingScreen>
                         items: [
                           'Male',
                           'Female',
-                          'non-binary',
-                          'lady-boy',
+                          'Nonbinary',
+                          'ladyboy',
                           'Transgender',
                           'Gay',
                           'Lesbian',
-                          'Bi-Sexual',
+                          'Bisexual',
                         ].map((value)
                         {
                           return DropdownMenuItem<String>(
@@ -886,6 +886,7 @@ class _SwippingScreenState extends State<SwippingScreen>
                           onPressed: ()
                           {
                             applyFilter();
+                            Get.snackbar("Please Note 🖐️", " ALL Filters Must Have A Selection!");
                           },
                           icon: const Icon(
                             Icons.filter_list,
