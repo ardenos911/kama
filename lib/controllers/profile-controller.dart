@@ -12,8 +12,6 @@ class ProfileController extends GetxController
   final Rx<List<Person>> usersProfileList = Rx<List<Person>>([]);
   List<Person> get allUsersProfileList => usersProfileList.value;
 
-
-
   getFilterReset(){
 
     onInit();
@@ -21,17 +19,21 @@ class ProfileController extends GetxController
 
   getResults()
   {
+
     usersProfileList.bindStream(
         FirebaseFirestore.instance
             .collection("users")
-            .where("gender", isEqualTo: chosenGender.toString().toLowerCase())
-            .where("country", isEqualTo: chosenCountry.toString().toLowerCase())
-            .where("city", isEqualTo: chosenCity.toString().toLowerCase())
+            .where("gender", isEqualTo: chosenGender!.toLowerCase())
+            .where("country", isEqualTo: chosenCountry!.toLowerCase())
+            .where("city", isEqualTo: chosenCity!.toLowerCase())
             .where("age", isGreaterThanOrEqualTo: int.parse(chosenAge.toString()))
             .snapshots()
             .map((QuerySnapshot queryDataSnapshot)
         {
           List<Person> profilesList = [];
+          print(chosenCity);
+          print(chosenCountry);
+          print(chosenGender);
 
           for (var eachProfile in queryDataSnapshot.docs) {
             profilesList.add(Person.fromDataSnapshot(eachProfile));

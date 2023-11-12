@@ -761,10 +761,10 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                           && emailTextEditingController.text.trim().isNotEmpty
                           && passwordTextEditingController.text.trim().isNotEmpty
                           && ageTextEditingController.text.trim().isNotEmpty
-                          && genderTextEditingController.text.trim().isNotEmpty
+                          && genderTextEditingController.text.toLowerCase().trim().isNotEmpty
                           && phoneNoTextEditingController.text.trim().isNotEmpty
-                          && cityTextEditingController.text.trim().isNotEmpty
-                          && countryTextEditingController.text.trim().isNotEmpty
+                          && cityTextEditingController.text.toLowerCase().trim().isNotEmpty
+                          && countryTextEditingController.text.toLowerCase().trim().isNotEmpty
                           && profileHeadingTextEditingController.text.trim().isNotEmpty
                           && lookingForInaPartnerTextEditingController.text.trim().isNotEmpty &&
 

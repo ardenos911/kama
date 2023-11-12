@@ -106,10 +106,11 @@ class _SwippingScreenState extends State<SwippingScreen>
                             ),
                           );
                         }).toList(),
-                        onChanged: (String? value)
+                        onChanged: ( String? value)
                         {
                           setState(() {
                             chosenGender = value;
+                            //print(value);
                           });
                         },
                       ),
@@ -343,6 +344,7 @@ class _SwippingScreenState extends State<SwippingScreen>
                         {
                           setState(() {
                             chosenCountry = value;
+                            //print(value);
                           });
                         },
                       ),
@@ -381,6 +383,7 @@ class _SwippingScreenState extends State<SwippingScreen>
                         {
                           setState(() {
                             chosenAge = value;
+                            //print(value);
                           });
                         },
                       ),
@@ -779,6 +782,7 @@ class _SwippingScreenState extends State<SwippingScreen>
                         {
                           setState(() {
                             chosenCity = value;
+                           // print(value);
                           });
                         },
                       ),
