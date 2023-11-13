@@ -4,8 +4,9 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:kama_love/authenticationScreen/registration_screen.dart';
 import 'package:kama_love/widgets/custom_text_field_widget.dart';
-
+import '../global.dart';
 import '../controllers/authentication_controller.dart';
+import 'package:geolocator/geolocator.dart';
 
 
 class LoginScreen extends StatefulWidget {
@@ -16,6 +17,9 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  //logic for currentUser location and Permission setting
+  late bool servicePermission=false;
+  late LocationPermission permission;
 
   TextEditingController emailTextEditingController= TextEditingController();
   TextEditingController passwordTextEditingController= TextEditingController();

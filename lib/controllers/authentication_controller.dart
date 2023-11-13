@@ -93,7 +93,7 @@ class AuthenticationController extends GetxController
      {
 
        //code that will set the current user's Lat & long coordinates and send to Firestore
-       Position position = await Geolocator.getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
+       Position position = await Geolocator.getCurrentPosition(desiredAccuracy: LocationAccuracy.low);
 
        //3. authenticate user and create User With Email and Password
        UserCredential credential = await FirebaseAuth.instance.createUserWithEmailAndPassword(

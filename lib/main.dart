@@ -7,6 +7,7 @@ import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:kama_love/authenticationScreen/login_screen.dart';
 import 'package:kama_love/controllers/authentication_controller.dart';
 
+
 void main() async
 {
   WidgetsFlutterBinding.ensureInitialized();

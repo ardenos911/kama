@@ -48,6 +48,7 @@ dependencies:
   http:
   permission_handler:
   geolocator:
+  geocoding:
 
 dev_dependencies:
   flutter_test:
