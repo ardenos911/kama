@@ -920,7 +920,7 @@ class _SwippingScreenState extends State<SwippingScreen>
                             ),
                           ),
                           child: Text(
-                            "click to see how far away I am ",
+                            "click to see how far away I am 💞",
                             style: const TextStyle(
                               color: Colors.white,
                               fontSize: 12,
@@ -929,7 +929,7 @@ class _SwippingScreenState extends State<SwippingScreen>
                         ),
                         const SizedBox(
                           width: 16,
-                          height:2,
+                          height:4,
                         ),
                         ElevatedButton(
                           onPressed: () {
