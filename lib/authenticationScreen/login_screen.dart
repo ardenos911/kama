@@ -152,7 +152,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       }
                       else
                       {
-                        Get.snackbar("Email/Password is Missing", "Please fill all fields.");
+                        Get.snackbar("Email 📧/Password 🔐 is Missing", "Please fill all fields 😒.");
                       }
                     },
                 child: const Center(

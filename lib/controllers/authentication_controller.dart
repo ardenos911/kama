@@ -93,16 +93,16 @@ class AuthenticationController extends GetxController
      try
      {
 
-       //3. authenticate user and create User With Email and Password
+       //1. authenticate user and create User With Email and Password
        UserCredential credential = await FirebaseAuth.instance.createUserWithEmailAndPassword(
            email: email,
            password: password
        );
 
-       //4. upload image to storage
+       //2. upload image to storage
        String urlOfDownloadedImage = await uploadImageToStorage(imageProfile);
 
-       //5. save user info to firestore database
+       //3. save user info to firestore database
        personModel.Person personInstance = personModel.Person(
 
          //personal info
