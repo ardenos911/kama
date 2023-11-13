@@ -22,6 +22,7 @@ class _SwippingScreenState extends State<SwippingScreen>
 {
   ProfileController profileController = Get.put(ProfileController());
   String senderName = "";
+  String miles="";
 
 
   startChattingInWhatsApp(String receiverPhoneNumber) async
@@ -899,6 +900,58 @@ class _SwippingScreenState extends State<SwippingScreen>
                     ),
 
                     const Spacer(),
+
+                    //----------distance calculator button--------------
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        ElevatedButton(
+                          onPressed: () async{
+                           miles = await calculateDistance(currentUserID,eachProfileInfo.uid.toString());
+                             print(miles);
+                             setState(() {
+                               miles;
+                             });
+                          },
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.redAccent,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(16)
+                            ),
+                          ),
+                          child: Text(
+                            "click to see how far away I am:",
+                            style: const TextStyle(
+                              color: Colors.white,
+                              fontSize: 19,
+                            ),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 6,
+                        ),
+                        ElevatedButton(
+                          onPressed: () async{
+                            miles = await calculateDistance(currentUserID,eachProfileInfo.uid.toString());
+                            print(miles);
+                          },
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.redAccent,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(16)
+                            ),
+                          ),
+                          child: Text(
+                            " I am: ${miles} away from you ",
+                            style: const TextStyle(
+                              color: Colors.white,
+                              fontSize: 19,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+
 
                     //user data
                     GestureDetector(
