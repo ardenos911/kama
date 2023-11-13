@@ -18,8 +18,34 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
   //logic for currentUser location and Permission setting
-  late bool servicePermission=false;
+  Position? currentLocation;
+  late bool servicePermission = false;
   late LocationPermission permission;
+  String? _address;
+
+  Future<Position?> _getCurrentLocation() async {
+    try {
+      servicePermission = await Geolocator.isLocationServiceEnabled();
+      if (!servicePermission) {
+        print("service disabled!!");
+      }
+      permission = await Geolocator.checkPermission();
+      if (permission == LocationPermission.denied) {
+        permission = await Geolocator.requestPermission();
+      }
+      //code that will set the current user's Lat & long coordinates and send to Firestore
+       currentLocation = await Geolocator.getCurrentPosition(
+          desiredAccuracy: LocationAccuracy.low);
+      setState(() {
+        position = currentLocation;
+      });
+      return currentLocation;
+    }
+     catch(errorMsg){
+     Get.snackbar("you have an error", "${errorMsg}");
+    }
+  } //end of Future
+      //_getCurrentLocation();
 
   TextEditingController emailTextEditingController= TextEditingController();
   TextEditingController passwordTextEditingController= TextEditingController();
@@ -158,7 +184,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 InkWell(
                   onTap: ()
-                  {
+                  { _getCurrentLocation();
                     Get.to(() => const RegistrationScreen());
                   },
                   child: const Text(

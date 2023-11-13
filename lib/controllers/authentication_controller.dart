@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:kama_love/global.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
@@ -92,9 +93,6 @@ class AuthenticationController extends GetxController
      try
      {
 
-       //code that will set the current user's Lat & long coordinates and send to Firestore
-       Position position = await Geolocator.getCurrentPosition(desiredAccuracy: LocationAccuracy.low);
-
        //3. authenticate user and create User With Email and Password
        UserCredential credential = await FirebaseAuth.instance.createUserWithEmailAndPassword(
            email: email,
@@ -121,8 +119,8 @@ class AuthenticationController extends GetxController
          profileHeading: profileHeading,
          lookingForInaPartner: lookingForInaPartner,
          publishedDateTime: DateTime.now().millisecondsSinceEpoch,
-         lat: position.latitude,
-         long: position.longitude,
+         lat: position?.latitude,
+         long: position?.longitude,
 
          //Appearance
          height: height,
