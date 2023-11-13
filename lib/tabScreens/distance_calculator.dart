@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:geolocator/geolocator.dart';
 
 
-Future<double> calculateDistance(String uid1, String uid2) async {
+Future<int> calculateDistance(String uid1, String uid2) async {
   DocumentSnapshot doc1 = await FirebaseFirestore.instance.collection('users').doc(uid1).get();
   DocumentSnapshot doc2 = await FirebaseFirestore.instance.collection('users').doc(uid2).get();
 
@@ -14,7 +14,7 @@ Future<double> calculateDistance(String uid1, String uid2) async {
   double distanceInMeters = Geolocator.distanceBetween(startLatitude, startLongitude, endLatitude, endLongitude);
 
   // Convert the distance to miles
-  double distanceInMiles = distanceInMeters / 1609.34;
+  int distanceInMiles = (distanceInMeters / 1609.34).round();
 
   return distanceInMiles;
 }
