@@ -908,44 +908,44 @@ class _SwippingScreenState extends State<SwippingScreen>
                         ElevatedButton(
                           onPressed: () async{
                            miles = await calculateDistance(currentUserID,eachProfileInfo.uid.toString());
-                             print(miles);
+                             //print(miles);
                              setState(() {
                                miles;
                              });
                           },
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.redAccent,
+                            backgroundColor: Colors.red[1],
                             shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(16)
+                                borderRadius: BorderRadius.circular(26)
                             ),
                           ),
                           child: Text(
-                            "click to see how far away I am:",
+                            "click to see how far away I am ",
                             style: const TextStyle(
                               color: Colors.white,
-                              fontSize: 19,
+                              fontSize: 12,
                             ),
                           ),
                         ),
                         const SizedBox(
-                          width: 6,
+                          width: 16,
+                          height:2,
                         ),
                         ElevatedButton(
-                          onPressed: () async{
-                            miles = await calculateDistance(currentUserID,eachProfileInfo.uid.toString());
-                            print(miles);
+                          onPressed: () {
+
                           },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.redAccent,
                             shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(16)
+                                borderRadius: BorderRadius.circular(26)
                             ),
                           ),
                           child: Text(
-                            " I am: ${miles} away from you ",
+                            " I am: ${miles} miles away from you ",
                             style: const TextStyle(
                               color: Colors.white,
-                              fontSize: 19,
+                              fontSize: 12,
                             ),
                           ),
                         ),
