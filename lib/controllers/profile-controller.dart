@@ -31,9 +31,6 @@ class ProfileController extends GetxController
             .map((QuerySnapshot queryDataSnapshot)
         {
           List<Person> profilesList = [];
-          print(chosenCity);
-          print(chosenCountry);
-          print(chosenGender);
 
           for (var eachProfile in queryDataSnapshot.docs) {
             profilesList.add(Person.fromDataSnapshot(eachProfile));

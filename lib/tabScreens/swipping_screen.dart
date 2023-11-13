@@ -7,6 +7,7 @@ import 'package:kama_love/tabScreens/user_details_screen.dart';
 
 import '../controllers/profile-controller.dart';
 import '../global.dart';
+import './distance_calculator.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class SwippingScreen extends StatefulWidget
