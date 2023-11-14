@@ -5,6 +5,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
+import 'package:kama_love/tabScreens/distance_calculator.dart';
 import '../models/person.dart';
 
 class ProfileController extends GetxController
@@ -64,6 +65,10 @@ class ProfileController extends GetxController
 
             for(var eachProfile in queryDataSnapshot.docs)
             {
+             DocumentSnapshot puid = eachProfile.get('uid');
+             String suid = puid.toString();
+             Future <String> Miles =  calculateDistance(suid, currentUserID);
+             String sMile = Miles.toString();
               profilesList.add(Person.fromDataSnapshot(eachProfile));
             }
             return profilesList;
