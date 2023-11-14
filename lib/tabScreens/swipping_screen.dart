@@ -49,7 +49,7 @@ class _SwippingScreenState extends State<SwippingScreen>
           {
             return AlertDialog(
               title: const Text("Whatsapp Not Found 😔"),
-              content: const Text("WhatsApp is not installed.Please Install WhatsApp ✆ To Use Chat Feature"),
+              content: const Text("WhatsApp is not installed 😨. Please Install WhatsApp ✆ To Use Chat Feature"),
               actions: [
                 TextButton(
                   onPressed: ()
