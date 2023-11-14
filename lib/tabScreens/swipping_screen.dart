@@ -1157,6 +1157,7 @@ class _SwippingScreenState extends State<SwippingScreen>
                         GestureDetector(
                           onTap: ()
                           {
+
                             startChattingInWhatsApp(eachProfileInfo.phoneNo.toString());
                           },
                           child: Image.asset(
@@ -1164,6 +1165,7 @@ class _SwippingScreenState extends State<SwippingScreen>
                             width: 70,
                           ),
                         ),
+
 
                         //like button
                         GestureDetector(
