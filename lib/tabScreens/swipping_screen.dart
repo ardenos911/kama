@@ -34,11 +34,11 @@ class _SwippingScreenState extends State<SwippingScreen>
     {
       if(Platform.isIOS)
       {
-       // await launchUrl((Uri.parse(iosUrl)));
+         await launchUrl((Uri.parse(iosUrl)));
       }
       else
       {
-       // await launchUrl((Uri.parse(androidUrl)));
+         await launchUrl((Uri.parse(androidUrl)));
       }
     }
     on Exception
@@ -48,8 +48,8 @@ class _SwippingScreenState extends State<SwippingScreen>
           builder: (BuildContext context)
           {
             return AlertDialog(
-              title: const Text("Whatsapp Not Found"),
-              content: const Text("WhatsApp is not installed."),
+              title: const Text("Whatsapp Not Found 😔"),
+              content: const Text("WhatsApp is not installed.Please Install WhatsApp ✆ To Use Chat Feature"),
               actions: [
                 TextButton(
                   onPressed: ()
