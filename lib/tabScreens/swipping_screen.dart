@@ -27,8 +27,8 @@ class _SwippingScreenState extends State<SwippingScreen>
 
   startChattingInWhatsApp(String receiverPhoneNumber) async
   {
-    var androidUrl = "whatsapp://send?phone=$receiverPhoneNumber&text=Hi, I found your profile on kama app.";
-    var iosUrl = "https://wa.me/$receiverPhoneNumber?text=${Uri.parse('Hi, I found your profile on kama app.')}";
+    var androidUrl = "whatsapp://send?phone=$receiverPhoneNumber&text=Hi, I found your profile on kama app and would like to chat with you 😊.";
+    var iosUrl = "https://wa.me/$receiverPhoneNumber?text=${Uri.parse('Hi, I found your profile on kama app and would like to chat with you 😊.')}";
 
     try
     {
