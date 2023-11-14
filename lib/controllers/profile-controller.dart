@@ -13,6 +13,13 @@ class ProfileController extends GetxController
   final Rx<List<Person>> usersProfileList = Rx<List<Person>>([]);
   List<Person> get allUsersProfileList => usersProfileList.value;
 
+
+  // DocumentSnapshot puid = eachProfile.get('uid');
+  // String suid = puid.toString();
+  // Future <String> Miles =  calculateDistance(suid, currentUserID);
+  // String sMile = Miles.toString();
+  // var dMiles = double.parse(sMile);
+
   getFilterReset(){
 
     onInit();
@@ -65,10 +72,7 @@ class ProfileController extends GetxController
 
             for(var eachProfile in queryDataSnapshot.docs)
             {
-             DocumentSnapshot puid = eachProfile.get('uid');
-             String suid = puid.toString();
-             Future <String> Miles =  calculateDistance(suid, currentUserID);
-             String sMile = Miles.toString();
+
               profilesList.add(Person.fromDataSnapshot(eachProfile));
             }
             return profilesList;
