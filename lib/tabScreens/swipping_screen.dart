@@ -119,7 +119,7 @@ class _SwippingScreenState extends State<SwippingScreen>
                     ),
                     const SizedBox(height: 20,),
 
-                    const Text("who's from the Country:"),
+                    const Text("from the Country:"),
                     SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
                       child: DropdownButton<String>(
@@ -352,7 +352,7 @@ class _SwippingScreenState extends State<SwippingScreen>
                     ),
                     const SizedBox(height: 20,),
 
-                    const Text("who's age is equal to or above:"),
+                    const Text("age is equal to or above:"),
                     SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
                       child: DropdownButton<String>(
@@ -919,9 +919,9 @@ class _SwippingScreenState extends State<SwippingScreen>
                                 borderRadius: BorderRadius.circular(26)
                             ),
                           ),
-                          child: Text(
+                          child: const Text(
                             "click to see how far away I am 💞",
-                            style: const TextStyle(
+                            style:  TextStyle(
                               color: Colors.white,
                               fontSize: 12,
                             ),
