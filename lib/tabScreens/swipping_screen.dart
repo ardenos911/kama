@@ -65,6 +65,14 @@ class _SwippingScreenState extends State<SwippingScreen>
     }
   }
 
+  //Filter by DISTANCE away from Current user-----
+  applyDistanceFilter(){
+
+
+
+  }
+
+ //Filter by GEO-LOCATION & TRAITS---
   applyFilter()
   {
     showDialog(
@@ -880,7 +888,7 @@ class _SwippingScreenState extends State<SwippingScreen>
                 child: Column(
                   children: [
 
-                    //filter icon button
+                    //filter by GEO-LOCATION & TRAITS icon button--------
                     Align(
                       alignment: Alignment.topRight,
                       child: Padding(
@@ -892,7 +900,7 @@ class _SwippingScreenState extends State<SwippingScreen>
                             Get.snackbar("Please Note 🖐️", " ALL Filters Must Have A Selection!");
                           },
                           icon: const Icon(
-                            Icons.filter_list_sharp,
+                            Icons.filter_list,
                             size: 35,
                             color:Colors.red
                           ),
@@ -900,7 +908,7 @@ class _SwippingScreenState extends State<SwippingScreen>
                       ),
                     ),
 
-                    //filter by distance icon
+                    //filter by DISTANCE icon-------------
                     Align(
                       alignment: Alignment.topRight,
                       child: Padding(
@@ -908,7 +916,7 @@ class _SwippingScreenState extends State<SwippingScreen>
                         child: IconButton(
                           onPressed: ()
                           {
-                            applyFilter();
+                            applyDistanceFilter();
                             Get.snackbar("Please Note 🖐️", "The value chosen will return ALL users 🦱 who are LESS than that many miles away from you!");
                           },
                           icon: const Icon(
