@@ -803,6 +803,7 @@ class _SwippingScreenState extends State<SwippingScreen>
                     },
                     child: const Text("Start Filters"),
                   ),
+
                   ElevatedButton(
                     onPressed: ()
                     {
@@ -891,9 +892,29 @@ class _SwippingScreenState extends State<SwippingScreen>
                             Get.snackbar("Please Note 🖐️", " ALL Filters Must Have A Selection!");
                           },
                           icon: const Icon(
-                            Icons.filter_list,
-                            size: 30,
-                            color:Colors.black
+                            Icons.filter_list_sharp,
+                            size: 35,
+                            color:Colors.red
+                          ),
+                        ),
+                      ),
+                    ),
+
+                    //filter by distance icon
+                    Align(
+                      alignment: Alignment.topRight,
+                      child: Padding(
+                        padding: const EdgeInsets.only(top: 11),
+                        child: IconButton(
+                          onPressed: ()
+                          {
+                            applyFilter();
+                            Get.snackbar("Please Note 🖐️", "The value chosen will return ALL users 🦱 who are LESS than that many miles away from you!");
+                          },
+                          icon: const Icon(
+                              Icons.filter_vintage,
+                              size: 35,
+                              color: Colors.black87
                           ),
                         ),
                       ),
