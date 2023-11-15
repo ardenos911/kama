@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:html';
 import 'package:kama_love/global.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -14,7 +15,9 @@ class ProfileController extends GetxController
   final Rx<List<Person>> usersProfileList = Rx<List<Person>>([]);
   List<Person> get allUsersProfileList => usersProfileList.value;
 
-  getDistanceFilter(){
+
+
+  getDistanceFilter()async {
 
     usersProfileList.bindStream(
         FirebaseFirestore.instance
@@ -22,20 +25,20 @@ class ProfileController extends GetxController
             .where("uid", isNotEqualTo: FirebaseAuth.instance.currentUser!.uid)
             .snapshots()
             .map((QuerySnapshot queryDataSnapshot)
-    {
+         {
       List<Person> profilesList = [];
 
-      for(var eachProfile in queryDataSnapshot.docs)
-      {
-        String puid =  eachProfile.get('uid');
+         Future.forEach<QuerySnapshot> (queryDataSnapshot.docs as Iterable<QuerySnapshot<Object?>>,
+          (eachProfile) async{
+        String puid =  QueryDocumentSnapshot.get('uid');
         String suid = puid.toString();
 
-          dynamic Miles = Future.value(calculateDistance(suid, currentUserID));
+          dynamic Miles = await calculateDistance(suid, currentUserID);
           String sMile = Miles.toString();
           var dMiles = double.parse(sMile);
           var chosenMiless = double.parse(chosenMiles!);
           if(dMiles<chosenMiless){
-            profilesList.add(Person.fromDataSnapshot(eachProfile));
+            profilesList.add(Person.fromDataSnapshot(eachProfile as DocumentSnapshot<Object?>));
 
         }
       }
@@ -99,6 +102,7 @@ class ProfileController extends GetxController
 
               profilesList.add(Person.fromDataSnapshot(eachProfile));
             }
+
             return profilesList;
           })
       );
