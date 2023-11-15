@@ -80,13 +80,12 @@ class _SwippingScreenState extends State<SwippingScreen>
                 content: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-
                       const Text("I want ALL users to be less than so many miles away from me:"),
                       SingleChildScrollView(
                         scrollDirection: Axis.horizontal,
-                        child: DropdownButton<String?>(
+                        child: DropdownButton<String>(
                           hint: const Text('Select Number of Miles'),
-                          value: chosenMiles.toString(),
+                          value: chosenMiles,
                           underline: Container(),
                           items: [
                             '1',
@@ -128,7 +127,44 @@ class _SwippingScreenState extends State<SwippingScreen>
                       ),
                       const SizedBox(height: 20,),
                     ]
-                )
+                ),
+
+                actions: [
+                ElevatedButton(
+                onPressed: ()
+            {
+              //Get.back();
+
+              profileController.getDistanceFilter();
+            },
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.blue,
+                  ),
+            child: const Text("Start Distance Filter"),
+
+            ),
+
+            ElevatedButton(
+            onPressed: ()
+            {
+            //Get.back();
+
+            setState(() {
+            chosenMiles = null;
+            chosenCity = null;
+            chosenAge = null;
+            chosenCountry = null;
+            chosenGender = null;
+            });
+
+            profileController.getFilterReset();
+            },
+            style: ElevatedButton.styleFrom(
+            primary: Colors.red,
+            ),
+            child: const Text("Clear Distance Filter"),
+            ),
+            ],
             );
           }
         );

@@ -8,17 +8,41 @@ import 'package:http/http.dart' as http;
 import 'package:kama_love/tabScreens/distance_calculator.dart';
 import '../models/person.dart';
 
+
 class ProfileController extends GetxController
 {
   final Rx<List<Person>> usersProfileList = Rx<List<Person>>([]);
   List<Person> get allUsersProfileList => usersProfileList.value;
 
+  getDistanceFilter(){
 
-  // DocumentSnapshot puid = eachProfile.get('uid');
-  // String suid = puid.toString();
-  // Future <String> Miles =  calculateDistance(suid, currentUserID);
-  // String sMile = Miles.toString();
-  // var dMiles = double.parse(sMile);
+    usersProfileList.bindStream(
+        FirebaseFirestore.instance
+            .collection("users")
+            .where("uid", isNotEqualTo: FirebaseAuth.instance.currentUser!.uid)
+            .snapshots()
+            .map((QuerySnapshot queryDataSnapshot)
+    {
+      List<Person> profilesList = [];
+
+      for(var eachProfile in queryDataSnapshot.docs)
+      {
+        String puid =  eachProfile.get('uid');
+        String suid = puid.toString();
+
+          dynamic Miles = Future.value(calculateDistance(suid, currentUserID));
+          String sMile = Miles.toString();
+          var dMiles = double.parse(sMile);
+          var chosenMiless = double.parse(chosenMiles!);
+          if(dMiles<chosenMiless){
+            profilesList.add(Person.fromDataSnapshot(eachProfile));
+
+        }
+      }
+      return profilesList;
+    })
+    );
+  }//end of getDistanceFilter
 
   getFilterReset(){
 
