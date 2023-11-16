@@ -133,8 +133,7 @@ class _SwippingScreenState extends State<SwippingScreen>
                 ElevatedButton (
                 onPressed: ()async
             {
-              //Get.back();
-
+              Get.back();
              await profileController.getDistanceFilter();
             },
                   style: ElevatedButton.styleFrom(
