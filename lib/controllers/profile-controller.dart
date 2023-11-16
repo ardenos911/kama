@@ -28,23 +28,19 @@ class ProfileController extends GetxController
          {
              List<Person> profilesList = [];
              QueryDocumentSnapshot eachProfile;
+
               queryDataSnapshot.docs.forEach((eachProfile) async{
                 String puid = eachProfile.get('uid');
                 String Miles = await calculateDistance(puid, currentUserID);
                 var dMiles = double.parse(Miles);
+                var dchosenMiles = double.parse(chosenMiles!);
+                if (dMiles < dchosenMiles) {
+                  profilesList.add(Person.fromDataSnapshot(eachProfile));
+                }
+
               });
-               //
-               //
 
-
-               // String sMile = Miles.toString();
-               //
-               // var chosenMiless = double.parse(chosenMiles!);
-               // if (dMiles < chosenMiless) {
-               //   profilesList.add(Person.fromDataSnapshot(eachProfile));
-               // }
-
-      return profilesList;
+          return profilesList;
     })
     );
   }//end of getDistanceFilter
