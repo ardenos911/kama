@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:html';
 import 'package:kama_love/global.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -28,7 +27,7 @@ class ProfileController extends GetxController
          {
              List<Person> profilesList = [];
 
-              queryDataSnapshot.docs.forEach((eachProfile) async{
+              queryDataSnapshot.docs.forEach((eachProfile) async {
                 String puid = eachProfile.get('uid');
                 String miles = await calculateDistance(puid, currentUserID);
                 var dMiles = double.parse(miles);
@@ -36,10 +35,9 @@ class ProfileController extends GetxController
                 if (dMiles < dchosenMiles) {
                   profilesList.add(Person.fromDataSnapshot(eachProfile));
                 }
-
               });
-
           return profilesList;
+
     })
     );
   }//end of getDistanceFilter

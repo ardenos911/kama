@@ -4,7 +4,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:kama_love/tabScreens/user_details_screen.dart';
-
 import '../controllers/profile-controller.dart';
 import '../global.dart';
 import './distance_calculator.dart';
@@ -131,10 +130,10 @@ class _SwippingScreenState extends State<SwippingScreen>
 
                 actions: [
                 ElevatedButton (
-                onPressed: ()async
+                onPressed: ()
             {
               Get.back();
-             await profileController.getDistanceFilter();
+              profileController.getDistanceFilter();
             },
                   style: ElevatedButton.styleFrom(
                     primary: Colors.blue,
