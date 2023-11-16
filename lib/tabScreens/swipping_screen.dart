@@ -65,110 +65,110 @@ class _SwippingScreenState extends State<SwippingScreen>
   }
 
   //Filter by DISTANCE away from Current user-----
-  applyDistanceFilter(){
-    showDialog(
-        context: context,
-        builder: (BuildContext context)
-    {
-      return StatefulBuilder(
-          builder: (BuildContext context, StateSetter setState) {
-            return AlertDialog(
-                title: const Text(
-                  "Distance Filter in Miles",
-                ),
-                content: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      const Text("I want ALL users to be less than so many miles away from me:"),
-                      SingleChildScrollView(
-                        scrollDirection: Axis.horizontal,
-                        child: DropdownButton<String>(
-                          hint: const Text('Select Number of Miles'),
-                          value: chosenMiles,
-                          underline: Container(),
-                          items: [
-                            '1',
-                            '5',
-                            '10',
-                            '20',
-                            '40',
-                            '50',
-                            '100',
-                            '200',
-                            '400',
-                            '500',
-                            '800',
-                            '1000',
-                            '1500',
-                            '2000',
-                            '4000',
-                            '5000',
-                            '8000',
-                            '10000',
-                            '12500',
-                            '15000',
-                            '24990',
-                          ].map((value) {
-                            return DropdownMenuItem<String>(
-                              value: value,
-                              child:Text( value,
-                                style: const TextStyle(fontWeight: FontWeight.w500),
-                              ),
-                            );
-                          }).toList(),
-                          onChanged: (String? value) {
-                            setState(() {
-                              chosenMiles = value;
-                              //print(value);
-                            });
-                          },
-                        ),
-                      ),
-                      const SizedBox(height: 20,),
-                    ]
-                ),
-
-                actions: [
-                ElevatedButton (
-                onPressed: ()
-            {
-              Get.back();
-              profileController.getDistanceFilter();
-            },
-                  style: ElevatedButton.styleFrom(
-                    primary: Colors.blue,
-                  ),
-            child: const Text("Start Distance Filter"),
-
-            ),
-
-            ElevatedButton(
-            onPressed: ()
-            {
-            //Get.back();
-
-            setState(() {
-            chosenMiles = null;
-            chosenCity = null;
-            chosenAge = null;
-            chosenCountry = null;
-            chosenGender = null;
-            });
-
-            profileController.getFilterReset();
-            },
-            style: ElevatedButton.styleFrom(
-            primary: Colors.red,
-            ),
-            child: const Text("Clear Distance Filter"),
-            ),
-            ],
-            );
-          }
-        );
-      },
-    );
-  }// end of DistanceFilter()
+  // applyDistanceFilter(){
+  //   showDialog(
+  //       context: context,
+  //       builder: (BuildContext context)
+  //   {
+  //     return StatefulBuilder(
+  //         builder: (BuildContext context, StateSetter setState) {
+  //           return AlertDialog(
+  //               title: const Text(
+  //                 "Distance Filter in Miles",
+  //               ),
+  //               content: Column(
+  //                   mainAxisSize: MainAxisSize.min,
+  //                   children: [
+  //                     const Text("I want ALL users to be less than so many miles away from me:"),
+  //                     SingleChildScrollView(
+  //                       scrollDirection: Axis.horizontal,
+  //                       child: DropdownButton<String>(
+  //                         hint: const Text('Select Number of Miles'),
+  //                         value: chosenMiles,
+  //                         underline: Container(),
+  //                         items: [
+  //                           '1',
+  //                           '5',
+  //                           '10',
+  //                           '20',
+  //                           '40',
+  //                           '50',
+  //                           '100',
+  //                           '200',
+  //                           '400',
+  //                           '500',
+  //                           '800',
+  //                           '1000',
+  //                           '1500',
+  //                           '2000',
+  //                           '4000',
+  //                           '5000',
+  //                           '8000',
+  //                           '10000',
+  //                           '12500',
+  //                           '15000',
+  //                           '24990',
+  //                         ].map((value) {
+  //                           return DropdownMenuItem<String>(
+  //                             value: value,
+  //                             child:Text( value,
+  //                               style: const TextStyle(fontWeight: FontWeight.w500),
+  //                             ),
+  //                           );
+  //                         }).toList(),
+  //                         onChanged: (String? value) {
+  //                           setState(() {
+  //                             chosenMiles = value;
+  //                             //print(value);
+  //                           });
+  //                         },
+  //                       ),
+  //                     ),
+  //                     const SizedBox(height: 20,),
+  //                   ]
+  //               ),
+  //
+  //               actions: [
+  //               ElevatedButton (
+  //               onPressed: ()
+  //           {
+  //             Get.back();
+  //             profileController.getDistanceFilter();
+  //           },
+  //                 style: ElevatedButton.styleFrom(
+  //                   primary: Colors.blue,
+  //                 ),
+  //           child: const Text("Start Distance Filter"),
+  //
+  //           ),
+  //
+  //           ElevatedButton(
+  //           onPressed: ()
+  //           {
+  //           //Get.back();
+  //
+  //           setState(() {
+  //           chosenMiles = null;
+  //           chosenCity = null;
+  //           chosenAge = null;
+  //           chosenCountry = null;
+  //           chosenGender = null;
+  //           });
+  //
+  //           profileController.getFilterReset();
+  //           },
+  //           style: ElevatedButton.styleFrom(
+  //           primary: Colors.red,
+  //           ),
+  //           child: const Text("Clear Distance Filter"),
+  //           ),
+  //           ],
+  //           );
+  //         }
+  //       );
+  //     },
+  //   );
+  // }// end of DistanceFilter()
 
 
  //Filter by GEO-LOCATION & TRAITS---
@@ -1008,24 +1008,24 @@ class _SwippingScreenState extends State<SwippingScreen>
                     ),
 
                     //filter by DISTANCE icon-------------
-                    Align(
-                      alignment: Alignment.topRight,
-                      child: Padding(
-                        padding: const EdgeInsets.only(top: 11),
-                        child: IconButton(
-                          onPressed: ()
-                          {
-                            applyDistanceFilter();
-                            Get.snackbar("Please Note 🖐", "The value chosen will return ALL users 🦱 who are LESS than that many miles away from you!");
-                          },
-                          icon: const Icon(
-                              Icons.filter_vintage,
-                              size: 35,
-                              color: Colors.black87
-                          ),
-                        ),
-                      ),
-                    ),
+                    // Align(
+                    //   alignment: Alignment.topRight,
+                    //   child: Padding(
+                    //     padding: const EdgeInsets.only(top: 11),
+                    //     child: IconButton(
+                    //       onPressed: ()
+                    //       {
+                    //         applyDistanceFilter();
+                    //         Get.snackbar("Please Note 🖐", "The value chosen will return ALL users who are LESS than that many miles away from you!");
+                    //       },
+                    //       icon: const Icon(
+                    //           Icons.filter_vintage,
+                    //           size: 35,
+                    //           color: Colors.black87
+                    //       ),
+                    //     ),
+                    //   ),
+                    // ),
 
                     const Spacer(),
 
