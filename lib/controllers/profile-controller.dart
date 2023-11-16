@@ -26,22 +26,24 @@ class ProfileController extends GetxController
             .snapshots()
             .map((QuerySnapshot queryDataSnapshot)
          {
-      List<Person> profilesList = [];
+             List<Person> profilesList = [];
+             QueryDocumentSnapshot eachProfile;
+              queryDataSnapshot.docs.forEach((eachProfile) async{
+                String puid = eachProfile.get('uid');
+                String Miles = await calculateDistance(puid, currentUserID);
+                var dMiles = double.parse(Miles);
+              });
+               //
+               //
 
-         Future.forEach<QuerySnapshot> (queryDataSnapshot.docs as Iterable<QuerySnapshot<Object?>>,
-          (eachProfile) async{
-        String puid =  QueryDocumentSnapshot.get('uid');
-        String suid = puid.toString();
 
-          dynamic Miles = await calculateDistance(suid, currentUserID);
-          String sMile = Miles.toString();
-          var dMiles = double.parse(sMile);
-          var chosenMiless = double.parse(chosenMiles!);
-          if(dMiles<chosenMiless){
-            profilesList.add(Person.fromDataSnapshot(eachProfile as DocumentSnapshot<Object?>));
+               // String sMile = Miles.toString();
+               //
+               // var chosenMiless = double.parse(chosenMiles!);
+               // if (dMiles < chosenMiless) {
+               //   profilesList.add(Person.fromDataSnapshot(eachProfile));
+               // }
 
-        }
-      }
       return profilesList;
     })
     );
