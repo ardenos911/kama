@@ -130,12 +130,12 @@ class _SwippingScreenState extends State<SwippingScreen>
                 ),
 
                 actions: [
-                ElevatedButton(
-                onPressed: ()
+                ElevatedButton (
+                onPressed: ()async
             {
               //Get.back();
 
-              profileController.getDistanceFilter();
+             await profileController.getDistanceFilter();
             },
                   style: ElevatedButton.styleFrom(
                     primary: Colors.blue,
@@ -1018,7 +1018,7 @@ class _SwippingScreenState extends State<SwippingScreen>
                           onPressed: ()
                           {
                             applyDistanceFilter();
-                            Get.snackbar("Please Note 🖐️", "The value chosen will return ALL users 🦱 who are LESS than that many miles away from you!");
+                            Get.snackbar("Please Note 🖐", "The value chosen will return ALL users 🦱 who are LESS than that many miles away from you!");
                           },
                           icon: const Icon(
                               Icons.filter_vintage,

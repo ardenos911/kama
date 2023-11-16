@@ -17,7 +17,7 @@ class ProfileController extends GetxController
 
 
 
-  getDistanceFilter()async {
+  Future getDistanceFilter()async {
 
     usersProfileList.bindStream(
         FirebaseFirestore.instance
@@ -27,12 +27,11 @@ class ProfileController extends GetxController
             .map((QuerySnapshot queryDataSnapshot)
          {
              List<Person> profilesList = [];
-             QueryDocumentSnapshot eachProfile;
 
               queryDataSnapshot.docs.forEach((eachProfile) async{
                 String puid = eachProfile.get('uid');
-                String Miles = await calculateDistance(puid, currentUserID);
-                var dMiles = double.parse(Miles);
+                String miles = await calculateDistance(puid, currentUserID);
+                var dMiles = double.parse(miles);
                 var dchosenMiles = double.parse(chosenMiles!);
                 if (dMiles < dchosenMiles) {
                   profilesList.add(Person.fromDataSnapshot(eachProfile));
