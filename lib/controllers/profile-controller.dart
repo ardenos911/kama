@@ -55,16 +55,14 @@ class ProfileController extends GetxController
 
     if(chosenGender == null || chosenCountry == null || chosenAge == null) {
       // Get the user's document reference
-      final userDocRef = FirebaseFirestore.instance.collection('users').doc(currentUserID);
 
-     // Get the user's document snapshot
-      final userDocSnapshot =  userDocRef.get();
+      final data =  FirebaseFirestore.instance.collection('users')
+          .where("uid", isEqualTo: FirebaseAuth.instance.currentUser!.uid);
 
-      // Get the user's publishedDateTime field
-      final  publishedDateTime = userDocSnapshot.get('publishedDateTime');
+
 
       // Print the publishedDateTime
-      print(publishedDateTime);
+      print(data);
 
     }
 
