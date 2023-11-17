@@ -53,16 +53,16 @@ class ProfileController extends GetxController
     // TODO: implement onInit
     super.onInit();
 
-    if(chosenGender == null || chosenCountry == null || chosenAge == null) {
+    getItemStreamSnapshots() async {
       // Get the user's document reference
 
-      final data =  FirebaseFirestore.instance.collection('users')
-          .where("uid", isEqualTo: FirebaseAuth.instance.currentUser!.uid);
-
-
-
-      // Print the publishedDateTime
-      print(data);
+      final dataMe =  await FirebaseFirestore.instance.collection('users')
+          .where("uid", isEqualTo: FirebaseAuth.instance.currentUser!.uid)
+           .get();
+         var data =  dataMe.docs;
+      final publishedDateTime = data[0]['publishedDateTime'];
+      print (publishedDateTime);
+      return publishedDateTime;
 
     }
 
