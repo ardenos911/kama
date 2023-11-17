@@ -211,3 +211,16 @@ class AuthenticationController extends GetxController
   }
 
 }// end of AuthenticationController{} class
+
+// getItemStreamSnapshots() async {
+//   // Get the user's document reference
+//
+//   final dataMe =  await FirebaseFirestore.instance.collection('users')
+//       .where("uid", isEqualTo: FirebaseAuth.instance.currentUser!.uid)
+//        .get();
+//      var data =  dataMe.docs;
+//   final publishedDateTime = data[0]['publishedDateTime'];
+//   print (publishedDateTime);
+//   return publishedDateTime;
+//
+// }
