@@ -45,7 +45,7 @@ class _LoginScreenState extends State<LoginScreen> {
      Get.snackbar("you have an error", "${errorMsg}");
     }
   } //end of Future
-      //_getCurrentLocation();
+
 
   TextEditingController emailTextEditingController= TextEditingController();
   TextEditingController passwordTextEditingController= TextEditingController();

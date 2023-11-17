@@ -49,9 +49,24 @@ class ProfileController extends GetxController
   }
 
   @override
-  void onInit() {
+  Future<void> onInit()  {
     // TODO: implement onInit
     super.onInit();
+
+    if(chosenGender == null || chosenCountry == null || chosenAge == null) {
+      // Get the user's document reference
+      final userDocRef = FirebaseFirestore.instance.collection('users').doc(currentUserID);
+
+     // Get the user's document snapshot
+      final userDocSnapshot =  userDocRef.get();
+
+      // Get the user's publishedDateTime field
+      final  publishedDateTime = userDocSnapshot.get('publishedDateTime');
+
+      // Print the publishedDateTime
+      print(publishedDateTime);
+
+    }
 
     if(chosenGender == null || chosenCountry == null || chosenAge == null)
     {
@@ -63,13 +78,12 @@ class ProfileController extends GetxController
               .map((QuerySnapshot queryDataSnapshot)
           {
             List<Person> profilesList = [];
-
             for(var eachProfile in queryDataSnapshot.docs)
             {
 
               profilesList.add(Person.fromDataSnapshot(eachProfile));
             }
-
+            //String accountSetUpDate = currentUserID.get('publishedDateTime');
             return profilesList;
           })
       );
