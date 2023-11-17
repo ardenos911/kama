@@ -49,22 +49,10 @@ class ProfileController extends GetxController
   }
 
   @override
-  Future<void> onInit()  {
+  void onInit()   {
     // TODO: implement onInit
     super.onInit();
 
-    getItemStreamSnapshots() async {
-      // Get the user's document reference
-
-      final dataMe =  await FirebaseFirestore.instance.collection('users')
-          .where("uid", isEqualTo: FirebaseAuth.instance.currentUser!.uid)
-           .get();
-         var data =  dataMe.docs;
-      final publishedDateTime = data[0]['publishedDateTime'];
-      print (publishedDateTime);
-      return publishedDateTime;
-
-    }
 
     if(chosenGender == null || chosenCountry == null || chosenAge == null)
     {
@@ -81,7 +69,6 @@ class ProfileController extends GetxController
 
               profilesList.add(Person.fromDataSnapshot(eachProfile));
             }
-            //String accountSetUpDate = currentUserID.get('publishedDateTime');
             return profilesList;
           })
       );
