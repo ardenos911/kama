@@ -5,7 +5,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
-import 'package:kama_love/tabScreens/distance_calculator.dart';
 import '../models/person.dart';
 
 
@@ -15,32 +14,6 @@ class ProfileController extends GetxController
   List<Person> get allUsersProfileList => usersProfileList.value;
 
 
-
-  //    getDistanceFilter()async {
-  //
-  //   usersProfileList.bindStream(
-  //       FirebaseFirestore.instance
-  //           .collection("users")
-  //           .where("uid", isNotEqualTo: FirebaseAuth.instance.currentUser!.uid)
-  //           .snapshots()
-  //           .map((QuerySnapshot queryDataSnapshot)
-  //        {
-  //            List<Person> profilesList = [];
-  //
-  //             queryDataSnapshot.docs.forEach((eachProfile) async {
-  //               String puid = eachProfile.get('uid');
-  //               String miles = await calculateDistance(puid, currentUserID);
-  //               var dMiles = double.parse(miles);
-  //               var dchosenMiles = double.parse(chosenMiles!);
-  //               if (dMiles < dchosenMiles) {
-  //                 profilesList.add(Person.fromDataSnapshot(eachProfile));
-  //               }
-  //             });
-  //         return profilesList;
-  //
-  //   })
-  //   );
-  // }//end of getDistanceFilter
 
   getFilterReset(){
 
