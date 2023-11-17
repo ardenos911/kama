@@ -55,7 +55,6 @@ class ProfileController extends GetxController
             .collection("users")
             .where("gender", isEqualTo: chosenGender!.toLowerCase())
             .where("country", isEqualTo: chosenCountry!.toLowerCase())
-            .where("city", isEqualTo: chosenCity!.toLowerCase())
             .where("age", isGreaterThanOrEqualTo: int.parse(chosenAge.toString()))
             .snapshots()
             .map((QuerySnapshot queryDataSnapshot)
@@ -81,7 +80,7 @@ class ProfileController extends GetxController
     // TODO: implement onInit
     super.onInit();
 
-    if(chosenGender == null || chosenCountry == null || chosenAge == null || chosenCity == null)
+    if(chosenGender == null || chosenCountry == null || chosenAge == null)
     {
       usersProfileList.bindStream(
           FirebaseFirestore.instance
