@@ -71,7 +71,7 @@ class _PayPalPaymentState extends State<PayPalPayment> {
                         note: "Contact us for any questions on your order.",
                         onSuccess: (Map params) async {
                           print("onSuccess: $params");
-                          UIHelper.showAlertDialog('Payment Successfull!',context,title:'Success!');
+                          UIHelper.showAlertDialog('Payment Successfull!', context, title:'Success!');
                         },
                         onError: (error) {
                           print("onError: $error");

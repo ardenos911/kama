@@ -50,6 +50,7 @@ dependencies:
   geolocator:
   geocoding:
   flutter_paypal:
+  one_context:
 
 dev_dependencies:
   flutter_test:
