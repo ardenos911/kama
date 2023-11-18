@@ -52,24 +52,12 @@ class _PayPalPaymentState extends State<PayPalPayment> {
                             "item_list": {
                               "items": [
                                 {
-                                  "name": "A demo product",
+                                  "name": "Kama-Premium Subscriber",
                                   "quantity": 1,
-                                  "price": '10.12',
+                                  "price": '99.98',
                                   "currency": "USD"
                                 }
                               ],
-
-                              // shipping address is not required though
-                              "shipping_address": {
-                                "recipient_name": "Jane Foster",
-                                "line1": "Travis County",
-                                "line2": "",
-                                "city": "Austin",
-                                "country_code": "US",
-                                "postal_code": "73301",
-                                "phone": "+00000000",
-                                "state": "Texas"
-                              },
                             }
                           }
                         ],
