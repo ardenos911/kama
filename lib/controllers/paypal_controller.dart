@@ -29,9 +29,9 @@ class _PayPalPaymentState extends State<PayPalPayment> {
                         clientId:
                         "${Constants.clientId}",
                         secretKey:
-                        "EHHtTDjnmTZATYBPiGzZC_AZUfMpMAzj2VZUeqlFUrRJA_C0pQNCxDccB5qoRQSEdcOnnKQhycuOWdP9",
-                        returnURL: "https://samplesite.com/return",
-                        cancelURL: "https://samplesite.com/cancel",
+                        "${Constants.secretKey}",
+                        returnURL: "${Constants.returnURL}",
+                        cancelURL: "${Constants.cancelURL}",
                         transactions: const [
                           {
                             "amount": {
