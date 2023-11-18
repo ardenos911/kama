@@ -1,11 +1,11 @@
 
 
 import 'package:flutter/material.dart';
-//import 'package:paypal_integration_app/helpers/navigation_service.dart';
+//import 'navigation_service.dart';
 
 class UIHelper {
-   static showAlertDialog(String message, {title = ''}){
-     showDialog(context: NavigationService.navigatorKey.currentContext!,
+   static showAlertDialog(String message, ctx , {title = ''}){
+     showDialog(context: ctx,
          builder: (BuildContext context) {
            return AlertDialog(
              title: Text(title),
