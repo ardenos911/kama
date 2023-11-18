@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_paypal/flutter_paypal.dart';
+import 'constants.dart';
 
 
 
@@ -26,7 +27,7 @@ class _PayPalPaymentState extends State<PayPalPayment> {
                     builder: (BuildContext context) => UsePaypal(
                         sandboxMode: true,
                         clientId:
-                        "AW1TdvpSGbIM5iP4HJNI5TyTmwpY9Gv9dYw8_8yW5lYIbCqf326vrkrp0ce9TAqjEGMHiV3OqJM_aRT0",
+                        "${Constants.clientId}",
                         secretKey:
                         "EHHtTDjnmTZATYBPiGzZC_AZUfMpMAzj2VZUeqlFUrRJA_C0pQNCxDccB5qoRQSEdcOnnKQhycuOWdP9",
                         returnURL: "https://samplesite.com/return",
