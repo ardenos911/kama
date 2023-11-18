@@ -74,7 +74,7 @@ class _PayPalPaymentState extends State<PayPalPayment> {
                   ),
                 )
               },
-              child: const Text("Make Payment")),
+              child: const Text("Make a One Time Payment")),
         ));
   }
   }
