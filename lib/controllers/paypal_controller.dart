@@ -1,8 +1,11 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_paypal/flutter_paypal.dart';
+import '../homeScreen/home_screen.dart';
 import 'constants.dart';
-import 'ui_helper.dart';
+import 'package:get/get.dart';
+
+
 
 
 
@@ -71,15 +74,14 @@ class _PayPalPaymentState extends State<PayPalPayment> {
                         note: "Contact us for any questions on your order.",
                         onSuccess: (Map params) async {
                           print("onSuccess: $params");
-                          UIHelper.showAlertDialog('Payment Successfull!', context, title:'Success!');
+                          Get.snackbar("Payment Successfull 🖐️", "Success");
+                          Get.to(()=>const HomeScreen());
                         },
                         onError: (error) {
                           print("onError: $error");
-                          UIHelper.showAlertDialog('Unable to complete the payment',context,title:'Error');
                         },
                         onCancel: (params) {
                           print('cancelled: $params');
-                          UIHelper.showAlertDialog('Payment Canceled',context,title:'Cancel!');
                         }),
                   ),
                 )
