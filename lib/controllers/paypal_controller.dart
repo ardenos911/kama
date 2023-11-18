@@ -17,7 +17,7 @@ class _PayPalPaymentState extends State<PayPalPayment> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text("One Time Payment For Lifetime Access"),
+          title: const Text("One Time Payment-Lifetime Access"),
         ),
         body: Center(
           child: TextButton(
@@ -74,7 +74,13 @@ class _PayPalPaymentState extends State<PayPalPayment> {
                   ),
                 )
               },
-              child: const Text("Make a One Time Payment")),
+              child: const Text("Make a One Time Payment",
+              style:const TextStyle(
+                color:Colors.blueAccent,
+                fontSize: 19,
+                fontWeight: FontWeight.bold
+              ))
+          ),
         ));
   }
   }
