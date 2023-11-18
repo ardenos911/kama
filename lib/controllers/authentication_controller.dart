@@ -1,5 +1,6 @@
 import 'dart:io';
-
+import 'paypal_controller.dart';
+import 'date_expiration.dart';
 import 'package:kama_love/global.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -186,7 +187,7 @@ class AuthenticationController extends GetxController
   }
 
     //validate if user is already logged in
-  checkIfUserIsLoggedIn(User? currentUser)
+  checkIfUserIsLoggedIn(User? currentUser) async
   {
     if(currentUser == null)
     {
@@ -194,7 +195,17 @@ class AuthenticationController extends GetxController
     }
     else
     {
-      Get.to(HomeScreen());
+      int rPublishedDateTime = await getItemStreamSnapshots();
+      DateTime now = DateTime.now();
+      int cCurrentDate = now.millisecondsSinceEpoch;
+      bool getPaypal = isThirtyDaysPassed(cCurrentDate,rPublishedDateTime);
+      if(getPaypal)
+      {
+        Get.to(const PayPalPayment());
+
+      } else {
+        Get.to(const HomeScreen());
+      }
     }
   }
 
@@ -210,17 +221,19 @@ class AuthenticationController extends GetxController
     ever(firebaseCurrentUser, checkIfUserIsLoggedIn);
   }
 
+  getItemStreamSnapshots() async {
+    // Get the user's document reference
+
+    final dataMe =  await FirebaseFirestore.instance.collection('users')
+        .where("uid", isEqualTo: FirebaseAuth.instance.currentUser!.uid)
+        .get();
+    var data =  dataMe.docs;
+    final publishedDateTime = data[0]['publishedDateTime'];
+    print (publishedDateTime);
+    return publishedDateTime;
+
+  }//end of getItemStreamSnapshots()
+
+
 }// end of AuthenticationController{} class
 
-// getItemStreamSnapshots() async {
-//   // Get the user's document reference
-//
-//   final dataMe =  await FirebaseFirestore.instance.collection('users')
-//       .where("uid", isEqualTo: FirebaseAuth.instance.currentUser!.uid)
-//        .get();
-//      var data =  dataMe.docs;
-//   final publishedDateTime = data[0]['publishedDateTime'];
-//   print (publishedDateTime);
-//   return publishedDateTime;
-//
-// }
