@@ -35,11 +35,11 @@ class _PayPalPaymentState extends State<PayPalPayment> {
                         transactions: const [
                           {
                             "amount": {
-                              "total": '10.12',
+                              "total": '99.98',
                               "currency": "USD",
                               "details": {
-                                "subtotal": '10.12',
-                                "shipping": '0',
+                                "subtotal": '99.98',
+                                "shipping": '0.00',
                                 "shipping_discount": 0
                               }
                             },
