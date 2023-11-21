@@ -788,6 +788,7 @@ class _SwippingScreenState extends State<SwippingScreen>
 
                   ],
                 ),
+
               ),
             );
           },

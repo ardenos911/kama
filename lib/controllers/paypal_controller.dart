@@ -80,7 +80,7 @@ class _PayPalPaymentState extends State<PayPalPayment> {
                           print(hasPaid);
                           print("onSuccess: $params");
                           Get.snackbar("Payment Successfull 🖐️", "Success");
-                          await Get.to(()=>const SwippingScreen());
+                          await Get.to(()=>const HomeScreen());
                         },
                         onError: (error) {
                           print("onError: $error");

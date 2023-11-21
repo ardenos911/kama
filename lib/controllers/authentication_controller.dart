@@ -199,9 +199,15 @@ class AuthenticationController extends GetxController
       DateTime now = DateTime.now();
       int cCurrentDate = now.millisecondsSinceEpoch;
       bool getPaypal = isThirtyDaysPassed(cCurrentDate,rPublishedDateTime);
+      // getPaypal merely checks if the user is still on the 30day trial membership
       if(getPaypal)
       {
+        if(hasPaid==false)
+        {
         Get.to(()=>const PayPalPayment());
+        } else {
+          Get.to(()=>const HomeScreen());
+        }
 
       } else {
         Get.to(()=>const HomeScreen());
