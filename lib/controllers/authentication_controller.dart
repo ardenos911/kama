@@ -201,10 +201,10 @@ class AuthenticationController extends GetxController
       bool getPaypal = isThirtyDaysPassed(cCurrentDate,rPublishedDateTime);
       if(getPaypal)
       {
-        Get.to(const PayPalPayment());
+        Get.to(()=>const PayPalPayment());
 
       } else {
-        Get.to(const HomeScreen());
+        Get.to(()=>const HomeScreen());
       }
     }
   }

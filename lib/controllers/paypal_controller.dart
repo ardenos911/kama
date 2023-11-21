@@ -1,10 +1,10 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_paypal/flutter_paypal.dart';
+import 'package:kama_love/tabScreens/swipping_screen.dart';
 import '../homeScreen/home_screen.dart';
 import 'constants.dart';
 import 'package:get/get.dart';
-
 
 
 
@@ -75,7 +75,7 @@ class _PayPalPaymentState extends State<PayPalPayment> {
                         onSuccess: (Map params) async {
                           print("onSuccess: $params");
                           Get.snackbar("Payment Successfull 🖐️", "Success");
-                          Get.to(()=>const HomeScreen());
+                          await Get.to(()=>const SwippingScreen());
                         },
                         onError: (error) {
                           print("onError: $error");

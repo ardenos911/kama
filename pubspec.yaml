@@ -51,6 +51,7 @@ dependencies:
   geocoding:
   flutter_paypal:
   one_context:
+  flutter_paypal_checkout:
 
 dev_dependencies:
   flutter_test:
