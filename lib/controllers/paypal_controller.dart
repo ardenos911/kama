@@ -5,6 +5,7 @@ import 'package:kama_love/tabScreens/swipping_screen.dart';
 import '../homeScreen/home_screen.dart';
 import 'constants.dart';
 import 'package:get/get.dart';
+import '../global.dart';
 
 
 
@@ -73,6 +74,10 @@ class _PayPalPaymentState extends State<PayPalPayment> {
                         ],
                         note: "Contact us for any questions on your order.",
                         onSuccess: (Map params) async {
+                          setState(() {
+                            hasPaid=true;
+                          });
+                          print(hasPaid);
                           print("onSuccess: $params");
                           Get.snackbar("Payment Successfull 🖐️", "Success");
                           await Get.to(()=>const SwippingScreen());

@@ -8,4 +8,5 @@ String? chosenGender;
 String? chosenCity;
 Position? position;
 String? chosenMiles;
+bool hasPaid=false;
 String fcmServerToken = "key=AAAA0_ioidk:APA91bG-nLGczqhOxE0TjLHBg5ROP-hzCBx5LmnqiH8opV-lHsiljd6zOAoTsDqu3jPTkaW5HDozTsFilKNUe8IfrMvYTo6C2-hWCkzLcnLA1mJ9L-AaD_NHta2rRG5oOdr8aHUzWD3I";
