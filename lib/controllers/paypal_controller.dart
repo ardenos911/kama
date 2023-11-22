@@ -27,7 +27,7 @@ class _PayPalPaymentState extends State<PayPalPayment> {
     await FirebaseFirestore.instance.collection("users")
         .doc(FirebaseAuth.instance.currentUser!.uid)
         .set({
-      'hasPaid': hasPaid
+      'hasPaid': true
     }, SetOptions(merge: true));
   }
 
@@ -102,11 +102,7 @@ class _PayPalPaymentState extends State<PayPalPayment> {
                             ],
                             note: "Contact us for any questions on your order.",
                             onSuccess: (Map params) async {
-                              setState(() {
-                                hasPaid=true;
-                                setPaidStatus();
-                              });
-                              print(hasPaid);
+                              await setPaidStatus();
                               print("onSuccess: $params");
                               Get.snackbar("Payment Successfull 🤑", "Success ✔️");
                               await Get.to(()=>const HomeScreen());
