@@ -21,6 +21,18 @@ class PayPalPayment extends StatefulWidget {
 }
 
 class _PayPalPaymentState extends State<PayPalPayment> {
+
+//sets a new field for the user regarding the payment status
+  setPaidStatus()async {
+    await FirebaseFirestore.instance.collection("users")
+        .doc(FirebaseAuth.instance.currentUser!.uid)
+        .set({
+      'hasPaid': hasPaid
+    }, SetOptions(merge: true));
+  }
+
+
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -92,6 +104,7 @@ class _PayPalPaymentState extends State<PayPalPayment> {
                             onSuccess: (Map params) async {
                               setState(() {
                                 hasPaid=true;
+                                setPaidStatus();
                               });
                               print(hasPaid);
                               print("onSuccess: $params");
@@ -130,9 +143,3 @@ class _PayPalPaymentState extends State<PayPalPayment> {
   }
   }
 
-
-    // FirebaseFirestore.instance.collection("users")
-    //   .doc(FirebaseAuth.instance.currentUser!.uid)
-    //       .set({
-    //    'hasPaid': true
-    //    }, SetOptions(merge: true));
