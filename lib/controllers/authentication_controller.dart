@@ -202,7 +202,8 @@ class AuthenticationController extends GetxController
       // getPaypal merely checks if the user is still on the 30day trial membership
       if(getPaypal)
       {
-        if(hasPaid==false)
+        var hasUserPaid = await getPaidStatus();
+        if(hasUserPaid==false || hasUserPaid==null)
         {
         Get.to(()=>const PayPalPayment());
         } else {
