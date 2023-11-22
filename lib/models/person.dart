@@ -17,6 +17,7 @@ class Person {
   int? publishedDateTime;
   double? lat;
   double? long;
+  bool? hasPaid;
 
   //Appearance
   String? height;
@@ -62,6 +63,7 @@ class Person {
     this.publishedDateTime,
     this.lat,
     this.long,
+    this.hasPaid,
 
     //Appearance
     this.height,
@@ -113,6 +115,7 @@ class Person {
       publishedDateTime: dataSnapshot["publishedDateTime"],
       lat: dataSnapshot["lat"],
       long: dataSnapshot["long"],
+      hasPaid: dataSnapshot["hasPaid"],
 
       //Appearance
       height: dataSnapshot["height"],
@@ -161,6 +164,7 @@ class Person {
         "publishedDateTime": publishedDateTime,
         "lat": lat,
         "long": long,
+        "hasPaid":hasPaid,
 
 
         //Appearance

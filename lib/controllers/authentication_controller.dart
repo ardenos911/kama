@@ -122,6 +122,7 @@ class AuthenticationController extends GetxController
          publishedDateTime: DateTime.now().millisecondsSinceEpoch,
          lat: position?.latitude,
          long: position?.longitude,
+         hasPaid: false,
 
          //Appearance
          height: height,
@@ -202,8 +203,8 @@ class AuthenticationController extends GetxController
       // getPaypal merely checks if the user is still on the 30day trial membership
       if(getPaypal)
       {
-        var hasUserPaid = await getPaidStatus();
-        if(hasUserPaid==false || hasUserPaid==null)
+        bool hasUserPaid = await getPaidStatus();
+        if(hasUserPaid==false)
         {
         Get.to(()=>const PayPalPayment());
         } else {
@@ -247,7 +248,8 @@ class AuthenticationController extends GetxController
           .where("uid", isEqualTo: FirebaseAuth.instance.currentUser!.uid)
           .get();
       var data =  dataMe.docs;
-      final paid = data[0]['hasPaid'];
+      bool paid;
+      paid =  data[0]['hasPaid'];
       print (paid);
       if(paid != null){
       return paid;
