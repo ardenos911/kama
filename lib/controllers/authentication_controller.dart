@@ -240,6 +240,21 @@ class AuthenticationController extends GetxController
 
   }//end of getItemStreamSnapshots()
 
+    getPaidStatus()async {
+    //get the users paid or has NOT paid status
+      final dataMe =  await FirebaseFirestore.instance.collection('users')
+          .where("uid", isEqualTo: FirebaseAuth.instance.currentUser!.uid)
+          .get();
+      var data =  dataMe.docs;
+      final paid = data[0]['hasPaid'];
+      print (paid);
+      if(paid != null){
+      return paid;
+      }else {
+        return false;
+      }
+
+    }//end of getPaidStatus
 
 }// end of AuthenticationController{} class
 
