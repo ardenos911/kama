@@ -1,11 +1,13 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_paypal/flutter_paypal.dart';
-import 'package:kama_love/tabScreens/swipping_screen.dart';
 import '../homeScreen/home_screen.dart';
 import 'constants.dart';
 import 'package:get/get.dart';
 import '../global.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 
 
 
@@ -105,3 +107,8 @@ class _PayPalPaymentState extends State<PayPalPayment> {
   }
 
 
+    // FirebaseFirestore.instance.collection("users")
+    //   .doc(FirebaseAuth.instance.currentUser!.uid)
+    //       .set({
+    //    'hasPaid': true
+    //    }, SetOptions(merge: true));
