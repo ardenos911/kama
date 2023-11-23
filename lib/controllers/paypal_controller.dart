@@ -35,7 +35,8 @@ class _PayPalPaymentState extends State<PayPalPayment> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return WillPopScope(
+    child: Container(
       child: Scaffold(
           backgroundColor: Colors.white,
           appBar: AppBar(
@@ -135,6 +136,10 @@ class _PayPalPaymentState extends State<PayPalPayment> {
             ),
           ),
       ),
+    ),
+      onWillPop: () async{
+        return false;
+      },
     );
   }
   }
