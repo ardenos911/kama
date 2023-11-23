@@ -114,7 +114,7 @@ class _ViewSentViewReceivedScreenState extends State<ViewSentViewReceivedScreen>
                   style: TextStyle(
                     color: isViewSentClicked ? Colors.white : Colors.grey,
                     fontWeight: isViewSentClicked ? FontWeight.bold : FontWeight.normal,
-                    fontSize: 12,
+                    fontSize: 10,
                   ),
                 ),
               ),
@@ -123,7 +123,7 @@ class _ViewSentViewReceivedScreenState extends State<ViewSentViewReceivedScreen>
                 "   🧐   ",
                 style: TextStyle(
                   color: Colors.grey,
-                  fontSize: 15,
+                  fontSize: 12,
                 ),
               ),
 
@@ -148,7 +148,31 @@ class _ViewSentViewReceivedScreenState extends State<ViewSentViewReceivedScreen>
                   style: TextStyle(
                     color: isViewSentClicked ? Colors.grey : Colors.white,
                     fontWeight: isViewSentClicked ? FontWeight.normal : FontWeight.bold,
-                    fontSize: 12,
+                    fontSize: 10,
+                  ),
+                ),
+              ),
+              TextButton(
+                onPressed: ()
+                {
+                  viewSentList.clear();
+                  viewSentList = [];
+                  viewReceivedList.clear();
+                  viewReceivedList = [];
+                  viewsList.clear();
+                  viewsList = [];
+
+                  setState(() {
+                    isViewSentClicked = false;
+                  });
+
+                },
+                child: const Text(
+                  "CLEAR",
+                  style: TextStyle(
+                    color: Colors.red,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 9,
                   ),
                 ),
               ),
