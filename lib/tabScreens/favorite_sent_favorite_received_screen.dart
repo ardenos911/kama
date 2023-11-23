@@ -75,7 +75,35 @@ class _FavoriteSentFavoriteReceivedScreenState extends State<FavoriteSentFavorit
     });
 
     print("favoritesList = " + favoritesList.toString());
-  }
+  }// end of getKeysDataFromUsersCollection
+
+
+    clearAllFavoritesReceived()async {
+      await FirebaseFirestore.instance
+          .collection('users')
+          .doc(currentUserID.toString())
+          .collection('favoriteReceived')
+          .get()
+          .then((querySnapshot) {
+        querySnapshot.docs.forEach((document) {
+          document.reference.delete();
+        });
+      });
+    }// end of clearALLFavoritesReceived
+
+
+  clearAllFavoritesSent()async {
+    await FirebaseFirestore.instance
+        .collection('users')
+        .doc(currentUserID.toString())
+        .collection('favoriteSent')
+        .get()
+        .then((querySnapshot) {
+      querySnapshot.docs.forEach((document) {
+        document.reference.delete();
+      });
+    });
+  }// end of clearALLFavoritesSent
 
   @override
   void initState() {
@@ -156,7 +184,7 @@ class _FavoriteSentFavoriteReceivedScreenState extends State<FavoriteSentFavorit
               ),
             ),
             TextButton(
-              onPressed: ()
+              onPressed: () async
               {
                 favoriteSentList.clear();
                 favoriteSentList = [];
@@ -166,8 +194,10 @@ class _FavoriteSentFavoriteReceivedScreenState extends State<FavoriteSentFavorit
                 favoritesList = [];
 
                 setState(() {
-                  isFavoriteSentClicked = true;
+                  isFavoriteSentClicked =false;
                 });
+                await clearAllFavoritesReceived();
+                await clearAllFavoritesSent();
 
               },
               child: const Text(

@@ -73,7 +73,37 @@ class _ViewSentViewReceivedScreenState extends State<ViewSentViewReceivedScreen>
     });
 
     print("viewsList = " + viewsList.toString());
-  }
+  }//end of getKeysFromUsersCollection
+
+
+  clearAllViewsReceived() async {
+    await FirebaseFirestore.instance
+        .collection('users')
+        .doc(currentUserID.toString())
+        .collection('viewReceived')
+        .get()
+        .then((querySnapshot) {
+      querySnapshot.docs.forEach((document) {
+        document.reference.delete();
+      });
+    });
+  }// end of clearALLViewsReceived
+
+
+  clearAllViewsSent() async {
+    await FirebaseFirestore.instance
+        .collection('users')
+        .doc(currentUserID.toString())
+        .collection('viewSent')
+        .get()
+        .then((querySnapshot) {
+      querySnapshot.docs.forEach((document) {
+        document.reference.delete();
+      });
+    });
+  }// end of clearALLViewsSent
+
+
 
   @override
   void initState() {
