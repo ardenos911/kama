@@ -120,7 +120,7 @@ class _ViewSentViewReceivedScreenState extends State<ViewSentViewReceivedScreen>
               ),
 
               const Text(
-                "   🧐   ",
+                "🧐",
                 style: TextStyle(
                   color: Colors.grey,
                   fontSize: 12,

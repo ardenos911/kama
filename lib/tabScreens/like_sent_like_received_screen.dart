@@ -114,13 +114,13 @@ class _LikeSentLikeReceivedScreenState extends State<LikeSentLikeReceivedScreen>
                 style: TextStyle(
                   color: isLikeSentClicked ? Colors.white : Colors.grey,
                   fontWeight: isLikeSentClicked ? FontWeight.bold : FontWeight.normal,
-                  fontSize: 12,
+                  fontSize: 10,
                 ),
               ),
             ),
 
             const Text(
-              "   💕   ",
+              " 💕",
               style: TextStyle(
                 color: Colors.red,
               ),
@@ -147,7 +147,30 @@ class _LikeSentLikeReceivedScreenState extends State<LikeSentLikeReceivedScreen>
                 style: TextStyle(
                   color: isLikeSentClicked ? Colors.grey : Colors.white,
                   fontWeight: isLikeSentClicked ? FontWeight.normal : FontWeight.bold,
-                  fontSize: 12,
+                  fontSize: 10,
+                ),
+              ),
+            ),
+            TextButton(
+              onPressed: ()
+              {
+                likeSentList.clear();
+                likeSentList = [];
+                likeReceivedList.clear();
+                likeReceivedList = [];
+                likesList.clear();
+                likesList = [];
+
+                setState(() {
+                  isLikeSentClicked = false;
+                });
+              },
+              child: const Text(
+                "CLEAR",
+                style: TextStyle(
+                  color: Colors.red,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 9,
                 ),
               ),
             ),

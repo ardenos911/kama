@@ -117,16 +117,16 @@ class _FavoriteSentFavoriteReceivedScreenState extends State<FavoriteSentFavorit
                 style: TextStyle(
                   color: isFavoriteSentClicked ? Colors.white : Colors.grey,
                   fontWeight: isFavoriteSentClicked ? FontWeight.bold : FontWeight.normal,
-                  fontSize: 11,
+                  fontSize: 10,
                 ),
               ),
             ),
 
             const Text(
-              "   ✪   ",
+              " ✪ ",
               style: TextStyle(
                 color: Colors.black,
-                fontSize: 17,
+                fontSize: 12,
               ),
             ),
 
@@ -151,11 +151,34 @@ class _FavoriteSentFavoriteReceivedScreenState extends State<FavoriteSentFavorit
                 style: TextStyle(
                   color: isFavoriteSentClicked ? Colors.grey : Colors.white,
                   fontWeight: isFavoriteSentClicked ? FontWeight.normal : FontWeight.bold,
-                  fontSize: 11,
+                  fontSize: 10,
                 ),
               ),
             ),
+            TextButton(
+              onPressed: ()
+              {
+                favoriteSentList.clear();
+                favoriteSentList = [];
+                favoriteReceivedList.clear();
+                favoriteReceivedList = [];
+                favoritesList.clear();
+                favoritesList = [];
 
+                setState(() {
+                  isFavoriteSentClicked = true;
+                });
+
+              },
+              child: const Text(
+                "CLEAR",
+                style: TextStyle(
+                  color: Colors.red,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 9,
+                ),
+              ),
+            ),
 
           ],
         ),
