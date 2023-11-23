@@ -48,7 +48,7 @@ class _PayPalPaymentState extends State<PayPalPayment> {
             title:  const Text("One Time Payment \$99.98-Lifetime Access",
                 style:TextStyle(
                     color:Colors.redAccent,
-                    fontSize: 15,
+                    fontSize: 9,
                     fontWeight: FontWeight.bold
                 )),
           ),
@@ -56,7 +56,7 @@ class _PayPalPaymentState extends State<PayPalPayment> {
             decoration: const BoxDecoration(
               image: DecorationImage(
                   image: AssetImage('images/paypal.png'),
-                  fit: BoxFit.fill),
+                  fit: BoxFit.cover),
             ),
             child: Center(
               child: TextButton(
@@ -127,13 +127,13 @@ class _PayPalPaymentState extends State<PayPalPayment> {
                   child: const Text("Make a One Time Payment with PayPal",
                   style:const TextStyle(
                     color:Colors.white,
-                    fontSize: 17,
+                    fontSize: 11,
                     fontWeight: FontWeight.bold,
                     )
                   )
               ),
             ),
-          )
+          ),
       ),
     );
   }
