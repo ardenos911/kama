@@ -73,7 +73,36 @@ class _LikeSentLikeReceivedScreenState extends State<LikeSentLikeReceivedScreen>
     });
 
     print("likesList = " + likesList.toString());
-  }
+  }// end of getKeysFromUsersCollection()
+
+
+  clearAllLikesReceived() async {
+    await FirebaseFirestore.instance
+        .collection('users')
+        .doc(currentUserID.toString())
+        .collection('likeReceived')
+        .get()
+        .then((querySnapshot) {
+      querySnapshot.docs.forEach((document) {
+        document.reference.delete();
+      });
+    });
+  }// end of clearALLLikesReceived
+
+
+  clearAllLikesSent() async {
+    await FirebaseFirestore.instance
+        .collection('users')
+        .doc(currentUserID.toString())
+        .collection('likeSent')
+        .get()
+        .then((querySnapshot) {
+      querySnapshot.docs.forEach((document) {
+        document.reference.delete();
+      });
+    });
+  }// end of clearALLLikesSent
+
 
   @override
   void initState() {
@@ -152,7 +181,7 @@ class _LikeSentLikeReceivedScreenState extends State<LikeSentLikeReceivedScreen>
               ),
             ),
             TextButton(
-              onPressed: ()
+              onPressed: () async
               {
                 likeSentList.clear();
                 likeSentList = [];
@@ -164,6 +193,8 @@ class _LikeSentLikeReceivedScreenState extends State<LikeSentLikeReceivedScreen>
                 setState(() {
                   isLikeSentClicked = false;
                 });
+                  await clearAllLikesReceived();
+                  await clearAllLikesSent();
               },
               child: const Text(
                 "CLEAR",

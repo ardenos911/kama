@@ -183,7 +183,7 @@ class _ViewSentViewReceivedScreenState extends State<ViewSentViewReceivedScreen>
                 ),
               ),
               TextButton(
-                onPressed: ()
+                onPressed: () async
                 {
                   viewSentList.clear();
                   viewSentList = [];
@@ -195,7 +195,8 @@ class _ViewSentViewReceivedScreenState extends State<ViewSentViewReceivedScreen>
                   setState(() {
                     isViewSentClicked = false;
                   });
-
+                      await clearAllViewsReceived();
+                      await clearAllViewsSent();
                 },
                 child: const Text(
                   "CLEAR",
