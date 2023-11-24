@@ -22,11 +22,19 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
         elevation:2,
       ),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
           children:[
             const SizedBox(
               height:30,
             ),
-            Text('Enter Your Email and we will send you a password reset link'),
+            const Text('Enter Your Email and we will send you a password reset link',
+            textAlign: TextAlign.center,
+                style: TextStyle(
+                    fontWeight:FontWeight.bold,
+                    color:Colors.redAccent,
+                     fontSize:14,
+                ),
+            ),
 
             const SizedBox(
               height:30,
