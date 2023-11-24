@@ -198,6 +198,25 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ],
             ),
+            const SizedBox(
+              height:30,
+            ),
+            Padding(
+              padding:EdgeInsets.symmetric(horizontal: 20.0),
+              child: InkWell(
+                onTap: ()
+                { 
+                },
+                child: const Text(
+                  "Forgot Password?",
+                  style: TextStyle(
+                    fontSize: 13,
+                    color: Colors.red,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ),
 
             const SizedBox(
               height:15,
