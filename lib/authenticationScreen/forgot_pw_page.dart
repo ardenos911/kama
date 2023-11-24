@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/custom_text_field_widget.dart';
@@ -11,8 +12,27 @@ class ForgotPasswordPage extends StatefulWidget {
 
 class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
 
-  TextEditingController emailTextEditingController= TextEditingController();
-  TextEditingController passwordTextEditingController= TextEditingController();
+   TextEditingController emailController= TextEditingController();
+
+  @override
+  void dispose(){
+    emailController.dispose();
+    super.dispose();
+  }
+
+  Future passwordReset() async {
+   try {
+     await FirebaseAuth.instance.sendPasswordResetEmail(
+         email: emailController.text.trim());
+   } on FirebaseAuthException catch (e){
+     print(e);
+     showDialog(context: context, builder: (context){
+       return AlertDialog(
+         content: Text(e.message.toString()),
+       );
+     });
+   }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -27,13 +47,16 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
             const SizedBox(
               height:30,
             ),
-            const Text('Enter Your Email and we will send you a password reset link',
-            textAlign: TextAlign.center,
-                style: TextStyle(
-                    fontWeight:FontWeight.bold,
-                    color:Colors.redAccent,
-                     fontSize:14,
-                ),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal:20.0),
+              child: Text('Enter Your Email and we will send you a password reset link',
+              textAlign: TextAlign.center,
+                  style: TextStyle(
+                      fontWeight:FontWeight.bold,
+                      color:Colors.redAccent,
+                       fontSize:14,
+                  ),
+              ),
             ),
 
             const SizedBox(
@@ -43,7 +66,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
               height:50,
               width:MediaQuery.of(context).size.width-40,
               child: CustomTextFieldWidget(
-                editingController: emailTextEditingController,
+                editingController: emailController,
                 labelText: "Email",
                 iconData: Icons.email_outlined,
                 isObscure: false,
@@ -52,9 +75,9 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
             const SizedBox(
               height:30,
             ),
-            MaterialButton(
-              onPressed:(){
-
+            MaterialButton (
+              onPressed:() async{
+               await passwordReset();
               },
               color: Colors.deepPurple[200],
               child: const Text('Reset Password',
