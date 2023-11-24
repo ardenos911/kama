@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/get_navigation.dart';
+import 'package:kama_love/authenticationScreen/forgot_pw_page.dart';
 import 'package:kama_love/authenticationScreen/registration_screen.dart';
 import 'package:kama_love/widgets/custom_text_field_widget.dart';
 import '../global.dart';
@@ -206,7 +207,7 @@ class _LoginScreenState extends State<LoginScreen> {
               child: InkWell(
                 onTap: ()
                 {
-                  //todo code here
+                  Get.to(() => const ForgotPasswordPage());
                 },
                 child: const Text(
                   "Forgot Password?",
