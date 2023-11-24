@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 import '../widgets/custom_text_field_widget.dart';
 
@@ -24,15 +25,24 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
    try {
      await FirebaseAuth.instance.sendPasswordResetEmail(
          email: emailController.text.trim());
+     showDialog(
+         context: context,
+         builder: (context){
+           return  AlertDialog(
+             content: Text('Password reset link sent! Check your email'),
+           );
+         });
    } on FirebaseAuthException catch (e){
      print(e);
-     showDialog(context: context, builder: (context){
+     showDialog(
+         context: context,
+         builder: (context){
        return AlertDialog(
          content: Text(e.message.toString()),
        );
      });
    }
-  }
+  }// end of passwordReset
 
   @override
   Widget build(BuildContext context) {
