@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -318,7 +320,7 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                         ),
 
                         Text(
-                          phoneNo,
+                          "****"+phoneNo.substring(max(phoneNo.length - 4, 0)),
                           style: const TextStyle(
                             color: Colors.grey,
                             fontSize: 13,
