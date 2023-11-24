@@ -205,7 +205,8 @@ class _LoginScreenState extends State<LoginScreen> {
               padding:EdgeInsets.symmetric(horizontal: 20.0),
               child: InkWell(
                 onTap: ()
-                { 
+                {
+                  //todo code here
                 },
                 child: const Text(
                   "Forgot Password?",
