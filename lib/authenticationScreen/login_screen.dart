@@ -91,7 +91,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
             //email section
             SizedBox(
-              height:50,
+              height:60,
               width:MediaQuery.of(context).size.width-40,
               child: CustomTextFieldWidget(
                 editingController: emailTextEditingController,
@@ -107,7 +107,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
             //password section
             SizedBox(
-              height:50,
+              height:60,
               width: MediaQuery.of(context).size.width-40,
               child: CustomTextFieldWidget(
                 editingController: passwordTextEditingController,

@@ -83,6 +83,7 @@ flutter:
     - images/chat.png
     - images/favorite.png
     - images/paypal.png
+    - images/forgotpasswd.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
