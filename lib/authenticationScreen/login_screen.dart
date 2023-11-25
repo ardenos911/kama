@@ -55,7 +55,7 @@ class _LoginScreenState extends State<LoginScreen> {
       builder: (BuildContext context) {
         return AlertDialog(
           title: Text('PLEASE NOTE 🛑'),
-          content: Text('by clicking ok, you agree to our Privacy Policy along with our Tems & Conditions BEFORE using KAMA app'),
+          content: const Text('by clicking ok, you agree to our Privacy Policy along with our Tems & Conditions BEFORE using KAMA app'),
           actions: [
             TextButton(
               onPressed: () {

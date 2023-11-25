@@ -35,7 +35,7 @@ class TermsAndConditionsPage extends StatelessWidget {
                       ),
                       SizedBox(height: 16.0),
                       Text(
-                        'These Website Standard Terms and Conditions written on this'
+                        'This Kama App\'s Standard Terms and Conditions written on this'
                         ' webpage shall manage your use of our website, Webiste Name accessible'
                         ' at Website.com.',
                         style: TextStyle(
