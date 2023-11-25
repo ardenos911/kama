@@ -4,6 +4,7 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:kama_love/authenticationScreen/forgot_pw_page.dart';
 import 'package:kama_love/authenticationScreen/registration_screen.dart';
+import 'package:kama_love/authenticationScreen/terms_conditions.dart';
 import 'package:kama_love/widgets/custom_text_field_widget.dart';
 import '../global.dart';
 import '../controllers/authentication_controller.dart';
@@ -222,6 +223,23 @@ class _LoginScreenState extends State<LoginScreen> {
 
             const SizedBox(
               height:15,
+            ),
+            Padding(
+              padding:EdgeInsets.symmetric(horizontal: 20.0),
+              child: InkWell(
+                onTap: ()
+                {
+                  Get.to(() => const TermsAndConditionsPage());
+                },
+                child: const Text(
+                  "Terms & Privacy Policy",
+                  style: TextStyle(
+                    fontSize: 8,
+                    color: Colors.lightBlue,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
             ),
 
             showProgressBar == true ? const CircularProgressIndicator(

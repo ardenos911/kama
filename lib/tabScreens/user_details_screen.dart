@@ -138,7 +138,7 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
         appBar:AppBar(
           systemOverlayStyle: SystemUiOverlayStyle(
             statusBarColor: Colors.red[900], // <-- SEE HERE
-            statusBarIconBrightness: Brightness.dark, //<-- For Android SEE HERE (dark icons)
+            statusBarIconBrightness: Brightness.light, //<-- For Android SEE HERE (dark icons)
             statusBarBrightness: Brightness.light, //<-- For iOS SEE HERE (dark icons)
           ),
           backgroundColor: Colors.red[900],
