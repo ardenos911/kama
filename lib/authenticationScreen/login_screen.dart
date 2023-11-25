@@ -49,6 +49,31 @@ class _LoginScreenState extends State<LoginScreen> {
   } //end of Future
 
 
+  void showAlertDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text('PLEASE NOTE'),
+          content: Text('by clicking ok, you agree to our Privacy Policy along with our Tems & Conditions BEFORE using KAMA app'),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              child: const Text(
+                'OK',
+                style: TextStyle(
+                  color: Colors.blue,
+                ),
+              ),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
   TextEditingController emailTextEditingController= TextEditingController();
   TextEditingController passwordTextEditingController= TextEditingController();
   bool showProgressBar = false;
@@ -188,6 +213,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   onTap: ()
                   { _getCurrentLocation();
                     Get.to(() => const RegistrationScreen());
+                    showAlertDialog(context);
                   },
                   child: const Text(
                     "Register Here",
