@@ -326,7 +326,20 @@ class TermsAndConditionsPage extends StatelessWidget {
                         'this Privacy Policy. You can also share additional information with us, '
                         'such as details on your bio and your interests, as well as content such as '
                         'photos and videos. To add certain content, like pictures or videos, you may '
-                        'allow us to access naitive device features such as your camera or photo album.',
+                        'allow us to access native device features such as your camera or photo album.'
+                        '(3) When you subscribe to a paid service or make a purchase directly from '
+                        'us (rather than through a platform such as iOS or Android), you provide us with '
+                        'information related to the purchases you make and our payment processors (PayPal) with '
+                        'information such as your debit or credit card number or other pertinent financial information'
+                        '(4) we also process your chats with other members as well as the content you publish'
+                        'in order to operate our services in a secure manner, and to keep all our users safe'
+                        '(5) Precise geolocation data: If you give us your consent, we can collect your precise '
+                        'geolocation (latitude and longitude) from your device. The collection of your '
+                        'geolocation may occur in the background even when you aren’t using the services- '
+                        'this is in part due to the google API we use that is provided via their cloud platform- '
+                        'if the permission you gave us expressly permits such collection. If you decline '
+                        'permission for us to collect your precise geolocation, some app features '
+                        'and our services that rely on precise geolocation may NOT be available to you',
                         style: TextStyle(
                           fontStyle: FontStyle.italic,
                           fontFamily: 'Arial Narrow',
