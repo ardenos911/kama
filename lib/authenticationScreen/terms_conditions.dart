@@ -293,7 +293,7 @@ class TermsAndConditionsPage extends StatelessWidget {
                       ),
                       SizedBox(height: 16.0),
                       Text(
-                        'With Kama, your privacy is very important to us. Your privacy is at the core of the way'
+                        'With Kama, your privacy is very important to us. Your privacy is at the core of the way '
                         'we design and build our services and products,'
                         'so that you can fully trust them and focus on building meaningful connections or relationships..',
                         style: TextStyle(
@@ -315,24 +315,24 @@ class TermsAndConditionsPage extends StatelessWidget {
                       Text(
                         'In order to forge any sort of connection with another person, we need '
                         'to collect some information about you, '
-                        'such as basic profile and demographic details and the types of people you’d like to'
+                        'such as basic profile and demographic details and the types of people you’d like to '
                         'connect with. We also collect information about your use of our services '
                         'such as access logs, as well as information from third parties,'
                         'like when you access our services through your social media account. Additional '
                         'information you provide us when accessing our services include but are not limited to the following: '
-                        '(1) your phone number and email address, as well as some basic details necessary for the service to work, such as your gender, date of birth, and who you’d like to connect with'
-                        '(2) your sexual orientation with us. Where you provide such info  to us, '
-                        'you consent Kama App to using it for the purposes identified and as laid out in '
+                        '(1) your phone number and email address, as well as some basic details necessary for the service to work, such as your gender, date of birth, and who you’d like to connect with '
+                        '(2) your sexual orientation. When you provide such info to us, '
+                        'you consent Kama App to using it for the purposes identified and clearly expressed in '
                         'this Privacy Policy. You can also share additional information with us, '
                         'such as details on your bio and your interests, as well as content such as '
                         'photos and videos. To add certain content, like pictures or videos, you may '
                         'allow us to access native device features such as your camera or photo album.'
                         '(3) When you subscribe to a paid service or make a purchase directly from '
                         'us (rather than through a platform such as iOS or Android), you provide us with '
-                        'information related to the purchases you make and our payment processors (PayPal) with '
-                        'information such as your debit or credit card number or other pertinent financial information'
-                        '(4) we also process your chats with other members as well as the content you publish'
-                        'in order to operate our services in a secure manner, and to keep all our users safe'
+                        'information related to the purchases you make and our payment processor (PayPal) with '
+                        'information such as your debit or credit card number or other pertinent financial information '
+                        '(4) we also process your chats with other members as well as the content you publish '
+                        'in order to operate our services in a secure manner, and to keep all our users safe '
                         '(5) Precise geolocation data: If you give us your consent, we can collect your precise '
                         'geolocation (latitude and longitude) from your device. The collection of your '
                         'geolocation may occur in the background even when you aren’t using the services- '
