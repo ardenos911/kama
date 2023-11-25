@@ -272,15 +272,68 @@ class TermsAndConditionsPage extends StatelessWidget {
                         '(7).bully, “stalk,” intimidate, assault, harass, mistreat or defame, or otherwise mistreat any person '
                         '(8).post any Content that violates or infringes anyone’s rights, including rights of publicity, privacy, copyright, trademark or other intellectual property or contract right '
                         '(9).post any Content that is hate speech, threatening, sexually explicit or pornographic; incites violence; or contains nudity or graphic or excessive violence '
-                        '(10).post any Content that promotes racism, bigotry, hatred or physical harm of any kind against any group or individual'
-                        '2.your use of our App, and supersede all previous agreements in'
-                        ' respect of your use of this mobile App.',
+                        '(10).post any Content that promotes racism, bigotry, hatred or physical harm of any kind against any group, race, political organization or individual '
+                        '(11).use another person\'s account, share an account with another user, or maintain multiple accounts at any given time '
+                        '(12).misrepresent your identity, age, current or previous professional positions, qualifications, or affiliations with a person or regulated entity '
+                        '(13).create another account if any previous account owned by you has been terminated, unless you have our expressed consent ',
                         style: TextStyle(
                           fontStyle: FontStyle.italic,
                           fontFamily: 'Arial Narrow',
                           fontSize: 14.0,
                         ),
                       ),
+                      SizedBox(height: 16.0),
+                      Text(
+                        'Privacy Policy',
+                        style: TextStyle(
+                          fontSize: 23.0,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.blueAccent,
+                        ),
+                      ),
+                      SizedBox(height: 16.0),
+                      Text(
+                        'With Kama, your privacy is very important to us. Your privacy is at the core of the way'
+                        'we design and build our services and products,'
+                        'so that you can fully trust them and focus on building meaningful connections or relationships..',
+                        style: TextStyle(
+                          fontStyle: FontStyle.italic,
+                          fontFamily: 'Arial Narrow',
+                          fontSize: 14.0,
+                        ),
+                      ),
+                      SizedBox(height: 16.0),
+                      Text(
+                        'Privacy application & information we may collect',
+                        style: TextStyle(
+                          fontSize: 14.0,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.blueAccent,
+                        ),
+                      ),
+                      SizedBox(height: 16.0),
+                      Text(
+                        'In order to forge any sort of connection with another person, we need '
+                        'to collect some information about you, '
+                        'such as basic profile and demographic details and the types of people you’d like to'
+                        'connect with. We also collect information about your use of our services '
+                        'such as access logs, as well as information from third parties,'
+                        'like when you access our services through your social media account. Additional '
+                        'information you provide us when accessing our services include but are not limited to the following: '
+                        '(1) your phone number and email address, as well as some basic details necessary for the service to work, such as your gender, date of birth, and who you’d like to connect with'
+                        '(2) your sexual orientation with us. Where you provide such info  to us, '
+                        'you consent Kama App to using it for the purposes identified and as laid out in '
+                        'this Privacy Policy. You can also share additional information with us, '
+                        'such as details on your bio and your interests, as well as content such as '
+                        'photos and videos. To add certain content, like pictures or videos, you may '
+                        'allow us to access naitive device features such as your camera or photo album.',
+                        style: TextStyle(
+                          fontStyle: FontStyle.italic,
+                          fontFamily: 'Arial Narrow',
+                          fontSize: 14.0,
+                        ),
+                      ),
+                      SizedBox(height: 16.0),
                     ]))));
   }
 }
