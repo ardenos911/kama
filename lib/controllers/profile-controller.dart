@@ -38,7 +38,7 @@ class ProfileController extends GetxController
             profilesList.add(Person.fromDataSnapshot(eachProfile));
           }
           if(profilesList.isEmpty) {
-            Get.snackbar("No Filter Match 😒", "Sorry but your filter parameters have no matches-Try Again!");
+            Get.snackbar("No Filter Match 😒", "Please Try Again!");
             return allUsersProfileList;
           } else {
             Get.snackbar("Found Some Matches 🥰", "Here are your results!");

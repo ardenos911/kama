@@ -396,11 +396,11 @@ class _SwippingScreenState extends State<SwippingScreen>
                 ),
                 actions: [
                   ElevatedButton(
-                    onPressed: ()
+                    onPressed: () async
                     {
                       //Get.back();
 
-                      profileController.getResults();
+                      await profileController.getResults();
                     },
                     child: const Text("Start Filters"),
                   ),
@@ -568,164 +568,167 @@ class _SwippingScreenState extends State<SwippingScreen>
                           userID: eachProfileInfo.uid.toString(),
                         ));
                       },
-                      child: Column(
-                        children: [
+                      child: SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: Column(
+                          children: [
 
-                          //name
-                          Text(
-                            eachProfileInfo.name.toString(),
-                            style: const TextStyle(
-                              color: Colors.white,
-                              fontSize: 32,
-                              letterSpacing: 4,
-                              fontWeight: FontWeight.bold,
+                            //name
+                            Text(
+                              eachProfileInfo.name.toString(),
+                              style: const TextStyle(
+                                color: Colors.white,
+                                fontSize: 32,
+                                letterSpacing: 4,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
-                          ),
 
-                          //age - city
-                          Text(
-                            eachProfileInfo.age.toString() + " ◉ " + eachProfileInfo.city.toString(),
-                            style: const TextStyle(
-                              color: Colors.white,
-                              fontSize: 19,
-                              letterSpacing: 4,
-                              fontWeight: FontWeight.bold,
+                            //age - city
+                            Text(
+                              eachProfileInfo.age.toString() + " ◉ " + eachProfileInfo.city.toString(),
+                              style: const TextStyle(
+                                color: Colors.white,
+                                fontSize: 19,
+                                letterSpacing: 4,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
-                          ),
 
-                          const SizedBox(
-                            height: 4,
-                          ),
+                            const SizedBox(
+                              height: 4,
+                            ),
 
-                          //profession and religion
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
+                            //profession and religion
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
 
-                              ElevatedButton(
-                                onPressed: (){
-                                  profileController.viewSentAndViewReceived(
-                                    eachProfileInfo.uid.toString(),
-                                    senderName,
-                                  );
+                                ElevatedButton(
+                                  onPressed: (){
+                                    profileController.viewSentAndViewReceived(
+                                      eachProfileInfo.uid.toString(),
+                                      senderName,
+                                    );
 
-                                  Get.to(UserDetailsScreen(
-                                  userID: eachProfileInfo.uid.toString(),
-                                ));
-                                  },
-                                style: ElevatedButton.styleFrom(
-                                  backgroundColor: Colors.redAccent,
-                                  shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(16)
+                                    Get.to(UserDetailsScreen(
+                                    userID: eachProfileInfo.uid.toString(),
+                                  ));
+                                    },
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor: Colors.redAccent,
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(16)
+                                    ),
+                                  ),
+                                  child: Text(
+                                    eachProfileInfo.profession.toString(),
+                                    style: const TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 14,
+                                    ),
                                   ),
                                 ),
-                                child: Text(
-                                  eachProfileInfo.profession.toString(),
-                                  style: const TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 14,
+
+                                const SizedBox(
+                                  width: 6,
+                                ),
+
+                                ElevatedButton(
+                                  onPressed: (){
+                                    profileController.viewSentAndViewReceived(
+                                      eachProfileInfo.uid.toString(),
+                                      senderName,
+                                    );
+
+                                    Get.to(UserDetailsScreen(
+                                    userID: eachProfileInfo.uid.toString(),
+                                  ));
+                                    },
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor: Colors.redAccent,
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(16)
+                                    ),
+                                  ),
+                                  child: Text(
+                                    eachProfileInfo.religion.toString(),
+                                    style: const TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 14,
+                                    ),
                                   ),
                                 ),
-                              ),
 
-                              const SizedBox(
-                                width: 6,
-                              ),
+                              ],
+                            ),
 
-                              ElevatedButton(
-                                onPressed: (){
-                                  profileController.viewSentAndViewReceived(
-                                    eachProfileInfo.uid.toString(),
-                                    senderName,
-                                  );
+                            //country and ethnicity
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
 
-                                  Get.to(UserDetailsScreen(
-                                  userID: eachProfileInfo.uid.toString(),
-                                ));
-                                  },
-                                style: ElevatedButton.styleFrom(
-                                  backgroundColor: Colors.redAccent,
-                                  shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(16)
+                                ElevatedButton(
+                                  onPressed: (){
+                                    profileController.viewSentAndViewReceived(
+                                      eachProfileInfo.uid.toString(),
+                                      senderName,
+                                    );
+
+                                    Get.to(UserDetailsScreen(
+                                    userID: eachProfileInfo.uid.toString(),
+                                  ));
+                                    },
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor: Colors.redAccent,
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(16)
+                                    ),
+                                  ),
+                                  child: Text(
+                                    eachProfileInfo.country.toString(),
+                                    style: const TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 14,
+                                    ),
                                   ),
                                 ),
-                                child: Text(
-                                  eachProfileInfo.religion.toString(),
-                                  style: const TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 14,
+
+                                const SizedBox(
+                                  width: 6,
+                                ),
+
+                                ElevatedButton(
+                                  onPressed: (){
+                                    profileController.viewSentAndViewReceived(
+                                      eachProfileInfo.uid.toString(),
+                                      senderName,
+                                    );
+
+                                    Get.to(UserDetailsScreen(
+                                    userID: eachProfileInfo.uid.toString(),
+                                  ));
+                                    },
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor: Colors.redAccent,
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(16)
+                                    ),
+                                  ),
+                                  child: Text(
+                                    eachProfileInfo.ethnicity.toString(),
+                                    style: const TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 14,
+                                    ),
                                   ),
                                 ),
-                              ),
 
-                            ],
-                          ),
+                              ],
+                            ),
 
-                          //country and ethnicity
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-
-                              ElevatedButton(
-                                onPressed: (){
-                                  profileController.viewSentAndViewReceived(
-                                    eachProfileInfo.uid.toString(),
-                                    senderName,
-                                  );
-
-                                  Get.to(UserDetailsScreen(
-                                  userID: eachProfileInfo.uid.toString(),
-                                ));
-                                  },
-                                style: ElevatedButton.styleFrom(
-                                  backgroundColor: Colors.redAccent,
-                                  shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(16)
-                                  ),
-                                ),
-                                child: Text(
-                                  eachProfileInfo.country.toString(),
-                                  style: const TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 14,
-                                  ),
-                                ),
-                              ),
-
-                              const SizedBox(
-                                width: 6,
-                              ),
-
-                              ElevatedButton(
-                                onPressed: (){
-                                  profileController.viewSentAndViewReceived(
-                                    eachProfileInfo.uid.toString(),
-                                    senderName,
-                                  );
-
-                                  Get.to(UserDetailsScreen(
-                                  userID: eachProfileInfo.uid.toString(),
-                                ));
-                                  },
-                                style: ElevatedButton.styleFrom(
-                                  backgroundColor: Colors.redAccent,
-                                  shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(16)
-                                  ),
-                                ),
-                                child: Text(
-                                  eachProfileInfo.ethnicity.toString(),
-                                  style: const TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 14,
-                                  ),
-                                ),
-                              ),
-
-                            ],
-                          ),
-
-                        ],
+                          ],
+                        ),
                       ),
                     ),
 
