@@ -36,8 +36,53 @@ class TermsAndConditionsPage extends StatelessWidget {
                       SizedBox(height: 16.0),
                       Text(
                         'This Kama App\'s Standard Terms and Conditions written on this'
-                        ' webpage shall manage your use of our website, Webiste Name accessible'
-                        ' at Website.com.',
+                        'page shall manage your use of our App..By creating a Kama account '
+                        'or by using any Kama service, whether through a mobile device, '
+                        'mobile application or computer (collectively, the “Service”) you'
+                        ' agree to be bound by (i) these Terms of Use, (ii) our Privacy Policy, '
+                        'Cookie Policy, Safety Tips, and Community Guidelines, each of which '
+                        'is incorporated by reference into this Agreement, and (iii) any terms '
+                        'disclosed to you if you purchase or have purchased additional features, '
+                        'products or services that we offer on the Service (collectively, this “Agreement”).'
+                        'If you do not accept and agree to be bound by all of the terms of this Agreement, '
+                        'you should not access or utilize the Services we provide.',
+                        style: TextStyle(
+                          fontStyle: FontStyle.italic,
+                          fontFamily: 'Arial Narrow',
+                          fontSize: 14.0,
+                        ),
+                      ),
+                      SizedBox(height: 16.0),
+                      Text(
+                        'Eligibility',
+                        style: TextStyle(
+                          fontSize: 20.0,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.blueAccent,
+                        ),
+                      ),
+                      SizedBox(height: 16.0),
+                      Text(
+                        'You must be at least 18 years of age to create an account on Kama App and '
+                        'use the Service. By creating an account and using the Service, you '
+                        'represent and warrant that:'
+                        'you can form a legal and binding contract with Kama, you are not a person '
+                        'who is barred from using the Service under the laws of the United '
+                        'States or any other applicable jurisdiction (for example, you do'
+                        ' not appear on the U.S. Treasury Departments list of Specially Designated Nationals or face any other similar prohibition),'
+                        'you will comply with this Agreement and all applicable local, state, '
+                        'national and international laws, rules and regulations, including without limitation,'
+                        'privacy laws, intellectual property laws, anti-spam laws, and regulatory'
+                        'requirements, you have not committed, been convicted of, or pled no contest to'
+                        'a felony, a sex crime, or any crime involving violence or a threat of violence, '
+                        'unless you have received clemency for a non-violent crime and we have determined '
+                        'that you are not likely to pose a threat to other users of our Service, and that you'
+                        'are not required to register as a sex offender with any state, federal or local '
+                        'sex offender registry, you will use the latest version of our Services'
+                        '(via app), you do not have more than one account on the Service,'
+                        'and you have not previously been removed or barred from the Service by us, unless you have '
+                        'our express written permission to create a new or additional account.If at any time you cease '
+                        'to meet these requirements, all permissions/authorizations to access our Service or systems is automatically revoked, and you must immediately delete your account.',
                         style: TextStyle(
                           fontStyle: FontStyle.italic,
                           fontFamily: 'Arial Narrow',
