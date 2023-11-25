@@ -10,12 +10,12 @@ class TermsAndConditionsPage extends StatelessWidget {
           backgroundColor: Colors.red[900],
           elevation: 6,
           title: const Text(
-            'Terms and Conditions',
+            'Privacy Policy/Terms and Conditions',
             textAlign: TextAlign.center,
             style: TextStyle(
               fontWeight: FontWeight.bold,
               color: Colors.white,
-              fontSize: 16,
+              fontSize: 10,
             ),
           ),
         ),
