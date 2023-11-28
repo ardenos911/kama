@@ -63,6 +63,7 @@ class TermsAndConditionsPage extends StatelessWidget {
                       ),
                       SizedBox(height: 16.0),
                       Text(
+                        'WELCOME TO KAMA APP- our services will ALWAYS be FREE-however you MUST abide by the following terms when using this app: '
                         'You must be at least 18 years of age to create an account on Kama App and '
                         'use the Service. By creating an account and using the Service, you '
                         'represent and warrant that:'
@@ -327,9 +328,9 @@ class TermsAndConditionsPage extends StatelessWidget {
                         'such as details on your bio and your interests, as well as content such as '
                         'photos and videos. To add certain content, like pictures or videos, you may '
                         'allow us to access native device features such as your camera or photo album.'
-                        '(3) When you subscribe to a paid service or make a purchase directly from '
+                        '(3) When you subscribe to a paid PREMIUM service or make a purchase directly from '
                         'us (rather than through a platform such as iOS or Android), you provide us with '
-                        'information related to the purchases you make and our payment processor (PayPal) with '
+                        'information related to the purchases you make and our payment processor with '
                         'information such as your debit or credit card number or other pertinent financial information '
                         '(4) we also process your chats with other members as well as the content you publish '
                         'in order to operate our services in a secure manner, and to keep all our users safe '
