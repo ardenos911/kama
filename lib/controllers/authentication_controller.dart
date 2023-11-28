@@ -122,7 +122,7 @@ class AuthenticationController extends GetxController
          publishedDateTime: DateTime.now().millisecondsSinceEpoch,
          lat: position?.latitude,
          long: position?.longitude,
-         hasPaid: false,
+         hasPaid: true,
 
          //Appearance
          height: height,
@@ -161,7 +161,7 @@ class AuthenticationController extends GetxController
      }
      catch(errorMsg)
      {
-       Get.snackbar("Account Creation Unsuccessful", "Please try again-Fill in ALL fields");
+       Get.snackbar("Account Creation Unsuccessful 🤬", "Please try again-Fill in ALL fields");
      }
 
 
