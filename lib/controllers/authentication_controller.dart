@@ -1,6 +1,4 @@
 import 'dart:io';
-import 'dart:js';
-import 'package:flutter/material.dart';
 
 import 'date_expiration.dart';
 import 'package:kama_love/global.dart';
@@ -13,7 +11,7 @@ import 'package:kama_love/models/person.dart' as personModel;
 
 import '../authenticationScreen/login_screen.dart';
 import '../homeScreen/home_screen.dart';
-import 'package:geolocator/geolocator.dart';
+
 
 
 
@@ -164,7 +162,7 @@ class AuthenticationController extends GetxController
      }
      catch(errorMsg)
      {
-       Get.snackbar("Account Creation Unsuccessful 🤬", "Please try again-Fill in ALL fields");
+       Get.snackbar("Account Creation Unsuccessful 🤬", "Please try again-Fill in ALL fields correctly-double check the email field! OR maybe you already created an account?");
      }
 
 
@@ -209,30 +207,7 @@ class AuthenticationController extends GetxController
         bool hasUserPaid = await getPaidStatus();
         if(hasUserPaid==false)
         {
-          void showAlertThankYou(BuildContext context) {
-            showDialog(
-              context: context,
-              builder: (BuildContext context) {
-                return AlertDialog(
-                  title: Text('PLEASE NOTE 🛑'),
-                  content: const Text('by clicking ok, you agree to keep watching our ads in order for us to continue providing Kama app for free'),
-                  actions: [
-                    TextButton(
-                      onPressed: () {
-                        Navigator.of(context).pop();
-                      },
-                      child: const Text(
-                        'OK',
-                        style: TextStyle(
-                          color: Colors.blue,
-                        ),
-                      ),
-                    ),
-                  ],
-                );
-              },
-            );
-          }
+          Get.snackbar("You may continue using Kama app ⛔", "But please ensure that you keep an eye on our ads so we can deliver this service for free");
 
         } else {
           Get.to(()=>const HomeScreen());
