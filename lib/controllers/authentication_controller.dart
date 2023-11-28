@@ -1,5 +1,7 @@
 import 'dart:io';
-import 'paypal_controller.dart';
+import 'dart:js';
+import 'package:flutter/material.dart';
+
 import 'date_expiration.dart';
 import 'package:kama_love/global.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -68,6 +70,7 @@ class AuthenticationController extends GetxController
 
     return downloadUrlOfImage;
   }
+
 
    createNewUserAccount(
        //personal info
@@ -206,7 +209,31 @@ class AuthenticationController extends GetxController
         bool hasUserPaid = await getPaidStatus();
         if(hasUserPaid==false)
         {
-        Get.to(()=>const PayPalPayment());
+          void showAlertThankYou(BuildContext context) {
+            showDialog(
+              context: context,
+              builder: (BuildContext context) {
+                return AlertDialog(
+                  title: Text('PLEASE NOTE 🛑'),
+                  content: const Text('by clicking ok, you agree to keep watching our ads in order for us to continue providing Kama app for free'),
+                  actions: [
+                    TextButton(
+                      onPressed: () {
+                        Navigator.of(context).pop();
+                      },
+                      child: const Text(
+                        'OK',
+                        style: TextStyle(
+                          color: Colors.blue,
+                        ),
+                      ),
+                    ),
+                  ],
+                );
+              },
+            );
+          }
+
         } else {
           Get.to(()=>const HomeScreen());
         }
@@ -216,6 +243,8 @@ class AuthenticationController extends GetxController
       }
     }
   }
+
+
 
   @override
   void onReady() {

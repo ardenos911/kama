@@ -9,5 +9,5 @@ bool isThirtyDaysPassed(int date1, int date2)
 
   Duration difference = dateTime1.difference(dateTime2);
 
-  return difference.inDays >= 30;
+  return difference.inDays >= 340;
 }
